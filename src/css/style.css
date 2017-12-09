@@ -1,0 +1,39 @@
+#main-header img {
+  width: 100%;
+  height: 100%; }
+
+#main-header .port-item {
+  width: 100%; }
+  #main-header .port-item .fa {
+    font-size: 2em; }
+
+#main-header .name .fa {
+  padding: 25px;
+  font-size: 25px;
+  color: white; }
+
+#main-header .port-item:hover {
+  opacity: 0.8;
+  cursor: pointer; }
+
+.bg-black {
+  background-color: #000;
+  color: #fff; }
+
+p.bg-dark {
+  border-radius: 3px; }
+
+@media (min-width: 1199px) {
+  .port-item {
+    padding: 2em !important; } }
+
+@media (max-width: 576px) {
+  .bg-black {
+    text-align: center; }
+  .title {
+    text-align: center;
+    padding-bottom: 15px !important; }
+  .name .fa {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 25px; } }
