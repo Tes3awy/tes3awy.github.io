@@ -1,6 +1,6 @@
-const gulp        = require('gulp');
-const browserSync = require('browser-sync').create();
-const sass        = require('gulp-sass');
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
@@ -21,7 +21,7 @@ gulp.task('js', function() {
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        server: "./src"  
+        server: "./src"
     });
 
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'src/scss/*.scss'], ['sass']);
@@ -31,13 +31,13 @@ gulp.task('serve', ['sass'], function() {
 // Move Fonts to src/fonts
 gulp.task('fonts', function() {
   return gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('src/fonts'))
-})
+    .pipe(gulp.dest('src/fonts'));
+});
 
 // Move Font Awesome CSS to src/css
 gulp.task('fa', function() {
   return gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
-    .pipe(gulp.dest('src/css'))
-})
+    .pipe(gulp.dest('src/css'));
+});
 
 gulp.task('default', ['js','serve', 'fa', 'fonts']);
