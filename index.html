@@ -11,6 +11,20 @@
 
         <title>Osama Abbas | Portfolio</title>
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112079245-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-112079245-1');
+        </script>
+
+
         <!-- FontAwesome CSS -->
         <link rel="stylesheet" href="src/css/font-awesome.min.css">
         <!-- Devicons -->
@@ -93,56 +107,69 @@
                 <div class="card card-body py-5">
                     <h3>My Skills</h3>
                     <hr>
-                    <h4><i class="devicon-html5-plain-wordmark colored"></i> HTML</h4>
+                    <h4>
+                        <i class="devicon-html5-plain-wordmark colored"></i> HTML</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-css3-plain-wordmark colored"></i> CSS</h4>
+                    <h4>
+                        <i class="devicon-css3-plain-wordmark colored"></i> CSS</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-bootstrap-plain-wordmark colored"></i> Bootstrap 4</h4>
+                    <h4>
+                        <i class="devicon-bootstrap-plain-wordmark colored"></i> Bootstrap 4</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-javascript-plain colored"></i> JavaScript</h4>
+                    <h4>
+                        <i class="devicon-javascript-plain colored"></i> JavaScript</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-jquery-plain-wordmark colored"></i> jQuery</h4>
+                    <h4>
+                        <i class="devicon-jquery-plain-wordmark colored"></i> jQuery</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
 
-                    <h4><i class="devicon-php-plain colored"></i> PHP</h4>
+                    <h4>
+                        <i class="devicon-php-plain colored"></i> PHP</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 95%">95%</div>
                     </div>
-                    <h4><i class="devicon-codeigniter-plain-wordmark colored"></i> CodeiCodeigniter</h4>
+                    <h4>
+                        <i class="devicon-codeigniter-plain-wordmark colored"></i> CodeiCodeigniter</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style="width: 80%">80%</div>
                     </div>
-                    <h4><i class="devicon-wordpress-plain-wordmark colored"></i> WordPress</h4>
+                    <h4>
+                        <i class="devicon-wordpress-plain-wordmark colored"></i> WordPress</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-git-plain colored"></i> Git</h4>
+                    <h4>
+                        <i class="devicon-git-plain colored"></i> Git</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-github-plain-wordmark colored"></i> GitHub</h4>
+                    <h4>
+                        <i class="devicon-github-plain-wordmark colored"></i> GitHub</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-bitbucket-plain-wordmark colored"></i> Bitbucket</h4>
+                    <h4>
+                        <i class="devicon-bitbucket-plain-wordmark colored"></i> Bitbucket</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-gulp-plain colored"></i> Gulp</h4>
+                    <h4>
+                        <i class="devicon-gulp-plain colored"></i> Gulp</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-success w-100 progress-bar-striped" role="progressbar">100%</div>
                     </div>
-                    <h4><i class="devicon-nodejs-plain colored"></i> NodeJS</h4>
+                    <h4>
+                        <i class="devicon-nodejs-plain colored"></i> NodeJS</h4>
                     <div class="progress mb-3">
                         <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" style="width: 60%">60%</div>
                     </div>
@@ -200,7 +227,7 @@
                     <h2>Some of my published website so far</h2>
                 </div>
                 <div class="card card-body py-5">
-                    <h3>What Have I Built so far?</h3>
+                    <h3 class="text-center mb-5">What Have I Built so far?</h3>
                     <div class="row">
                         <div class="col-md-3">
                             <a href="src/img/Picit.png" data-fancybox="images" data-caption="Not yet published">
@@ -277,7 +304,8 @@
                     <div class="row">
                         <div class="col-md-6 pr-4 ml-auto text-right">
                             <a href="src/files/Osama_Abbas_CV.pdf" class="btn btn-outline-primary text-white" download="Osama_Abbas_Resume">
-                                <i class="fa fa-cloud-download"></i> <span>Download My Resume</span>
+                                <i class="fa fa-cloud-download"></i>
+                                <span>Download My Resume</span>
                             </a>
                         </div>
                     </div>
