@@ -8,8 +8,7 @@ $('[data-fancybox]').fancybox({
     loop: true
 });
 
-
 $('.toggling-tabs').on('click', function (event) {
-    var targetOffset = $(this).offset().top + 128;
+    var targetOffset = $(this).offset().top;
     $('html, body').animate({scrollTop: targetOffset}, 'slow');
 });
