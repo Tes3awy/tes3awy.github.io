@@ -105,8 +105,16 @@ p.bg-dark {
   width: 53px;
 }
 
-input[type="submit"] {
-  cursor: pointer;
+.send-btn {
+  cursor: not-allowed;
+}
+
+.captcha-col {
+  text-align: -webkit-center;
+}
+
+.contact-alert {
+  width: 60%;
 }
 
 @media (min-width: 1199px) {
