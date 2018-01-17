@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="HTML,CSS,JavaScript,JSON,PHP,Codeigniter,Wordpress,Freelancer,Web Development,Web Designing,Freelancing,Freelance,NodeJS,Angular5,Web Developer,Web Applications">
         <meta name="author" content="Osama Abbas">
-        <meta name="description" content="Osama Abbas Portfolio">
+        <meta name="description" content="Osama Abbas Portfolio - Full Stack Web Developer">
         <link rel="shortcut icon" href="src/img/fina-logo.png" type="image/x-icon">
 
         <title>Osama Abbas | Portfolio</title>
@@ -36,6 +36,9 @@
         <link rel="stylesheet" href="src/css/jquery.fancybox.min.css">
         <!-- My Custom CSS -->
         <link rel="stylesheet" href="src/css/style.css">
+
+        <!-- ReCAPTCHA -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 
     <body>
@@ -266,6 +269,10 @@
 
             <!-- CONTACT -->
             <section class="collapse collapsing sections" id="contact">
+                <div class="alert alert-danger text-center my-4 mx-auto contact-alert" role="alert">
+                    <h3>Currently unavailable!</h2>
+                    <h4>Please contact me through my <strong>social media</strong>.</h4>
+                </div>
                 <div class="card card-body bg-danger text-white py-5">
                     <h2>Contact Me</h2>
                 </div>
@@ -273,13 +280,13 @@
                     <h3>Get in Touch</h3>
                     <div class="row">
                         <div class="col-md-12">
-                            <form>
+                            <form method="POST" class="contact-form">
                                 <div class="form-group">
                                     <div class="input-group input-group-lg">
                                         <span class="input-group-addon bg-danger text-white">
                                             <i class="fa fa-user text-white"></i>
                                         </span>
-                                        <input class="form-control bg-dark text-white" type="text" placeholder="Your Name">
+                                        <input class="form-control bg-dark text-white" type="text" placeholder="Your Name" required id="name">
                                     </div>
                                 </div>
 
@@ -288,8 +295,9 @@
                                         <span class="input-group-addon bg-danger text-white">
                                             <i class="fa fa-envelope text-white"></i>
                                         </span>
-                                        <input class="form-control bg-dark text-white" type="email" placeholder="Email">
+                                        <input class="form-control bg-dark text-white" type="email" placeholder="Email Address" required id="email">
                                     </div>
+                                    <small class="text-muted">Your email will never be published to anyone</small>
                                 </div>
 
                                 <div class="form-group">
@@ -297,11 +305,18 @@
                                         <span class="input-group-addon bg-danger text-white">
                                             <i class="fa fa-pencil text-white"></i>
                                         </span>
-                                        <textarea class="form-control bg-dark text-white" type="text" placeholder="Your Message" rows="5"></textarea>
+                                        <textarea class="form-control bg-dark text-white" type="text" placeholder="Your Message" rows="5" required id="message"></textarea>
                                     </div>
                                 </div>
+
+                                <div class="form-group text-center">
+                                    <div class="col-md-4 mx-auto captcha-col px-0">
+                                        <div class="g-recaptcha" data-sitekey="6LfYREEUAAAAAIisE-kPxQMi2WxBqkDpBgwy22Gl" data-theme="dark" data-callback="recaptcha_callback"></div>
+                                    </div>
+                                </div>
+
                                 <div class="text-center">
-                                    <input type="submit" value="Submit" class="btn btn-danger btn-lg">
+                                    <input type="submit" value="Send" class="btn btn-danger btn-lg send-btn" disabled>
                                 </div>
                             </form>
                         </div>
@@ -330,6 +345,14 @@
         <script src="src/js/bootstrap.min.js"></script>
         <script src="src/js/jquery.fancybox.min.js"></script>
         <script src="src/js/main.js"></script>
+
+        <script>
+            function recaptcha_callback() {
+                var sendBtn = document.querySelector('.send-btn');
+                sendBtn.removeAttribute('disabled');
+                sendBtn.style.cursor = 'default';
+            }
+        </script>
     </body>
 
 </html>
