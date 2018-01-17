@@ -110,6 +110,7 @@ p.bg-dark {
 }
 
 .captcha-col {
+  text-align: center;
   text-align: -webkit-center;
 }
 
