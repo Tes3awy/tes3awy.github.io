@@ -106,10 +106,6 @@ p.bg-dark {
     width: 53px;
 }
 
-input[type='submit'] {
-    cursor: pointer;
-}
-
 .captcha-col .g-recaptcha > div {
     text-align: center;
     width: auto !important;
