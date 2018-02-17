@@ -111,6 +111,30 @@ p.bg-dark {
     width: auto !important;
 }
 
+/*===========================================
+=            Accordion Panes CSS            =
+=============================================*/
+
+.home-pane {
+    background: #29335C;
+}
+
+.resume-pane {
+    background: #272635;
+}
+
+.projects-pane {
+    background: #F3A712;
+}
+
+.contact-pane {
+    background: #2D0320;
+}
+
+/*=====  End of Accordion Panes CSS  ======*/
+
+
+
 @media (min-width: 1199px) {
     .port-item {
         padding: 2em !important;
