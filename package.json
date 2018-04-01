@@ -1,22 +1,22 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "My Portfolio",
-  "main": "index.js",
-  "scripts": {
-    "start": "gulp"
-  },
-  "author": "Osama Abbas",
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "4.0.0",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
-  }
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "My Portfolio",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp"
+    },
+    "author": "Osama Abbas",
+    "license": "MIT",
+    "dependencies": {
+        "bootstrap": "4.0.0",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.3.1",
+        "popper.js": "^1.14.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.23.6",
+        "gulp": "^3.9.1",
+        "gulp-sass": "^3.2.1"
+    }
 }
