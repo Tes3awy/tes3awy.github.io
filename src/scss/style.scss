@@ -70,12 +70,59 @@ p.bg-dark {
     border-radius: 3px;
 }
 
-.form-group {
-    .input-group {
-        .input-group-addon {
-            width: 53px;
+.devicons {
+    font-size: 2.8rem;
+    color: grey;
+    transition: all 0.4s;
+    vertical-align: middle;
+}
+
+.captcha-col {
+    text-align: -webkit-center;
+}
+
+.contact-form {
+    .form-group {
+        .input-group {
+            .form-control {
+                border: 0;
+                font-size: 1rem;
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            .input-group-addon {
+                display: inline-block;
+                padding: 0 1.5rem;
+                text-align: center;
+                position: relative;
+                border: 0;
+                .fa {
+                    font-size: 1.2rem;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        label {
+            font-size: 0.6rem;
         }
     }
+    .send-btn:hover {
+        cursor: not-allowed;
+    }
+}
+
+.download-resume {
+    margin: 1rem 0;
+}
+
+.statcounter {
+    display: none;
 }
 
 @media (min-width: 1199px) {
@@ -98,5 +145,11 @@ p.bg-dark {
             padding-bottom: 15px;
             font-size: 25px;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .download-resume {
+        text-align: center !important;
     }
 }

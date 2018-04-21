@@ -25,24 +25,24 @@ body {
   font-family: 'Calligraffitti', sans-serif;
   text-align: center; }
   .title .name a .fa {
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out; }
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .title .name a .fa-twitter:hover {
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: #0084b4 !important; }
   .title .name a .fa-linkedin:hover {
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    color: #0077B5 !important; }
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #0077b5 !important; }
   .title .name a .fa-github:hover {
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: #6e5494 !important; }
   .title .name a .fa-envelope:hover {
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    color: #CCC !important; }
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #ccc !important; }
 
 .bg-black {
   background-color: #000;
@@ -51,8 +51,47 @@ body {
 p.bg-dark {
   border-radius: 3px; }
 
-.form-group .input-group .input-group-addon {
-  width: 53px; }
+.devicons {
+  font-size: 2.8rem;
+  color: grey;
+  transition: all 0.4s;
+  vertical-align: middle; }
+
+.captcha-col {
+  text-align: -webkit-center; }
+
+.contact-form .form-group .input-group .form-control {
+  border: 0;
+  font-size: 1rem; }
+  .contact-form .form-group .input-group .form-control:focus {
+    outline: none;
+    box-shadow: none; }
+
+.contact-form .form-group .input-group .input-group-addon {
+  display: inline-block;
+  padding: 0 1.5rem;
+  text-align: center;
+  position: relative;
+  border: 0; }
+  .contact-form .form-group .input-group .input-group-addon .fa {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.contact-form .form-group label {
+  font-size: 0.6rem; }
+
+.contact-form .send-btn:hover {
+  cursor: not-allowed; }
+
+.download-resume {
+  margin: 1rem 0; }
+
+.statcounter {
+  display: none; }
 
 @media (min-width: 1199px) {
   .port-item {
@@ -68,3 +107,7 @@ p.bg-dark {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 25px; } }
+
+@media (max-width: 768px) {
+  .download-resume {
+    text-align: center !important; } }

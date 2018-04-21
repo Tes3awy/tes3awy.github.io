@@ -1,3 +1,9 @@
+// Toggling colored class
+$('i.devicons').hover( function () {
+    $(this).toggleClass('colored');
+    $(this).css('color', 'none');
+});
+
 // Collapsing Sections
 $('.port-item').click(function (e) {
     e.preventDefault();
