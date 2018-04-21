@@ -34,28 +34,28 @@ body {
     .name {
         a {
             .fa {
-                -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
             .fa-twitter:hover {
-                -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 color: #0084b4 !important;
             }
             .fa-linkedin:hover {
-                -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
-                color: #0077B5 !important;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                color: #0077b5 !important;
             }
             .fa-github:hover {
-                -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 color: #6e5494 !important;
             }
             .fa-envelope:hover {
-                -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
-                color: #CCC !important;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                color: #ccc !important;
             }
         }
     }
