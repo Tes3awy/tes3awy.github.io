@@ -1,27 +1,29 @@
 // Toggling colored class
-$('i.devicons').hover( function () {
-    $(this).toggleClass('colored');
-    $(this).css('color', 'none');
+$("i.devicons").hover(function() {
+    $(this).toggleClass("colored");
+    $(this).css("color", "none");
 });
 
 // Collapsing Sections
-$('.port-item').click(function (e) {
+$(".port-item").on("click", function(e) {
     e.preventDefault();
-    $('.collapse').collapse('hide');
+    $(".collapse").collapse("hide");
 });
 
 // FancyBox
-$('[data-fancybox]').fancybox({
+$("[data-fancybox]").fancybox({
     protect: true,
-    loop: true
+    loop: true,
 });
 
 // Toggling Tabs Smooth Scroll
-$('.toggling-tabs').on('click', function (event) {
+$(".toggling-tabs").on("click", function(event) {
     var targetOffset = $(this).offset().top;
-    $('html, body').animate({
-        scrollTop: targetOffset
-    }, 'slow');
+    $("html, body").animate({ scrollTop: targetOffset }, "slow");
+});
+
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 // var name = $("#name").val();

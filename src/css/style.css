@@ -1,7 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url("https://fonts.googleapis.com/css?family=Calligraffitti");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 body {
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Raleway", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Titillium Web", sans-serif; }
 
 #main-header img {
   width: 100%;
@@ -10,39 +18,41 @@ body {
 #main-header .port-item {
   width: 100%; }
   #main-header .port-item .fa {
-    font-size: 2em; }
+    font-size: 2rem; }
 
-#main-header .name .fa {
-  padding: 25px;
-  font-size: 25px;
-  color: white; }
+#main-header .name a {
+  color: #fff;
+  padding: 1.5625rem;
+  font-size: 2rem; }
 
 #main-header .port-item:hover {
   opacity: 0.8;
   cursor: pointer; }
 
-.title {
-  font-family: 'Calligraffitti', sans-serif;
+.title .name-title {
+  font-family: "Great Vibes", sans-serif;
   text-align: center; }
+
+.title .name a {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
   .title .name a .fa {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-  .title .name a .fa-twitter:hover {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    color: #0084b4 !important; }
-  .title .name a .fa-linkedin:hover {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    color: #0077b5 !important; }
-  .title .name a .fa-github:hover {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    color: #6e5494 !important; }
-  .title .name a .fa-envelope:hover {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    color: #ccc !important; }
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s; }
+  .title .name a:hover {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+    .title .name a:hover .fa-twitter {
+      color: #0084b4; }
+    .title .name a:hover .fa-linkedin {
+      color: #0077b5; }
+    .title .name a:hover .fa-github {
+      color: #6e5494; }
+    .title .name a:hover .fa-envelope {
+      color: #ccc; }
 
 .bg-black {
   background-color: #000;
@@ -53,11 +63,12 @@ p.bg-dark {
 
 .devicons {
   font-size: 2.8rem;
-  color: grey;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   vertical-align: middle; }
 
 .captcha-col {
+  text-align: center;
   text-align: -webkit-center; }
 
 .contact-form .form-group .input-group .form-control {
@@ -65,7 +76,8 @@ p.bg-dark {
   font-size: 1rem; }
   .contact-form .form-group .input-group .form-control:focus {
     outline: none;
-    box-shadow: none; }
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
 .contact-form .form-group .input-group .input-group-addon {
   display: inline-block;
@@ -79,7 +91,8 @@ p.bg-dark {
     left: 0;
     right: 0;
     top: 50%;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
 
 .contact-form .form-group label {
   font-size: 0.6rem; }
@@ -95,18 +108,18 @@ p.bg-dark {
 
 @media (min-width: 1199px) {
   .port-item {
-    padding: 2em !important; } }
+    padding: 2rem !important; } }
 
 @media (max-width: 576px) {
   .bg-black {
     text-align: center; }
   .title {
     text-align: center;
-    padding-bottom: 15px !important; }
+    padding-bottom: 0.9375rem !important; }
   .name .fa {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 25px; } }
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    font-size: 1.5625rem; } }
 
 @media (max-width: 768px) {
   .download-resume {

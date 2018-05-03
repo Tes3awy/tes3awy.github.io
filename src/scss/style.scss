@@ -1,9 +1,20 @@
 // Main Sass File
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Calligraffitti');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Titillium Web", sans-serif;
+}
+
 #main-header {
     img {
         width: 100%;
@@ -12,14 +23,14 @@ body {
     .port-item {
         width: 100%;
         .fa {
-            font-size: 2em;
+            font-size: 2rem;
         }
     }
     .name {
-        .fa {
-            padding: 25px;
-            font-size: 25px;
-            color: white;
+        a {
+            color: #fff;
+            padding: 1.5625rem;
+            font-size: 2rem;
         }
     }
     .port-item:hover {
@@ -29,33 +40,32 @@ body {
 }
 
 .title {
-    font-family: 'Calligraffitti', sans-serif;
-    text-align: center;
+    .name-title {
+        font-family: "Great Vibes", sans-serif;
+        text-align: center;
+    }
     .name {
         a {
+            transition: all 0.4s;
+            backface-visibility: hidden;
             .fa {
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
+                transition: all 0.4s;
             }
-            .fa-twitter:hover {
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                color: #0084b4 !important;
-            }
-            .fa-linkedin:hover {
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                color: #0077b5 !important;
-            }
-            .fa-github:hover {
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                color: #6e5494 !important;
-            }
-            .fa-envelope:hover {
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                color: #ccc !important;
+            &:hover {
+                transform: scale(1.4);
+                text-shadow: 0 0.5rem 1rem rgba(black, 0.4);
+                .fa-twitter {
+                    color: #0084b4;
+                }
+                .fa-linkedin {
+                    color: #0077b5;
+                }
+                .fa-github {
+                    color: #6e5494;
+                }
+                .fa-envelope {
+                    color: #ccc;
+                }
             }
         }
     }
@@ -72,12 +82,12 @@ p.bg-dark {
 
 .devicons {
     font-size: 2.8rem;
-    color: grey;
     transition: all 0.4s;
     vertical-align: middle;
 }
 
 .captcha-col {
+    text-align: center;
     text-align: -webkit-center;
 }
 
@@ -127,7 +137,7 @@ p.bg-dark {
 
 @media (min-width: 1199px) {
     .port-item {
-        padding: 2em !important;
+        padding: 2rem !important;
     }
 }
 
@@ -137,13 +147,13 @@ p.bg-dark {
     }
     .title {
         text-align: center;
-        padding-bottom: 15px !important;
+        padding-bottom: 0.9375rem !important;
     }
     .name {
         .fa {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            font-size: 25px;
+            padding-top: 0.9375rem;
+            padding-bottom: 0.9375rem;
+            font-size: 1.5625rem;
         }
     }
 }

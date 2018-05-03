@@ -1,22 +1,24 @@
 {
     "name": "portfolio",
-    "version": "4.1.0",
+    "version": "4.1.1",
     "description": "My Portfolio",
     "main": "index.js",
     "scripts": {
         "start": "gulp"
     },
     "author": "Osama Abbas",
-    "license": "MIT",
+    "license": "ISC",
     "dependencies": {
+        "@fancyapps/fancybox": "^3.3.5",
         "bootstrap": "4.1.1",
         "font-awesome": "^4.7.0",
         "jquery": "^3.3.1",
         "popper.js": "^1.14.3"
     },
     "devDependencies": {
-        "browser-sync": "^2.24.2",
+        "browser-sync": "^2.24.3",
         "gulp": "^3.9.1",
+        "gulp-postcss": "^7.0.1",
         "gulp-sass": "^4.0.1"
     }
 }
