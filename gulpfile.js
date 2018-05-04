@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-var postcss = require('gulp-postcss');
+const postcss = require('gulp-postcss');
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 

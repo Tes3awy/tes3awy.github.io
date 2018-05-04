@@ -80,6 +80,12 @@ p.bg-dark {
     border-radius: 3px;
 }
 
+.my-skills {
+    &:hover {
+        cursor: default;
+    }
+}
+
 .devicons {
     font-size: 2.8rem;
     transition: all 0.4s;

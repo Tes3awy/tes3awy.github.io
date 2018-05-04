@@ -1,7 +1,7 @@
 // Toggling colored class
-$("i.devicons").hover(function() {
-    $(this).toggleClass("colored");
-    $(this).css("color", "none");
+$(".my-skills").hover(function() {
+    $(this).find('i.devicons').toggleClass("colored");
+    $(this).find('i.devicons').css("color", "none");
 });
 
 // Collapsing Sections

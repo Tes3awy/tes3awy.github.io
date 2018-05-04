@@ -34,16 +34,12 @@ h5 {
   text-align: center; }
 
 .title .name a {
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
+  backface-visibility: hidden; }
   .title .name a .fa {
-    -webkit-transition: all 0.4s;
     transition: all 0.4s; }
   .title .name a:hover {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
+    transform: scale(1.4);
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
     .title .name a:hover .fa-twitter {
       color: #0084b4; }
@@ -61,9 +57,11 @@ h5 {
 p.bg-dark {
   border-radius: 3px; }
 
+.my-skills:hover {
+  cursor: default; }
+
 .devicons {
   font-size: 2.8rem;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   vertical-align: middle; }
 
@@ -76,8 +74,7 @@ p.bg-dark {
   font-size: 1rem; }
   .contact-form .form-group .input-group .form-control:focus {
     outline: none;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+    box-shadow: none; }
 
 .contact-form .form-group .input-group .input-group-addon {
   display: inline-block;
@@ -91,8 +88,7 @@ p.bg-dark {
     left: 0;
     right: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    transform: translateY(-50%); }
 
 .contact-form .form-group label {
   font-size: 0.6rem; }
