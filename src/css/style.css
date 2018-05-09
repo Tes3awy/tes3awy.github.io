@@ -18,16 +18,18 @@ h5 {
 #main-header .port-item {
   width: 100%; }
   #main-header .port-item .fa {
-    font-size: 2rem; }
+    font-size: 2rem;
+    transition: all .4s;
+    backface-visibility: hidden; }
+  #main-header .port-item:hover {
+    cursor: pointer; }
+    #main-header .port-item:hover .fa {
+      transform: scale(1.2); }
 
 #main-header .name a {
   color: #fff;
   padding: 1.5625rem;
   font-size: 2rem; }
-
-#main-header .port-item:hover {
-  opacity: 0.8;
-  cursor: pointer; }
 
 .title .name-title {
   font-family: "Great Vibes", sans-serif;
@@ -39,8 +41,8 @@ h5 {
   .title .name a .fa {
     transition: all 0.4s; }
   .title .name a:hover {
-    transform: scale(1.4);
-    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    transform: scale(1.4); }
     .title .name a:hover .fa-twitter {
       color: #0084b4; }
     .title .name a:hover .fa-linkedin {
@@ -71,7 +73,9 @@ p.bg-dark {
 
 .contact-form .form-group .input-group .form-control {
   border: 0;
-  font-size: 1rem; }
+  font-size: .8rem; }
+  .contact-form .form-group .input-group .form-control:hover {
+    cursor: not-allowed !important; }
   .contact-form .form-group .input-group .form-control:focus {
     outline: none;
     box-shadow: none; }
@@ -99,8 +103,8 @@ p.bg-dark {
 .download-resume {
   margin: 1rem 0; }
 
-.statcounter {
-  display: none; }
+.projects-cols a img {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); }
 
 @media (min-width: 1199px) {
   .port-item {

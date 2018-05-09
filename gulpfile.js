@@ -1,16 +1,21 @@
 const gulp = require("gulp");
-const postcss = require('gulp-postcss');
+const postcss = require("gulp-postcss");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 
 // Compile Sass & Inject Into Browser
 gulp.task("sass", function() {
-    return gulp
-        .src(["./node_modules/bootstrap/scss/bootstrap.scss", "./src/scss/*.scss"])
-        .pipe(sass())
-        .pipe(postcss())
-        .pipe(gulp.dest("./src/css"))
-        .pipe(browserSync.stream());
+    return (
+        gulp
+            .src([
+                "./node_modules/bootstrap/scss/bootstrap.scss",
+                "./src/scss/*.scss",
+            ])
+            .pipe(sass())
+            // .pipe(postcss())
+            .pipe(gulp.dest("./src/css"))
+            .pipe(browserSync.stream())
+    );
 });
 
 // Move JS Files to src/js
@@ -18,9 +23,9 @@ gulp.task("js", function() {
     return gulp
         .src([
             "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-            "./node_modules/jquery/dist/jquery.min.js",
+            "./bower_components/jquery/dist/jquery.min.js",
             "./node_modules/popper.js/dist/umd/popper.min.js",
-            "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"
+            "./bower_components/fancybox/dist/jquery.fancybox.min.js",
         ])
         .pipe(gulp.dest("./src/js"))
         .pipe(browserSync.stream());
@@ -52,7 +57,7 @@ gulp.task("css", function() {
     return gulp
         .src([
             "./node_modules/font-awesome/css/font-awesome.min.css",
-            "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+            "./bower_components/fancybox/dist/jquery.fancybox.min.css",
         ])
         .pipe(gulp.dest("./src/css"));
 });

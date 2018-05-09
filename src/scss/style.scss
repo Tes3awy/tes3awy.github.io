@@ -24,6 +24,14 @@ h5 {
         width: 100%;
         .fa {
             font-size: 2rem;
+            transition: all .4s;
+            backface-visibility: hidden;
+        }
+        &:hover {
+            cursor: pointer;
+            .fa {
+                transform: scale(1.2);
+            }
         }
     }
     .name {
@@ -32,10 +40,6 @@ h5 {
             padding: 1.5625rem;
             font-size: 2rem;
         }
-    }
-    .port-item:hover {
-        opacity: 0.8;
-        cursor: pointer;
     }
 }
 
@@ -52,8 +56,8 @@ h5 {
                 transition: all 0.4s;
             }
             &:hover {
-                transform: scale(1.4);
                 text-shadow: 0 0.5rem 1rem rgba(black, 0.4);
+                transform: scale(1.4);
                 .fa-twitter {
                     color: #0084b4;
                 }
@@ -102,7 +106,10 @@ p.bg-dark {
         .input-group {
             .form-control {
                 border: 0;
-                font-size: 1rem;
+                font-size: .8rem;
+                &:hover {
+                    cursor: not-allowed !important;
+                }
                 &:focus {
                     outline: none;
                     box-shadow: none;
@@ -137,8 +144,12 @@ p.bg-dark {
     margin: 1rem 0;
 }
 
-.statcounter {
-    display: none;
+.projects-cols {
+    a {
+        img {
+            box-shadow: 0 .5rem 1.5rem rgba(black, 0.2);
+        }
+    }
 }
 
 @media (min-width: 1199px) {

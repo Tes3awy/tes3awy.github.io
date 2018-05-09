@@ -1,28 +1,32 @@
-// Toggling colored class
-$(".my-skills").hover(function() {
-    $(this).find('i.devicons').toggleClass("colored");
-    $(this).find('i.devicons').css("color", "none");
-});
-
-// Collapsing Sections
-$(".port-item").on("click", function(e) {
-    e.preventDefault();
-    $(".collapse").collapse("hide");
-});
-
-// FancyBox
-$("[data-fancybox]").fancybox({
-    protect: true,
-    loop: true,
-});
-
-// Toggling Tabs Smooth Scroll
-$(".toggling-tabs").on("click", function(event) {
-    var targetOffset = $(this).offset().top;
-    $("html, body").animate({ scrollTop: targetOffset }, "slow");
-});
-
 $(document).ready(function() {
+    // Toggling colored class
+    $(".my-skills").hover(function() {
+        $(this)
+            .find("i.devicons")
+            .toggleClass("colored");
+        $(this)
+            .find("i.devicons")
+            .css("color", "none");
+    });
+
+    // Collapsing Sections
+    $(".port-item").on("click", function(e) {
+        e.preventDefault();
+        $(".collapse").collapse("hide");
+    });
+
+    // FancyBox
+    $("[data-fancybox]").fancybox({
+        protect: true,
+        loop: true,
+    });
+
+    // Toggling Tabs Smooth Scroll
+    $(".toggling-tabs").on("click", function(event) {
+        var targetOffset = $(this).offset().top;
+        $("html, body").animate({ scrollTop: targetOffset }, "slow");
+    });
+
     $('[data-toggle="tooltip"]').tooltip();
 });
 
