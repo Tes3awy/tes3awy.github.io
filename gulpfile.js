@@ -2,9 +2,15 @@ const gulp = require("gulp");
 const postcss = require("gulp-postcss");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
+const autoprefixer = require("autoprefixer");
 
 // Compile Sass & Inject Into Browser
 gulp.task("sass", function() {
+    const plugins = [
+        autoprefixer({
+            cascade: true
+        })
+    ];
     return (
         gulp
             .src([
@@ -12,7 +18,7 @@ gulp.task("sass", function() {
                 "./src/scss/*.scss",
             ])
             .pipe(sass())
-            // .pipe(postcss())
+            .pipe(postcss(plugins))
             .pipe(gulp.dest("./src/css"))
             .pipe(browserSync.stream())
     );
@@ -43,6 +49,7 @@ gulp.task("serve", ["sass"], function() {
     );
     gulp.watch("./*.html").on("change", browserSync.reload);
     gulp.watch("./src/js/app.js").on("change", browserSync.reload);
+    gulp.watch("./src/css/style.css").on("change", browserSync.reload);
 });
 
 // Move Fonts to src/fonts
