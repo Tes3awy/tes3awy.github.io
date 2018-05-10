@@ -8,20 +8,19 @@ const autoprefixer = require("autoprefixer");
 gulp.task("sass", function() {
     const plugins = [
         autoprefixer({
-            cascade: true
-        })
+            browsers: ["last 2 versions"],
+            cascade: true,
+        }),
     ];
-    return (
-        gulp
-            .src([
-                "./node_modules/bootstrap/scss/bootstrap.scss",
-                "./src/scss/*.scss",
-            ])
-            .pipe(sass())
-            .pipe(postcss(plugins))
-            .pipe(gulp.dest("./src/css"))
-            .pipe(browserSync.stream())
-    );
+    return gulp
+        .src([
+            "./node_modules/bootstrap/scss/bootstrap.scss",
+            "./src/scss/*.scss",
+        ])
+        .pipe(sass())
+        .pipe(postcss(plugins))
+        .pipe(gulp.dest("./src/css"))
+        .pipe(browserSync.stream());
 });
 
 // Move JS Files to src/js
@@ -43,10 +42,7 @@ gulp.task("serve", ["sass"], function() {
         server: "./",
     });
 
-    gulp.watch(
-        ["./node_modules/bootstrap/scss/bootstrap.scss", "./src/scss/*.scss"],
-        ["sass"]
-    );
+    gulp.watch(["./node_modules/bootstrap/scss/bootstrap.scss", "./src/scss/*.scss"], ["sass"]);
     gulp.watch("./*.html").on("change", browserSync.reload);
     gulp.watch("./src/js/app.js").on("change", browserSync.reload);
     gulp.watch("./src/css/style.css").on("change", browserSync.reload);

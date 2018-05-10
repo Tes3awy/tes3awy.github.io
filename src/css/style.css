@@ -19,6 +19,7 @@ h5 {
   width: 100%; }
   #main-header .port-item .fa {
     font-size: 2rem;
+    -webkit-transition: all .4s;
     transition: all .4s;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
@@ -35,13 +36,16 @@ h5 {
 
 .title .name-title {
   font-family: "Great Vibes", sans-serif;
-  text-align: center; }
+  text-align: center;
+  cursor: crosshair; }
 
 .title .name a {
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
   .title .name a .fa {
+    -webkit-transition: all 0.4s;
     transition: all 0.4s; }
   .title .name a:hover {
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
@@ -68,6 +72,7 @@ p.bg-dark {
 
 .devicons {
   font-size: 2.8rem;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   vertical-align: middle; }
 
@@ -82,7 +87,8 @@ p.bg-dark {
     cursor: not-allowed !important; }
   .contact-form .form-group .input-group .form-control:focus {
     outline: none;
-    box-shadow: none; }
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
 .contact-form .form-group .input-group .input-group-addon {
   display: inline-block;
@@ -109,7 +115,8 @@ p.bg-dark {
   margin: 1rem 0; }
 
 .projects-cols a img {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
 
 @media (min-width: 1199px) {
   .port-item {
