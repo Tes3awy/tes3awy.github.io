@@ -4,6 +4,23 @@ const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const autoprefixer = require("autoprefixer");
 
+// Move CSS to src/css
+gulp.task("css", function() {
+    return gulp
+        .src([
+            "./node_modules/font-awesome/css/font-awesome.min.css",
+            "./bower_components/fancybox/dist/jquery.fancybox.min.css",
+        ])
+        .pipe(gulp.dest("./src/css"));
+});
+
+// Move Fonts to src/fonts
+gulp.task("fonts", function() {
+    return gulp
+        .src("./node_modules/font-awesome/fonts/*")
+        .pipe(gulp.dest("./src/fonts"));
+});
+
 // Compile Sass & Inject Into Browser
 gulp.task("sass", function() {
     const plugins = [
@@ -48,21 +65,5 @@ gulp.task("serve", ["sass"], function() {
     gulp.watch("./src/css/style.css").on("change", browserSync.reload);
 });
 
-// Move Fonts to src/fonts
-gulp.task("fonts", function() {
-    return gulp
-        .src("./node_modules/font-awesome/fonts/*")
-        .pipe(gulp.dest("./src/fonts"));
-});
-
-// Move CSS to src/css
-gulp.task("css", function() {
-    return gulp
-        .src([
-            "./node_modules/font-awesome/css/font-awesome.min.css",
-            "./bower_components/fancybox/dist/jquery.fancybox.min.css",
-        ])
-        .pipe(gulp.dest("./src/css"));
-});
-
+// Default Tasks
 gulp.task("default", ["js", "css", "fonts"]);

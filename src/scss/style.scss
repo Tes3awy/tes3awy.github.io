@@ -3,6 +3,9 @@
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes");
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 
+$color-black: #000;
+$color-white: #fff;
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -36,7 +39,7 @@ h5 {
     }
     .name {
         a {
-            color: #fff;
+            color: $color-white;
             padding: 1.5625rem;
             font-size: 2rem;
         }
@@ -57,7 +60,7 @@ h5 {
                 transition: all 0.4s;
             }
             &:hover {
-                text-shadow: 0 0.5rem 1rem rgba(black, 0.4);
+                text-shadow: 0 0.5rem 1rem rgba($color-black,0.4);
                 transform: scale(1.4);
                 .fa-twitter {
                     color: #0084b4;
@@ -77,8 +80,8 @@ h5 {
 }
 
 .bg-black {
-    background-color: #000;
-    color: #fff;
+    background-color: $color-black;
+    color: $color-white;
 }
 
 p.bg-dark {
@@ -148,7 +151,7 @@ p.bg-dark {
 .projects-cols {
     a {
         img {
-            box-shadow: 0 .5rem 1rem rgba(black, 0.1);
+            box-shadow: 0 .5rem 1rem rgba($color-black, 0.1);
         }
     }
 }
