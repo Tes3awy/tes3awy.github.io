@@ -5,6 +5,10 @@
 
 $color-black: #000;
 $color-white: #fff;
+$color-twitter: #0084b4;
+$color-linkedin: #0077b5;
+$color-github: #6e5494;
+$color-mail: #cccccc;
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -27,7 +31,7 @@ h5 {
         width: 100%;
         .fa {
             font-size: 2rem;
-            transition: all .4s;
+            transition: all 0.4s;
             backface-visibility: hidden;
         }
         &:hover {
@@ -60,19 +64,19 @@ h5 {
                 transition: all 0.4s;
             }
             &:hover {
-                text-shadow: 0 0.5rem 1rem rgba($color-black,0.4);
+                text-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
                 transform: scale(1.4);
                 .fa-twitter {
-                    color: #0084b4;
+                    color: $color-twitter;
                 }
                 .fa-linkedin {
-                    color: #0077b5;
+                    color: $color-linkedin;
                 }
                 .fa-github {
-                    color: #6e5494;
+                    color: $color-github;
                 }
                 .fa-envelope {
-                    color: #ccc;
+                    color: $color-mail;
                 }
             }
         }
@@ -110,7 +114,7 @@ p.bg-dark {
         .input-group {
             .form-control {
                 border: 0;
-                font-size: .8rem;
+                font-size: 0.8rem;
                 &:hover {
                     cursor: not-allowed !important;
                 }
@@ -151,7 +155,7 @@ p.bg-dark {
 .projects-cols {
     a {
         img {
-            box-shadow: 0 .5rem 1rem rgba($color-black, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.1);
         }
     }
 }
