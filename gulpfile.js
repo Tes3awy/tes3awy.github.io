@@ -45,7 +45,7 @@ gulp.task("js", function() {
     return gulp
         .src([
             "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-            "./bower_components/jquery/dist/jquery.min.js",
+            "./node_modules/jquery/dist/jquery.min.js",
             "./node_modules/popper.js/dist/umd/popper.min.js",
             "./bower_components/fancybox/dist/jquery.fancybox.min.js",
         ])
