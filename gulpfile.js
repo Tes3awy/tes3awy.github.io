@@ -3,6 +3,7 @@ const postcss = require("gulp-postcss");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const autoprefixer = require("autoprefixer");
+const imagemin = require("gulp-imagemin");
 
 // Move CSS to src/css
 gulp.task("css", function() {
@@ -19,6 +20,17 @@ gulp.task("fonts", function() {
     return gulp
         .src("./node_modules/font-awesome/fonts/*")
         .pipe(gulp.dest("./src/fonts"));
+});
+
+// Minify Images
+gulp.task("imagemin", function() {
+    return gulp
+        .src("./src/img/*")
+        .pipe(imagemin({
+            verbose: true,
+            progressive: true
+        }))
+        .pipe(gulp.dest("./src/img"));
 });
 
 // Compile Sass & Inject Into Browser
@@ -59,11 +71,14 @@ gulp.task("serve", ["sass"], function() {
         server: "./",
     });
 
-    gulp.watch(["./node_modules/bootstrap/scss/bootstrap.scss", "./src/scss/*.scss"], ["sass"]);
+    gulp.watch(
+        ["./node_modules/bootstrap/scss/bootstrap.scss", "./src/scss/*.scss"],
+        ["sass"]
+    );
     gulp.watch("./*.html").on("change", browserSync.reload);
     gulp.watch("./src/js/app.js").on("change", browserSync.reload);
     gulp.watch("./src/css/style.css").on("change", browserSync.reload);
 });
 
 // Default Tasks
-gulp.task("default", ["js", "css", "fonts"]);
+gulp.task("default", ["js", "css", "fonts", "imagemin"]);
