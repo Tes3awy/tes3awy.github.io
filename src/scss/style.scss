@@ -29,14 +29,14 @@ h5 {
     }
     .port-item {
         width: 100%;
-        .fa {
+        .icon {
             font-size: 2rem;
             transition: all 0.4s;
             backface-visibility: hidden;
         }
         &:hover {
             cursor: pointer;
-            .fa {
+            .icon {
                 transform: scale(1.2);
             }
         }
@@ -65,7 +65,7 @@ h5 {
             }
             &:hover {
                 text-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
-                transform: scale(1.4);
+                transform: scale(1.2);
                 .fa-twitter {
                     color: $color-twitter;
                 }
