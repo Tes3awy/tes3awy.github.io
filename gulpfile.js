@@ -77,7 +77,7 @@ gulp.task("serve", ["sass"], function() {
     );
     gulp.watch("./*.html").on("change", browserSync.reload);
     gulp.watch("./src/js/app.js").on("change", browserSync.reload);
-    gulp.watch("./src/css/style.css").on("change", browserSync.reload);
+    gulp.watch("./src/css/*.css").on("change", browserSync.reload);
 });
 
 // Default Tasks
