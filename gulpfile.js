@@ -112,7 +112,7 @@ gulp.task('imagemin', () => {
 gulp.task('watch', () => {
     gulp.watch('./*.html').on('change', reload);
     gulp.watch('./src/js/app.js', ['minjs']).on('change', reload);
-    gulp.watch('./src/scss/style.scss', ['scss']).on('change', reload);
+    gulp.watch('./src/scss/style.scss', ['scss', 'mincss']).on('change', reload);
 });
 
 // Default Tasks
