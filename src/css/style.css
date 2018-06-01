@@ -84,7 +84,7 @@ p.bg-dark {
   border: 0;
   font-size: 0.8rem; }
   .contact-form .form-group .input-group .form-control:hover {
-    cursor: not-allowed !important; }
+    cursor: not-allowed; }
   .contact-form .form-group .input-group .form-control:focus {
     outline: none;
     -webkit-box-shadow: none;
