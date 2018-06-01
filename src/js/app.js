@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    var myLazyLoad = new LazyLoad();
+
     // Toggling colored class
     $(".my-skills").hover(function() {
         $(this)
