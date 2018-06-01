@@ -1,13 +1,13 @@
 const gulp = require('gulp');
-const postcss = require('gulp-postcss');
-const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const imagemin = require('gulp-imagemin');
 const cssnano = require('cssnano');
-const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
 
+const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
 // Move CSS to src/css
@@ -16,6 +16,7 @@ gulp.task('css', () => {
         .src([
             './node_modules/font-awesome/css/font-awesome.min.css',
             './bower_components/fancybox/dist/jquery.fancybox.min.css',
+            './node_modules/sweetalert2/dist/sweetalert2.min.css'
         ])
         .pipe(gulp.dest('./src/css'));
 });
@@ -25,14 +26,6 @@ gulp.task('fonts', () => {
     return gulp
         .src('./node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('./src/fonts'));
-});
-
-// Minify Images
-gulp.task('imagemin', () => {
-    return gulp
-        .src('./src/img/*')
-        .pipe(imagemin({ verbose: true, progressive: true }))
-        .pipe(gulp.dest('./src/img'));
 });
 
 // Compile Sass & Inject Into Browser
@@ -76,16 +69,10 @@ gulp.task('js', () => {
             './node_modules/popper.js/dist/umd/popper.min.js',
             './bower_components/fancybox/dist/jquery.fancybox.min.js',
             './node_modules/vanilla-lazyload/dist/lazyload.min.js',
+            './node_modules/sweetalert2/dist/sweetalert2.min.js'
         ])
         .pipe(gulp.dest('./src/js'))
         .pipe(browserSync.stream());
-});
-
-// Watch Sass & Serve
-gulp.task('watch', () => {
-    gulp.watch('./*.html').on('change', reload);
-    gulp.watch('./src/js/app.js').on('change', reload);
-    gulp.watch('./src/css/*.css').on('change', reload);
 });
 
 // Minify js
@@ -107,5 +94,26 @@ gulp.task('mincss', () => {
         .pipe(gulp.dest('./src/css/'));
 });
 
+// Minify Images
+gulp.task('imagemin', () => {
+    return gulp
+        .src('./src/img/*')
+        .pipe(
+            imagemin([imagemin.optipng({ optimizationLevel: 5 })], {
+                verbose: true,
+                progressive: true,
+            })
+        )
+        .pipe(rename({ suffix: '-min' }))
+        .pipe(gulp.dest('./src/img/dist'));
+});
+
+// Watch Sass & Serve
+gulp.task('watch', () => {
+    gulp.watch('./*.html').on('change', reload);
+    gulp.watch('./src/js/app.js', ['minjs']).on('change', reload);
+    gulp.watch('./src/scss/style.scss', ['scss']).on('change', reload);
+});
+
 // Default Tasks
-gulp.task('default', ['js', 'css', 'fonts', 'imagemin']);
+gulp.task('default', ['js', 'css', 'fonts']);
