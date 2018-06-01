@@ -11,7 +11,7 @@ const rename = require('gulp-rename');
 const reload = browserSync.reload;
 
 // Move CSS to src/css
-gulp.task('css', function() {
+gulp.task('css', () => {
     return gulp
         .src([
             './node_modules/font-awesome/css/font-awesome.min.css',
@@ -21,14 +21,14 @@ gulp.task('css', function() {
 });
 
 // Move Fonts to src/fonts
-gulp.task('fonts', function() {
+gulp.task('fonts', () => {
     return gulp
         .src('./node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('./src/fonts'));
 });
 
 // Minify Images
-gulp.task('imagemin', function() {
+gulp.task('imagemin', () => {
     return gulp
         .src('./src/img/*')
         .pipe(imagemin({ verbose: true, progressive: true }))
@@ -36,7 +36,7 @@ gulp.task('imagemin', function() {
 });
 
 // Compile Sass & Inject Into Browser
-// gulp.task('sass', function() {
+// gulp.task('sass', () => {
 //     const plugins = [
 //         autoprefixer({
 //             browsers: ['last 2 versions'],
@@ -68,7 +68,7 @@ gulp.task('scss', () => {
 });
 
 // Move JS Files to src/js
-gulp.task('js', function() {
+gulp.task('js', () => {
     return gulp
         .src([
             './node_modules/bootstrap/dist/js/bootstrap.min.js',
@@ -82,7 +82,7 @@ gulp.task('js', function() {
 });
 
 // Watch Sass & Serve
-gulp.task('watch', function() {
+gulp.task('watch', () => {
     gulp.watch('./*.html').on('change', reload);
     gulp.watch('./src/js/app.js').on('change', reload);
     gulp.watch('./src/css/*.css').on('change', reload);
