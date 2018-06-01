@@ -143,21 +143,15 @@ p.bg-dark {
             font-size: 0.6rem;
         }
     }
-    .send-btn:hover {
-        cursor: not-allowed;
+    .send-btn {
+        &:hover {
+            cursor: not-allowed;
+        }
     }
 }
 
 .download-resume {
     margin: 1rem 0;
-}
-
-.projects-cols {
-    a {
-        img {
-            box-shadow: 0 0.5rem 1rem rgba($color-black, 0.1);
-        }
-    }
 }
 
 @media (min-width: 1199px) {

@@ -114,10 +114,6 @@ p.bg-dark {
 .download-resume {
   margin: 1rem 0; }
 
-.projects-cols a img {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
-
 @media (min-width: 1199px) {
   .port-item {
     padding: 2rem !important; } }
