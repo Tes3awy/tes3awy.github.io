@@ -2,11 +2,22 @@
     "name": "portfolio",
     "version": "4.1.1",
     "description": "Osama Abbas a.k.a tes3awy Portfolio",
+    "private": true,
+    "main": "./src/js/app.js",
+    "homepage": "https://tes3awy.github.io/",
     "scripts": {
         "start": "gulp"
     },
-    "author": "Osama Abbas",
-    "license": "ISC",
+    "author": {
+        "name": "Osama Abbas",
+        "email": "osaid2512@gmail.com",
+        "url": "https://tes3awy.github.io/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Tes3awy/tes3awy.github.io.git"
+    },
+    "license": "MIT",
     "dependencies": {
         "bootstrap": "^4.1.1",
         "font-awesome": "^4.7.0",
