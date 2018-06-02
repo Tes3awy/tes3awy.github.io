@@ -114,6 +114,16 @@ p.bg-dark {
 .download-resume {
   margin: 1rem 0; }
 
+.matcss-img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .4s;
+  transition: all .4s; }
+
+.my-skills:hover .matcss-img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0); }
+
 @media (min-width: 1199px) {
   .port-item {
     padding: 2rem !important; } }

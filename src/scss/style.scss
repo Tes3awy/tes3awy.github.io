@@ -154,6 +154,16 @@ p.bg-dark {
     margin: 1rem 0;
 }
 
+.matcss-img {
+    filter: grayscale(100%);
+    transition: all .4s;
+}
+.my-skills:hover {
+    .matcss-img {
+        filter: grayscale(0);
+    }
+}
+
 @media (min-width: 1199px) {
     .port-item {
         padding: 2rem !important;
