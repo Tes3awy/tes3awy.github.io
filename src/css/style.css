@@ -46,18 +46,34 @@ h5 {
           backface-visibility: hidden; }
   .title .name a .fa {
     -webkit-transition: all 0.4s;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
   .title .name a:hover {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     -webkit-transform: scale(1.2);
             transform: scale(1.2); }
     .title .name a:hover .fa-twitter {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
       color: #0084b4; }
     .title .name a:hover .fa-linkedin {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
       color: #0077b5; }
     .title .name a:hover .fa-github {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
       color: #6e5494; }
+    .title .name a:hover .fa-youtube-play {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      color: #FF0000; }
     .title .name a:hover .fa-envelope {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
       color: #cccccc; }
 
 .bg-black {

@@ -8,6 +8,7 @@ $color-white: #fff;
 $color-twitter: #0084b4;
 $color-linkedin: #0077b5;
 $color-github: #6e5494;
+$color-youtube: #FF0000;
 $color-mail: #cccccc;
 
 body {
@@ -62,20 +63,30 @@ h5 {
             backface-visibility: hidden;
             .fa {
                 transition: all 0.4s;
+                backface-visibility: hidden;
             }
             &:hover {
+                backface-visibility: hidden;
                 text-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
                 transform: scale(1.2);
                 .fa-twitter {
+                    backface-visibility: hidden;
                     color: $color-twitter;
                 }
                 .fa-linkedin {
+                    backface-visibility: hidden;
                     color: $color-linkedin;
                 }
                 .fa-github {
+                    backface-visibility: hidden;
                     color: $color-github;
                 }
+                .fa-youtube-play {
+                    backface-visibility: hidden;
+                    color: $color-youtube;
+                }
                 .fa-envelope {
+                    backface-visibility: hidden;
                     color: $color-mail;
                 }
             }
