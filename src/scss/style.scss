@@ -9,7 +9,7 @@ $color-twitter: #0084b4;
 $color-linkedin: #0077b5;
 $color-github: #6e5494;
 $color-youtube: #FF0000;
-$color-mail: #cccccc;
+$color-mail: #ccc;
 
 body {
     font-family: "Montserrat", sans-serif;
@@ -45,7 +45,7 @@ h5 {
     .name {
         a {
             color: $color-white;
-            padding: 1.2rem;
+            padding: 1rem;
             font-size: 2rem;
         }
     }
