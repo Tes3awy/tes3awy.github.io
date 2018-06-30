@@ -23,12 +23,12 @@
         "font-awesome": "^4.7.0",
         "jquery": "^3.3.1",
         "popper.js": "^1.14.3",
-        "sweetalert2": "^7.24.1",
+        "sweetalert2": "^7.24.4",
         "vanilla-lazyload": "^8.7.1"
     },
     "devDependencies": {
-        "autoprefixer": "^8.6.3",
-        "browser-sync": "^2.24.4",
+        "autoprefixer": "^8.6.4",
+        "browser-sync": "^2.24.5",
         "cssnano": "^3.10.0",
         "gulp": "^3.9.1",
         "gulp-imagemin": "^4.1.0",
