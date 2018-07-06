@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes");
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 body {
-  font-family: "Montserrat", sans-serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: "Titillium Web", sans-serif; }
+  font-family: 'Titillium Web', sans-serif; }
 
 #main-header img {
   width: 100%;
@@ -29,49 +29,47 @@ h5 {
       -webkit-transform: scale(1.2);
               transform: scale(1.2); }
 
-#main-header .name a {
-  color: #fff;
-  padding: 1rem;
-  font-size: 2rem; }
-
 .title .name-title {
-  font-family: "Great Vibes", sans-serif;
-  text-align: center;
-  cursor: crosshair; }
+  font-family: 'Great Vibes', sans-serif;
+  text-align: center; }
 
-.title .name a {
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
-  .title .name a .fa {
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden; }
-  .title .name a:hover {
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2); }
-    .title .name a:hover .fa-twitter {
+.title .social-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 0; }
+  .title .social-list--item {
+    display: inline-block;
+    margin: 0 1.5rem; }
+  .title .social-list--link {
+    color: #fff;
+    font-size: 2rem; }
+    .title .social-list--link i.fa {
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s; }
+    .title .social-list--link:hover .fa {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
+    .title .social-list--link:hover .fa-twitter {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       color: #0084b4; }
-    .title .name a:hover .fa-linkedin {
+    .title .social-list--link:hover .fa-linkedin {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       color: #0077b5; }
-    .title .name a:hover .fa-github {
+    .title .social-list--link:hover .fa-github {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       color: #6e5494; }
-    .title .name a:hover .fa-youtube-play {
+    .title .social-list--link:hover .fa-youtube-play {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
-      color: #FF0000; }
-    .title .name a:hover .fa-envelope {
+      color: #ff0000; }
+    .title .social-list--link:hover .fa-envelope {
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       color: #ccc; }
@@ -79,6 +77,8 @@ h5 {
 .bg-black {
   background-color: #000;
   color: #fff; }
+  .bg-black .info-text:hover {
+    text-decoration: none; }
 
 p.bg-dark {
   border-radius: 3px; }
@@ -133,8 +133,8 @@ p.bg-dark {
 .matcss-img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transition: all .4s;
-  transition: all .4s; }
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; }
 
 .my-skills:hover .matcss-img {
   -webkit-filter: grayscale(0);
@@ -147,13 +147,16 @@ p.bg-dark {
 @media (max-width: 576px) {
   .bg-black {
     text-align: center; }
+  .info-text {
+    font-size: 1rem; }
   .title {
     text-align: center;
-    padding-bottom: 0.9375rem !important; }
+    padding: 2.3rem !important; }
+  .name-title {
+    margin-bottom: 1rem; }
   .name .fa {
-    padding-top: 0.9375rem;
-    padding-bottom: 0.9375rem;
-    font-size: 1.5625rem; } }
+    padding: 0.9rem 0;
+    font-size: 1.5rem; } }
 
 @media (max-width: 768px) {
   .download-resume {
