@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    var myLazyLoad = new LazyLoad();
+    var myLazyLoad = new LazyLoad({
+        elements_selector: '.lazy'
+    });
 
     // Toggling colored class
     $('.my-skills').hover(function() {
@@ -24,14 +26,14 @@ $(document).ready(function() {
     });
 
     // Toggling Tabs Smooth Scroll
-    $('.toggling-tabs').on('click', function(event) {
+    $('.toggling-tabs').on('click', function() {
         var targetOffset = $(this).offset().top;
         $('html, body').animate({ scrollTop: targetOffset }, 'slow');
     });
 
     // $('[data-toggle="tooltip"]').tooltip();
 
-    $('.download-btn').on('click', function(e) {
+    $('.download-btn').on('click', function() {
         // e.preventDefault();
         swal({
             position: 'bottom-center',
@@ -40,7 +42,7 @@ $(document).ready(function() {
             text: 'Thank you for downloading my résumé',
             showConfirmButton: false,
             showCloseButton: true,
-            target: document.querySelector('.download-resume')
+            target: document.querySelector('.download-resume'),
         });
     });
 });
@@ -51,13 +53,13 @@ $(document).ready(function() {
 
 // Submit form using AJAX
 // $(function () {
-//     $('.contact-form').on('submit', function (e) {
+//     $('.contact-form').on('submit', (e) => {
 //         e.preventDefault();
 //         $.ajax({
 //             type: 'POST',
 //             url: 'mailto:osaid2512@gmail.com',
 //             data: $('.contact-form').serialize(),
-//             success: function () {
+//             success: () => {
 //                 alert('Your message has been sent successfully. Thank you for contacting me.');
 //             }
 //         });
