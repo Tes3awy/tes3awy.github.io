@@ -6,6 +6,7 @@ const cssnano = require('cssnano');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
+const plumber = require('gulp-plumber');
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -28,33 +29,15 @@ gulp.task('fonts', () => {
         .pipe(gulp.dest('./src/fonts'));
 });
 
-// Compile Sass & Inject Into Browser
-// gulp.task('sass', () => {
-//     const plugins = [
-//         autoprefixer({
-//             browsers: ['last 2 versions'],
-//             cascade: true,
-//         }),
-//     ];
-//     return gulp
-//         .src([
-//             './node_modules/bootstrap/scss/bootstrap.scss',
-//             './src/scss/*.scss',
-//         ])
-//         .pipe(sass())
-//         .pipe(postcss(plugins))
-//         .pipe(gulp.dest('./src/css'))
-//         .pipe(browserSync.stream());
-// });
-
 // My Custom SCSS
 gulp.task('scss', () => {
-    let plugins = [
+    var plugins = [
         autoprefixer({ browsers: ['last 2 versions'], cascade: true }),
     ];
     return gulp
         .src('./src/scss/style.scss')
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(plumber())
+        .pipe(sass.sync())
         .pipe(postcss(plugins))
         .pipe(gulp.dest('./src/css/'))
         .pipe(browserSync.stream());
@@ -79,6 +62,7 @@ gulp.task('js', () => {
 gulp.task('minjs', () => {
     return gulp
         .src('./src/js/app.js')
+        .pipe(plumber())
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./src/js/'));
@@ -86,7 +70,7 @@ gulp.task('minjs', () => {
 
 // Minify CSS
 gulp.task('mincss', () => {
-    let plugins = [cssnano()];
+    var plugins = [cssnano()];
     return gulp
         .src('./src/css/style.css')
         .pipe(postcss(plugins))
