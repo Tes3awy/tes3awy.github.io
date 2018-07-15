@@ -17,7 +17,8 @@ gulp.task('css', () => {
         .src([
             './node_modules/font-awesome/css/font-awesome.min.css',
             './bower_components/fancybox/dist/jquery.fancybox.min.css',
-            './node_modules/sweetalert2/dist/sweetalert2.min.css'
+            './node_modules/sweetalert2/dist/sweetalert2.min.css',
+            './node_modules/bootstrap/dist/css/bootstrap.css',
         ])
         .pipe(gulp.dest('./src/css'));
 });
@@ -28,6 +29,18 @@ gulp.task('fonts', () => {
         .src('./node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('./src/fonts'));
 });
+
+// Bootstrap task
+/* gulp.task('bootstrap', () => {
+    var plugins = [cssnano()];
+    return gulp
+        .src('./node_modules/bootstrap/scss/bootstrap.scss')
+        .pipe(sass.sync())
+        .pipe(gulp.dest('./src/css'))
+        .pipe(postcss(plugins))
+        .pipe(rename({ suffix: '-min' }))
+        .pipe(gulp.dest('./src/css'));
+}); */
 
 // My Custom SCSS
 gulp.task('scss', () => {
@@ -52,7 +65,7 @@ gulp.task('js', () => {
             './node_modules/popper.js/dist/umd/popper.min.js',
             './bower_components/fancybox/dist/jquery.fancybox.min.js',
             './node_modules/vanilla-lazyload/dist/lazyload.min.js',
-            './node_modules/sweetalert2/dist/sweetalert2.min.js'
+            './node_modules/sweetalert2/dist/sweetalert2.min.js',
         ])
         .pipe(gulp.dest('./src/js'))
         .pipe(browserSync.stream());
@@ -96,7 +109,10 @@ gulp.task('imagemin', () => {
 gulp.task('watch', () => {
     gulp.watch('./*.html').on('change', reload);
     gulp.watch('./src/js/app.js', ['minjs']).on('change', reload);
-    gulp.watch('./src/scss/style.scss', ['scss', 'mincss']).on('change', reload);
+    gulp.watch('./src/scss/style.scss', ['scss', 'mincss']).on(
+        'change',
+        reload
+    );
 });
 
 // Default Tasks
