@@ -7,7 +7,7 @@
     "homepage": "https://tes3awy.github.io/",
     "scripts": {
         "start": "gulp",
-        "watch": "gulp watch"
+        "dev-watch": "gulp watch"
     },
     "author": {
         "name": "Osama Abbas",
