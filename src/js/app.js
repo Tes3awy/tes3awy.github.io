@@ -22,7 +22,7 @@ $(document).ready(function() {
     // FancyBox
     $('[data-fancybox]').fancybox({
         protect: true,
-        loop: true,
+        loop: true
     });
 
     // Toggling Tabs Smooth Scroll
@@ -31,10 +31,7 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: targetOffset }, 'slow');
     });
 
-    // $('[data-toggle="tooltip"]').tooltip();
-
     $('.download-btn').on('click', function() {
-        // e.preventDefault();
         swal({
             position: 'bottom-center',
             type: 'success',
@@ -42,7 +39,7 @@ $(document).ready(function() {
             text: 'Thank you for downloading my résumé',
             showConfirmButton: false,
             showCloseButton: true,
-            target: document.querySelector('.download-resume'),
+            target: document.querySelector('.download-resume')
         });
     });
 });
