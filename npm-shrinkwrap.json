@@ -1,5 +1,6 @@
 {
     "name": "portfolio",
+<<<<<<< HEAD
     "version": "4.1.1",
     "lockfileVersion": 1,
     "requires": true,
@@ -11196,4 +11197,8 @@
             }
         }
     }
+=======
+    "version": "4.1.2",
+    "lockfileVersion": 1
+>>>>>>> 2c681eb0139628949b268b1eb94bcf2ace6d5f8a
 }
