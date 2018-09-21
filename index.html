@@ -4,7 +4,6 @@
     <head>
 
         <!-- TODO: Add HammerJS -->
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112079245-1"></script>
         <script>
@@ -68,21 +67,11 @@
                 a.appendChild(r);
             })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
         </script>
-
-        <!-- FontAwesome CSS -->
-        <link rel="stylesheet" href="src/css/font-awesome.min.css">
-        <!-- Linea Icons CSS -->
-        <link rel="stylesheet" href="src/css/linea.css">
         <!-- Devicons -->
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="src/css/bootstrap.min.css">
-        <!-- SweetAlert 2 CSS -->
-        <link rel="stylesheet" href="src/css/sweetalert2.min.css">
-        <!-- FancyBox 3 -->
-        <link rel="stylesheet" href="src/css/jquery.fancybox.min.css">
         <!-- Cookie Consent CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+        <link rel="stylesheet" href="src/css/all.min.css">
         <!-- My Custom CSS -->
         <link rel="stylesheet" href="src/css/style.min.css">
 
@@ -100,7 +89,7 @@
             <header class="shadow" id="main-header">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-md-5 col-sm-12">
-                        <img src="src/img/me.png" alt="Osama Abbas Photo" title="My Photo">
+                        <img src="src/img/me.png" alt="Osama Abbas" title="Osama Abbas">
                     </div>
                     <div class="col-lg-8 col-md-7 col-sm-12">
                         <div class="d-flex flex-column">
@@ -137,7 +126,7 @@
                                 </div>
                             </section>
                             <div class="p-4 bg-black lead text-center">
-                                <h4>Full-time Full Stack PHP Developer and Freelancer</h4>
+                                <h4>Full-time Full Stack Web Developer and Freelancer</h4>
                                 <a href="http://vm.com.eg" class="text-info info-text" title="Vision Media Website">@Vision
                                     Media Egypt</a>
                             </div>
@@ -198,6 +187,10 @@
                             <i class="devicon-mongodb-plain-wordmark devicons"></i> MongoDB</h4>
                         <div class="progress mb-3">
                             <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%">80% & In progress</div>
+                        </div>
+                        <h4 class="my-skills"><i class="devicon-vuejs-plain devicons"></i> Vue.js</h4>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%">50% & In progress</div>
                         </div>
                         <h4 class="my-skills">
                             <i class="devicon-html5-plain-wordmark devicons"></i> HTML5</h4>
@@ -332,7 +325,7 @@
                                 </div>
                                 <div class="card-body">
                                     <p></p>
-                                    <p class="p-2 mb-3 bg-dark text-white rounded-0">Position: Full Stack PHP Developer</p>
+                                    <p class="p-2 mb-3 bg-dark text-white rounded-0">Position: Full Stack Developer</p>
                                     <a href="tel:+201016111706" class="p-2 mb-3 bg-dark text-white d-block" title="My Phone Number">Phone:
                                         +201016111706</a>
                                     <a href="mailto:oabbas@vm.com.eg" class="p-2 mb-3 bg-dark text-white d-block" title="Work Email Address">Email:
@@ -352,7 +345,7 @@
                                 </div>
                                 <div class="card-body">
                                     <p></p>
-                                    <p class="card-text p-2 mb-3 bg-dark text-white rounded-0">Position: Teaching Assistant</p>
+                                    <p class="card-text p-2 mb-3 bg-dark text-white rounded-0">Position: Part time Teaching Assistant</p>
                                     <a href="tel:+201016111706" class="p-2 mb-3 bg-dark text-white d-block" title="My Phone Number">Phone:
                                         +201016111706</a>
                                     <a href="mailto:osama_student.aast.edu" class="p-2 mb-3 bg-dark text-white d-block" title="Work Email Address">Email:
@@ -462,7 +455,7 @@
                                             <span class="input-group-addon contact-pane text-white bg-danger">
                                                 <i class="fa fa-user text-white"></i>
                                             </span>
-                                            <input class="form-control bg-dark text-white" type="text" placeholder="Your Name" id="name" disabled>
+                                            <input class="form-control rounded-0 bg-dark text-white" type="text" placeholder="Your Name" id="name" disabled>
                                         </div>
                                     </div>
 
@@ -471,7 +464,7 @@
                                             <span class="input-group-addon contact-pane text-white bg-danger">
                                                 <i class="fa fa-envelope text-white"></i>
                                             </span>
-                                            <input class="form-control bg-dark text-white" type="email" placeholder="Email Address" id="email" disabled>
+                                            <input class="form-control rounded-0 bg-dark text-white" type="email" placeholder="Email Address" id="email" disabled>
                                         </div>
                                         <label class="text-muted mb-0">Your email will never be published to anyone</label>
                                     </div>
@@ -481,7 +474,7 @@
                                             <span class="input-group-addon contact-pane text-white bg-danger">
                                                 <i class="fa fa-pencil text-white"></i>
                                             </span>
-                                            <textarea class="form-control bg-dark text-white" type="text" placeholder="Your Message" rows="8" id="message" disabled></textarea>
+                                            <textarea class="form-control rounded-0 bg-dark text-white" type="text" placeholder="Your Message" rows="10" id="message" disabled></textarea>
                                         </div>
                                     </div>
 
@@ -489,7 +482,7 @@
                                         <!-- reCAPTCHA Column -->
                                         <div class="col-md-4 mx-auto captcha-col px-0">
                                             <!-- data-callback="recaptcha_callback" -->
-                                            <div class="g-recaptcha" data-sitekey="6LfYREEUAAAAAIisE-kPxQMi2WxBqkDpBgwy22Gl" data-theme="dark"></div>
+                                            <div class="g-recaptcha" data-sitekey="6LfYREEUAAAAAIisE-kPxQMi2WxBqkDpBgwy22Gl" data-theme="light"></div>
                                         </div>
                                     </div>
 
@@ -527,13 +520,7 @@
         </div>
 
         <!-- REQUIRED JS LIBS -->
-        <script src="src/js/jquery.min.js"></script>
-        <script src="src/js/popper.min.js"></script>
-        <script src="src/js/bootstrap.min.js"></script>
-        <script src="src/js/sweetalert2.min.js"></script>
-        <script src="src/js/jquery.fancybox.min.js"></script>
-        <script src="src/js/lazyload.min.js"></script>
-        <script src="src/js/hammer.min.js"></script>
+        <script src="src/js/all.min.js"></script>
         <script src="src/js/app.min.js"></script>
         <!-- Cookie Consent -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
