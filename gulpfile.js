@@ -7,6 +7,7 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const plumber = require('gulp-plumber');
+const concat = require('gulp-concat');
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -46,7 +47,7 @@ gulp.task('fonts', () => {
 // My Custom SCSS
 gulp.task('scss', () => {
     var plugins = [
-        autoprefixer({ browsers: ['last 2 versions'], cascade: true }),
+        autoprefixer({ browsers: ['last 15 versions'], cascade: true }),
     ];
     return gulp
         .src('src/scss/style.scss')
@@ -106,6 +107,35 @@ gulp.task('imagemin', () => {
         .pipe(gulp.dest('src/img/dist'));
 });
 
+// Concat All JS Files
+gulp.task('concat:js', () => {
+    return gulp.src([
+        'src/js/jquery.min.js',
+        'src/js/popper.min.js',
+        'src/js/bootstrap.min.js',
+        'src/js/sweetalert2.min.js',
+        'src/js/jquery.fancybox.min.js',
+        'src/js/lazyload.min.js',
+        'src/js/hammer.min.js',
+    ])
+    .pipe(concat('all.min.js'))
+    .pipe(gulp.dest('src/js'));
+});
+
+// Concat All CSS Files
+gulp.task('concat:css', () => {
+    return gulp.src([
+        'src/css/font-awesome.min.css',
+        'src/css/linea.css',
+        'src/css/bootstrap.min.css',
+        'src/css/sweetalert2.min.css',
+        'src/css/jquery.fancybox.min.css'
+    ])
+    .pipe(postcss([cssnano()]))
+    .pipe(concat('all.min.css'))
+    .pipe(gulp.dest('src/css'));
+});
+
 // Watch Sass & Serve
 gulp.task('watch', () => {
     gulp.watch('*.html').on('change', reload);
@@ -115,6 +145,9 @@ gulp.task('watch', () => {
         reload
     );
 });
+
+// Concat tasks
+gulp.task('concat', ['concat:js', 'concat:css']);
 
 // Default Tasks
 gulp.task('default', ['js', 'css', 'fonts']);
