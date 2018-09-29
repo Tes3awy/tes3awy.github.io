@@ -123,10 +123,11 @@ gulp.task('imagemin', () => {
 gulp.task('minhtml', () => {
     return gulp.src('*.html')
         .pipe(htmlmin({
-            removeComments: true
+            removeComments: true,
+            collapseWhitespace: true
         }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('/'));
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest('./'));
 });
 
 // Concat All JS Files
@@ -160,12 +161,9 @@ gulp.task('concat:css', () => {
 
 // Watch Sass & Serve
 gulp.task('watch', () => {
-    gulp.watch('*.html').on('change', reload);
+    gulp.watch('index.src.html').on('change', reload);
     gulp.watch('src/js/app.js', ['minjs']).on('change', reload);
-    gulp.watch('src/scss/style.scss', ['scss', 'mincss']).on(
-        'change',
-        reload
-    );
+    gulp.watch('src/scss/style.scss', ['scss', 'mincss']).on('change', reload);
 });
 
 // Concat tasks
