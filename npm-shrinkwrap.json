@@ -4,6 +4,12 @@
     "lockfileVersion": 1,
     "requires": true,
     "dependencies": {
+        "@yarnpkg/lockfile": {
+            "version": "1.1.0",
+            "resolved": "https://registry.npmjs.org/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz",
+            "integrity": "sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==",
+            "dev": true
+        },
         "abbrev": {
             "version": "1.1.1",
             "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -1329,26 +1335,13 @@
             "dev": true
         },
         "css-declaration-sorter": {
-            "version": "3.0.1",
-            "resolved": "https://registry.npmjs.org/css-declaration-sorter/-/css-declaration-sorter-3.0.1.tgz",
-            "integrity": "sha512-jH4024SHZ3e0M7ann9VxpFpH3moplRXNz9ZBqvFMZqi09Yo5ARbs2wdPH8GqN9iRTlQynrbGbraNbBxBLei85Q==",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/css-declaration-sorter/-/css-declaration-sorter-4.0.1.tgz",
+            "integrity": "sha512-BcxQSKTSEEQUftYpBVnsH4SF05NTuBokb19/sBt6asXGKZ/6VP7PLG1CBCkFDYOnhXhPh0jMhO6xZ71oYHXHBA==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.1",
                 "timsort": "^0.3.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "css-select": {
@@ -1406,79 +1399,53 @@
             "dev": true
         },
         "cssnano": {
-            "version": "4.1.0",
-            "resolved": "https://registry.npmjs.org/cssnano/-/cssnano-4.1.0.tgz",
-            "integrity": "sha512-7x24b/ghbrQv2QRgqMR12H3ZZ38xYCKJSXfg21YCtnIE177/NyvMkeiuQdWauIgMjySaTZ+cd5PN2qvfbsGeSw==",
+            "version": "4.1.4",
+            "resolved": "https://registry.npmjs.org/cssnano/-/cssnano-4.1.4.tgz",
+            "integrity": "sha512-wP0wbOM9oqsek14CiNRYrK9N3w3jgadtGZKHXysgC/OMVpy0KZgWVPdNqODSZbz7txO9Gekr9taOfcCgL0pOOw==",
             "dev": true,
             "requires": {
                 "cosmiconfig": "^5.0.0",
-                "cssnano-preset-default": "^4.0.0",
+                "cssnano-preset-default": "^4.0.2",
                 "is-resolvable": "^1.0.0",
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "cssnano-preset-default": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/cssnano-preset-default/-/cssnano-preset-default-4.0.0.tgz",
-            "integrity": "sha1-wzQoe099SfstFwqS+SFGVXiOO2s=",
+            "version": "4.0.2",
+            "resolved": "https://registry.npmjs.org/cssnano-preset-default/-/cssnano-preset-default-4.0.2.tgz",
+            "integrity": "sha512-zO9PeP84l1E4kbrdyF7NSLtA/JrJY1paX5FHy5+w/ziIXO2kDqDMfJ/mosXkaHHSa3RPiIY3eB6aEgwx3IiGqA==",
             "dev": true,
             "requires": {
-                "css-declaration-sorter": "^3.0.0",
-                "cssnano-util-raw-cache": "^4.0.0",
-                "postcss": "^6.0.0",
-                "postcss-calc": "^6.0.0",
-                "postcss-colormin": "^4.0.0",
-                "postcss-convert-values": "^4.0.0",
-                "postcss-discard-comments": "^4.0.0",
-                "postcss-discard-duplicates": "^4.0.0",
-                "postcss-discard-empty": "^4.0.0",
-                "postcss-discard-overridden": "^4.0.0",
-                "postcss-merge-longhand": "^4.0.0",
-                "postcss-merge-rules": "^4.0.0",
-                "postcss-minify-font-values": "^4.0.0",
-                "postcss-minify-gradients": "^4.0.0",
-                "postcss-minify-params": "^4.0.0",
-                "postcss-minify-selectors": "^4.0.0",
-                "postcss-normalize-charset": "^4.0.0",
-                "postcss-normalize-display-values": "^4.0.0",
-                "postcss-normalize-positions": "^4.0.0",
-                "postcss-normalize-repeat-style": "^4.0.0",
-                "postcss-normalize-string": "^4.0.0",
-                "postcss-normalize-timing-functions": "^4.0.0",
-                "postcss-normalize-unicode": "^4.0.0",
-                "postcss-normalize-url": "^4.0.0",
-                "postcss-normalize-whitespace": "^4.0.0",
-                "postcss-ordered-values": "^4.0.0",
-                "postcss-reduce-initial": "^4.0.0",
-                "postcss-reduce-transforms": "^4.0.0",
-                "postcss-svgo": "^4.0.0",
-                "postcss-unique-selectors": "^4.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "css-declaration-sorter": "^4.0.1",
+                "cssnano-util-raw-cache": "^4.0.1",
+                "postcss": "^7.0.0",
+                "postcss-calc": "^6.0.2",
+                "postcss-colormin": "^4.0.2",
+                "postcss-convert-values": "^4.0.1",
+                "postcss-discard-comments": "^4.0.1",
+                "postcss-discard-duplicates": "^4.0.2",
+                "postcss-discard-empty": "^4.0.1",
+                "postcss-discard-overridden": "^4.0.1",
+                "postcss-merge-longhand": "^4.0.6",
+                "postcss-merge-rules": "^4.0.2",
+                "postcss-minify-font-values": "^4.0.2",
+                "postcss-minify-gradients": "^4.0.1",
+                "postcss-minify-params": "^4.0.1",
+                "postcss-minify-selectors": "^4.0.1",
+                "postcss-normalize-charset": "^4.0.1",
+                "postcss-normalize-display-values": "^4.0.1",
+                "postcss-normalize-positions": "^4.0.1",
+                "postcss-normalize-repeat-style": "^4.0.1",
+                "postcss-normalize-string": "^4.0.1",
+                "postcss-normalize-timing-functions": "^4.0.1",
+                "postcss-normalize-unicode": "^4.0.1",
+                "postcss-normalize-url": "^4.0.1",
+                "postcss-normalize-whitespace": "^4.0.1",
+                "postcss-ordered-values": "^4.1.1",
+                "postcss-reduce-initial": "^4.0.2",
+                "postcss-reduce-transforms": "^4.0.1",
+                "postcss-svgo": "^4.0.1",
+                "postcss-unique-selectors": "^4.0.1"
             }
         },
         "cssnano-util-get-arguments": {
@@ -1494,31 +1461,18 @@
             "dev": true
         },
         "cssnano-util-raw-cache": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/cssnano-util-raw-cache/-/cssnano-util-raw-cache-4.0.0.tgz",
-            "integrity": "sha1-vgooVuJfGF9feivMBiTii38Xmp8=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/cssnano-util-raw-cache/-/cssnano-util-raw-cache-4.0.1.tgz",
+            "integrity": "sha512-qLuYtWK2b2Dy55I8ZX3ky1Z16WYsx544Q0UWViebptpwn/xDBmog2TLg4f+DBMg1rJ6JDWtn96WHbOKDWt1WQA==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "cssnano-util-same-parent": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/cssnano-util-same-parent/-/cssnano-util-same-parent-4.0.0.tgz",
-            "integrity": "sha1-0qPeEDmqmLxOwlAB+gUDMMKhbaw=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/cssnano-util-same-parent/-/cssnano-util-same-parent-4.0.1.tgz",
+            "integrity": "sha512-WcKx5OY+KoSIAxBW6UBBRay1U6vkYheCdjyVNDm85zt5K9mHoGOfsOsqIszfAqrQQFIIKgjh2+FDgIj/zsl21Q==",
             "dev": true
         },
         "csso": {
@@ -2878,7 +2832,7 @@
         },
         "external-editor": {
             "version": "2.2.0",
-            "resolved": "https://registry.npmjs.org/external-editor/-/external-editor-2.2.0.tgz",
+            "resolved": "http://registry.npmjs.org/external-editor/-/external-editor-2.2.0.tgz",
             "integrity": "sha512-bSn6gvGxKt+b7+6TKEv1ZycHleA7aHhRHyAqJyp5pbUFuYYNIzpZnQDk7AsYckyWdEnTeAnay0aCy2aV6iTk9A==",
             "dev": true,
             "requires": {
@@ -3508,12 +3462,14 @@
                 "balanced-match": {
                     "version": "1.0.0",
                     "bundled": true,
-                    "dev": true
+                    "dev": true,
+                    "optional": true
                 },
                 "brace-expansion": {
                     "version": "1.1.11",
                     "bundled": true,
                     "dev": true,
+                    "optional": true,
                     "requires": {
                         "balanced-match": "^1.0.0",
                         "concat-map": "0.0.1"
@@ -3533,7 +3489,8 @@
                 "concat-map": {
                     "version": "0.0.1",
                     "bundled": true,
-                    "dev": true
+                    "dev": true,
+                    "optional": true
                 },
                 "console-control-strings": {
                     "version": "1.1.0",
@@ -3681,6 +3638,7 @@
                     "version": "3.0.4",
                     "bundled": true,
                     "dev": true,
+                    "optional": true,
                     "requires": {
                         "brace-expansion": "^1.1.7"
                     }
@@ -4026,7 +3984,7 @@
                 },
                 "readable-stream": {
                     "version": "1.1.14",
-                    "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-1.1.14.tgz",
+                    "resolved": "http://registry.npmjs.org/readable-stream/-/readable-stream-1.1.14.tgz",
                     "integrity": "sha1-fPTFTvZI44EwhMY23SB54WbAgdk=",
                     "dev": true,
                     "requires": {
@@ -6786,7 +6744,7 @@
                 },
                 "yargs": {
                     "version": "3.32.0",
-                    "resolved": "https://registry.npmjs.org/yargs/-/yargs-3.32.0.tgz",
+                    "resolved": "http://registry.npmjs.org/yargs/-/yargs-3.32.0.tgz",
                     "integrity": "sha1-AwiOnr+edWtpdRYR0qXvWRSCyZU=",
                     "dev": true,
                     "requires": {
@@ -6802,9 +6760,9 @@
             }
         },
         "needle": {
-            "version": "2.2.3",
-            "resolved": "https://registry.npmjs.org/needle/-/needle-2.2.3.tgz",
-            "integrity": "sha512-GPL22d/U9cai87FcCPO6e+MT3vyHS2j+zwotakDc7kE2DtUAqFKMXLJCTtRp+5S75vXIwQPvIxkvlctxf9q4gQ==",
+            "version": "2.2.4",
+            "resolved": "https://registry.npmjs.org/needle/-/needle-2.2.4.tgz",
+            "integrity": "sha512-HyoqEb4wr/rsoaIDfTH2aVL9nWtQqba2/HvMv+++m8u0dz808MaagKILxtfeSN7QU7nvbQ79zk3vYOJp9zsNEA==",
             "dev": true,
             "requires": {
                 "debug": "^2.1.2",
@@ -7683,165 +7641,74 @@
             }
         },
         "postcss-calc": {
-            "version": "6.0.1",
-            "resolved": "https://registry.npmjs.org/postcss-calc/-/postcss-calc-6.0.1.tgz",
-            "integrity": "sha1-PSQXG79udinUIqQ26/5t2VEfQzA=",
+            "version": "6.0.2",
+            "resolved": "https://registry.npmjs.org/postcss-calc/-/postcss-calc-6.0.2.tgz",
+            "integrity": "sha512-fiznXjEN5T42Qm7qqMCVJXS3roaj9r4xsSi+meaBVe7CJBl8t/QLOXu02Z2E6oWAMWIvCuF6JrvzFekmVEbOKA==",
             "dev": true,
             "requires": {
                 "css-unit-converter": "^1.1.1",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.2",
                 "postcss-selector-parser": "^2.2.2",
                 "reduce-css-calc": "^2.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-colormin": {
-            "version": "4.0.1",
-            "resolved": "https://registry.npmjs.org/postcss-colormin/-/postcss-colormin-4.0.1.tgz",
-            "integrity": "sha1-bxwYoBVbxpYT8v8ThD4uSuj/C74=",
+            "version": "4.0.2",
+            "resolved": "https://registry.npmjs.org/postcss-colormin/-/postcss-colormin-4.0.2.tgz",
+            "integrity": "sha512-1QJc2coIehnVFsz0otges8kQLsryi4lo19WD+U5xCWvXd0uw/Z+KKYnbiNDCnO9GP+PvErPHCG0jNvWTngk9Rw==",
             "dev": true,
             "requires": {
                 "browserslist": "^4.0.0",
                 "color": "^3.0.0",
                 "has": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-convert-values": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-convert-values/-/postcss-convert-values-4.0.0.tgz",
-            "integrity": "sha1-d9d9mu0dxOaVbmUcw0nVMwWHb2I=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-convert-values/-/postcss-convert-values-4.0.1.tgz",
+            "integrity": "sha512-Kisdo1y77KUC0Jmn0OXU/COOJbzM8cImvw1ZFsBgBgMgb1iL23Zs/LXRe3r+EZqM3vGYKdQ2YJVQ5VkJI+zEJQ==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-discard-comments": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-discard-comments/-/postcss-discard-comments-4.0.0.tgz",
-            "integrity": "sha1-loSimedrPpMmPvj9KtvxocCP2I0=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-discard-comments/-/postcss-discard-comments-4.0.1.tgz",
+            "integrity": "sha512-Ay+rZu1Sz6g8IdzRjUgG2NafSNpp2MSMOQUb+9kkzzzP+kh07fP0yNbhtFejURnyVXSX3FYy2nVNW1QTnNjgBQ==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "postcss-discard-duplicates": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-discard-duplicates/-/postcss-discard-duplicates-4.0.0.tgz",
-            "integrity": "sha1-QvPCZ/hfqQngQsNXZ+z9Zcsr1yw=",
+            "version": "4.0.2",
+            "resolved": "https://registry.npmjs.org/postcss-discard-duplicates/-/postcss-discard-duplicates-4.0.2.tgz",
+            "integrity": "sha512-ZNQfR1gPNAiXZhgENFfEglF93pciw0WxMkJeVmw8eF+JZBbMD7jp6C67GqJAXVZP2BWbOztKfbsdmMp/k8c6oQ==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "postcss-discard-empty": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-discard-empty/-/postcss-discard-empty-4.0.0.tgz",
-            "integrity": "sha1-VeGKWcdBKOOMfSgEvPpAVmEfuX8=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-discard-empty/-/postcss-discard-empty-4.0.1.tgz",
+            "integrity": "sha512-B9miTzbznhDjTfjvipfHoqbWKwd0Mj+/fL5s1QOz06wufguil+Xheo4XpOnc4NqKYBCNqqEzgPv2aPBIJLox0w==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "postcss-discard-overridden": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-discard-overridden/-/postcss-discard-overridden-4.0.0.tgz",
-            "integrity": "sha1-Sgv4WXh4TPH4HtLBwf2dlkodofo=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-discard-overridden/-/postcss-discard-overridden-4.0.1.tgz",
+            "integrity": "sha512-IYY2bEDD7g1XM1IDEsUT4//iEYCxAmP5oDSFMVU/JVvT7gh+l4fmjciLqGgwjdWpQIdb0Che2VX00QObS5+cTg==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "postcss-load-config": {
@@ -7879,55 +7746,31 @@
             }
         },
         "postcss-merge-longhand": {
-            "version": "4.0.5",
-            "resolved": "https://registry.npmjs.org/postcss-merge-longhand/-/postcss-merge-longhand-4.0.5.tgz",
-            "integrity": "sha512-tw2obF6I2VhXhPMObQc1QpQO850m3arhqP3PcBAU7Tx70v73QF6brs9uK0XKMNuC7BPo6DW+fh07cGhrLL57HA==",
+            "version": "4.0.6",
+            "resolved": "https://registry.npmjs.org/postcss-merge-longhand/-/postcss-merge-longhand-4.0.6.tgz",
+            "integrity": "sha512-JavnI+V4IHWsaUAfOoKeMEiJQGXTraEy1nHM0ILlE6NIQPEZrJDAnPh3lNGZ5HAk2mSSrwp66JoGhvjp6SqShA==",
             "dev": true,
             "requires": {
                 "css-color-names": "0.0.4",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0",
                 "stylehacks": "^4.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-merge-rules": {
-            "version": "4.0.1",
-            "resolved": "https://registry.npmjs.org/postcss-merge-rules/-/postcss-merge-rules-4.0.1.tgz",
-            "integrity": "sha1-Qw/Vmz8u0uivzQsxJ47aOYVKuxA=",
+            "version": "4.0.2",
+            "resolved": "https://registry.npmjs.org/postcss-merge-rules/-/postcss-merge-rules-4.0.2.tgz",
+            "integrity": "sha512-UiuXwCCJtQy9tAIxsnurfF0mrNHKc4NnNx6NxqmzNNjXpQwLSukUxELHTRF0Rg1pAmcoKLih8PwvZbiordchag==",
             "dev": true,
             "requires": {
                 "browserslist": "^4.0.0",
                 "caniuse-api": "^3.0.0",
                 "cssnano-util-same-parent": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-selector-parser": "^3.0.0",
                 "vendors": "^1.0.0"
             },
             "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                },
                 "postcss-selector-parser": {
                     "version": "3.1.1",
                     "resolved": "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz",
@@ -7942,102 +7785,53 @@
             }
         },
         "postcss-minify-font-values": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-minify-font-values/-/postcss-minify-font-values-4.0.0.tgz",
-            "integrity": "sha1-TMM9KD1qgXWQNudX75gdksvYW+0=",
+            "version": "4.0.2",
+            "resolved": "https://registry.npmjs.org/postcss-minify-font-values/-/postcss-minify-font-values-4.0.2.tgz",
+            "integrity": "sha512-j85oO6OnRU9zPf04+PZv1LYIYOprWm6IA6zkXkrJXyRveDEuQggG6tvoy8ir8ZwjLxLuGfNkCZEQG7zan+Hbtg==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-minify-gradients": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-minify-gradients/-/postcss-minify-gradients-4.0.0.tgz",
-            "integrity": "sha1-P8ORZDnSepu4Bm23za2AFlDrCQ4=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-minify-gradients/-/postcss-minify-gradients-4.0.1.tgz",
+            "integrity": "sha512-pySEW3E6Ly5mHm18rekbWiAjVi/Wj8KKt2vwSfVFAWdW6wOIekgqxKxLU7vJfb107o3FDNPkaYFCxGAJBFyogA==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-arguments": "^4.0.0",
                 "is-color-stop": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-minify-params": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-minify-params/-/postcss-minify-params-4.0.0.tgz",
-            "integrity": "sha1-BekWbuSMBa9lGYnOhNOcG015BnQ=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-minify-params/-/postcss-minify-params-4.0.1.tgz",
+            "integrity": "sha512-h4W0FEMEzBLxpxIVelRtMheskOKKp52ND6rJv+nBS33G1twu2tCyurYj/YtgU76+UDCvWeNs0hs8HFAWE2OUFg==",
             "dev": true,
             "requires": {
                 "alphanum-sort": "^1.0.0",
+                "browserslist": "^4.0.0",
                 "cssnano-util-get-arguments": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0",
                 "uniqs": "^2.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-minify-selectors": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-minify-selectors/-/postcss-minify-selectors-4.0.0.tgz",
-            "integrity": "sha1-sen2xGNBbT/Nyybnt4XZX2FXiq0=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-minify-selectors/-/postcss-minify-selectors-4.0.1.tgz",
+            "integrity": "sha512-8+plQkomve3G+CodLCgbhAKrb5lekAnLYuL1d7Nz+/7RANpBEVdgBkPNwljfSKvZ9xkkZTZITd04KP+zeJTJqg==",
             "dev": true,
             "requires": {
                 "alphanum-sort": "^1.0.0",
                 "has": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-selector-parser": "^3.0.0"
             },
             "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                },
                 "postcss-selector-parser": {
                     "version": "3.1.1",
                     "resolved": "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz",
@@ -8052,292 +7846,137 @@
             }
         },
         "postcss-normalize-charset": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-charset/-/postcss-normalize-charset-4.0.0.tgz",
-            "integrity": "sha1-JFJyknAtXoEp6vo9HeSe1RpqtzA=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-charset/-/postcss-normalize-charset-4.0.1.tgz",
+            "integrity": "sha512-gMXCrrlWh6G27U0hF3vNvR3w8I1s2wOBILvA87iNXaPvSNo5uZAMYsZG7XjCUf1eVxuPfyL4TJ7++SGZLc9A3g==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "postcss-normalize-display-values": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-display-values/-/postcss-normalize-display-values-4.0.0.tgz",
-            "integrity": "sha1-lQ4Me+NEV3ChYP/9a2ZEw8DNj4k=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-display-values/-/postcss-normalize-display-values-4.0.1.tgz",
+            "integrity": "sha512-R5mC4vaDdvsrku96yXP7zak+O3Mm9Y8IslUobk7IMP+u/g+lXvcN4jngmHY5zeJnrQvE13dfAg5ViU05ZFDwdg==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-match": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-positions": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-positions/-/postcss-normalize-positions-4.0.0.tgz",
-            "integrity": "sha1-7pNDq5gbgixjq3JhXszNCFZERaM=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-positions/-/postcss-normalize-positions-4.0.1.tgz",
+            "integrity": "sha512-GNoOaLRBM0gvH+ZRb2vKCIujzz4aclli64MBwDuYGU2EY53LwiP7MxOZGE46UGtotrSnmarPPZ69l2S/uxdaWA==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-arguments": "^4.0.0",
                 "has": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-repeat-style": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-repeat-style/-/postcss-normalize-repeat-style-4.0.0.tgz",
-            "integrity": "sha1-txHFks8W+vn/V15C+hALZ5kIPv8=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-repeat-style/-/postcss-normalize-repeat-style-4.0.1.tgz",
+            "integrity": "sha512-fFHPGIjBUyUiswY2rd9rsFcC0t3oRta4wxE1h3lpwfQZwFeFjXFSiDtdJ7APCmHQOnUZnqYBADNRPKPwFAONgA==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-arguments": "^4.0.0",
                 "cssnano-util-get-match": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-string": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-string/-/postcss-normalize-string-4.0.0.tgz",
-            "integrity": "sha1-cYy20wpvrGrGqDDjLAbAfbxm/l0=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-string/-/postcss-normalize-string-4.0.1.tgz",
+            "integrity": "sha512-IJoexFTkAvAq5UZVxWXAGE0yLoNN/012v7TQh5nDo6imZJl2Fwgbhy3J2qnIoaDBrtUP0H7JrXlX1jjn2YcvCQ==",
             "dev": true,
             "requires": {
                 "has": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-timing-functions": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-timing-functions/-/postcss-normalize-timing-functions-4.0.0.tgz",
-            "integrity": "sha1-A1HymIaqmB1D2RssK9GuptCvbSM=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-timing-functions/-/postcss-normalize-timing-functions-4.0.1.tgz",
+            "integrity": "sha512-1nOtk7ze36+63ONWD8RCaRDYsnzorrj+Q6fxkQV+mlY5+471Qx9kspqv0O/qQNMeApg8KNrRf496zHwJ3tBZ7w==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-match": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-unicode": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-unicode/-/postcss-normalize-unicode-4.0.0.tgz",
-            "integrity": "sha1-Ws1dR7rqXRdnSyzMSuUWb6iM35c=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-unicode/-/postcss-normalize-unicode-4.0.1.tgz",
+            "integrity": "sha512-od18Uq2wCYn+vZ/qCOeutvHjB5jm57ToxRaMeNuf0nWVHaP9Hua56QyMF6fs/4FSUnVIw0CBPsU0K4LnBPwYwg==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0",
+                "browserslist": "^4.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-url": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-url/-/postcss-normalize-url-4.0.0.tgz",
-            "integrity": "sha1-t6nIrSbPJmlMFG6y1ovQz0mVbw0=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-url/-/postcss-normalize-url-4.0.1.tgz",
+            "integrity": "sha512-p5oVaF4+IHwu7VpMan/SSpmpYxcJMtkGppYf0VbdH5B6hN8YNmVyJLuY9FmLQTzY3fag5ESUUHDqM+heid0UVA==",
             "dev": true,
             "requires": {
                 "is-absolute-url": "^2.0.0",
                 "normalize-url": "^3.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-normalize-whitespace": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-normalize-whitespace/-/postcss-normalize-whitespace-4.0.0.tgz",
-            "integrity": "sha1-HafnaxCuY8EYJ/oE/Du0oe/pnMA=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-normalize-whitespace/-/postcss-normalize-whitespace-4.0.1.tgz",
+            "integrity": "sha512-U8MBODMB2L+nStzOk6VvWWjZgi5kQNShCyjRhMT3s+W9Jw93yIjOnrEkKYD3Ul7ChWbEcjDWmXq0qOL9MIAnAw==",
             "dev": true,
             "requires": {
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-ordered-values": {
-            "version": "4.1.0",
-            "resolved": "https://registry.npmjs.org/postcss-ordered-values/-/postcss-ordered-values-4.1.0.tgz",
-            "integrity": "sha512-gbqbEiONKKJgoOKhtzBjFqmHSzviPL4rv0ACVcFS7wxWXBY07agFXRQ7Y3eMGV0ZORzQXp2NGnj0c+imJG0NcA==",
+            "version": "4.1.1",
+            "resolved": "https://registry.npmjs.org/postcss-ordered-values/-/postcss-ordered-values-4.1.1.tgz",
+            "integrity": "sha512-PeJiLgJWPzkVF8JuKSBcylaU+hDJ/TX3zqAMIjlghgn1JBi6QwQaDZoDIlqWRcCAI8SxKrt3FCPSRmOgKRB97Q==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-arguments": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-reduce-initial": {
-            "version": "4.0.1",
-            "resolved": "https://registry.npmjs.org/postcss-reduce-initial/-/postcss-reduce-initial-4.0.1.tgz",
-            "integrity": "sha1-8tWPUM6isMXcEnjW6l7Q/1gpwpM=",
+            "version": "4.0.2",
+            "resolved": "https://registry.npmjs.org/postcss-reduce-initial/-/postcss-reduce-initial-4.0.2.tgz",
+            "integrity": "sha512-epUiC39NonKUKG+P3eAOKKZtm5OtAtQJL7Ye0CBN1f+UQTHzqotudp+hki7zxXm7tT0ZAKDMBj1uihpPjP25ug==",
             "dev": true,
             "requires": {
                 "browserslist": "^4.0.0",
                 "caniuse-api": "^3.0.0",
                 "has": "^1.0.0",
-                "postcss": "^6.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
+                "postcss": "^7.0.0"
             }
         },
         "postcss-reduce-transforms": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-reduce-transforms/-/postcss-reduce-transforms-4.0.0.tgz",
-            "integrity": "sha1-9kX8dEDDUnT0DegQThStcWPt8Yg=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-reduce-transforms/-/postcss-reduce-transforms-4.0.1.tgz",
+            "integrity": "sha512-sZVr3QlGs0pjh6JAIe6DzWvBaqYw05V1t3d9Tp+VnFRT5j+rsqoWsysh/iSD7YNsULjq9IAylCznIwVd5oU/zA==",
             "dev": true,
             "requires": {
                 "cssnano-util-get-match": "^4.0.0",
                 "has": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-selector-parser": {
@@ -8352,52 +7991,26 @@
             }
         },
         "postcss-svgo": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-svgo/-/postcss-svgo-4.0.0.tgz",
-            "integrity": "sha1-wLutAlIPxjbJ14sOhAPi5RXDIoU=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-svgo/-/postcss-svgo-4.0.1.tgz",
+            "integrity": "sha512-YD5uIk5NDRySy0hcI+ZJHwqemv2WiqqzDgtvgMzO8EGSkK5aONyX8HMVFRFJSdO8wUWTuisUFn/d7yRRbBr5Qw==",
             "dev": true,
             "requires": {
                 "is-svg": "^3.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-value-parser": "^3.0.0",
                 "svgo": "^1.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-unique-selectors": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/postcss-unique-selectors/-/postcss-unique-selectors-4.0.0.tgz",
-            "integrity": "sha1-BMHpdkx1h0JhMDQCxB8Ol2n8VQE=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/postcss-unique-selectors/-/postcss-unique-selectors-4.0.1.tgz",
+            "integrity": "sha512-+JanVaryLo9QwZjKrmJgkI4Fn8SBgRO6WXQBJi7KiAVPlmxikB5Jzc4EvXMT2H0/m0RjrVVm9rGNhZddm/8Spg==",
             "dev": true,
             "requires": {
                 "alphanum-sort": "^1.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "uniqs": "^2.0.0"
-            },
-            "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                }
             }
         },
         "postcss-value-parser": {
@@ -8459,7 +8072,7 @@
         },
         "proxy-agent": {
             "version": "2.3.1",
-            "resolved": "https://registry.npmjs.org/proxy-agent/-/proxy-agent-2.3.1.tgz",
+            "resolved": "http://registry.npmjs.org/proxy-agent/-/proxy-agent-2.3.1.tgz",
             "integrity": "sha512-CNKuhC1jVtm8KJYFTS2ZRO71VCBx3QSA92So/e6NrY6GoJonkx3Irnk4047EsCcswczwqAekRj3s8qLRGahSKg==",
             "dev": true,
             "requires": {
@@ -9552,7 +9165,7 @@
             "dependencies": {
                 "kind-of": {
                     "version": "2.0.1",
-                    "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-2.0.1.tgz",
+                    "resolved": "http://registry.npmjs.org/kind-of/-/kind-of-2.0.1.tgz",
                     "integrity": "sha1-AY7HpM5+OobLkUG+UZ0kyPqpgbU=",
                     "dev": true,
                     "requires": {
@@ -9728,9 +9341,9 @@
             }
         },
         "snyk": {
-            "version": "1.97.0",
-            "resolved": "https://registry.npmjs.org/snyk/-/snyk-1.97.0.tgz",
-            "integrity": "sha512-G8MyGfmc6Wr3w2qm9Noz2G5Le5s0Shetx2fvAUJgmOfZCjnX+24KCYG8spGPz0DXcoL9T87dsEfZccUJ9uByzA==",
+            "version": "1.99.1",
+            "resolved": "https://registry.npmjs.org/snyk/-/snyk-1.99.1.tgz",
+            "integrity": "sha512-vN2jUGwHPHAbqqOeZQsBrnWgTvuCnbxsP8i9BIaqZxINeKbuBOS1t5Kg9KMMCRJyqqCB/y76PQSdoqavh4yxkg==",
             "dev": true,
             "requires": {
                 "abbrev": "^1.1.1",
@@ -9741,7 +9354,7 @@
                 "hasbin": "^1.2.3",
                 "inquirer": "^3.0.0",
                 "lodash": "^4.17.5",
-                "needle": "^2.0.1",
+                "needle": "^2.2.4",
                 "opn": "^5.2.0",
                 "os-name": "^2.0.1",
                 "proxy-agent": "^2.0.0",
@@ -9751,17 +9364,17 @@
                 "snyk-config": "2.2.0",
                 "snyk-docker-plugin": "1.11.0",
                 "snyk-go-plugin": "1.5.2",
-                "snyk-gradle-plugin": "1.3.1",
+                "snyk-gradle-plugin": "2.0.1",
                 "snyk-module": "1.8.2",
-                "snyk-mvn-plugin": "1.2.2",
-                "snyk-nodejs-lockfile-parser": "1.4.1",
+                "snyk-mvn-plugin": "2.0.0",
+                "snyk-nodejs-lockfile-parser": "1.5.1",
                 "snyk-nuget-plugin": "1.6.5",
                 "snyk-php-plugin": "1.5.1",
                 "snyk-policy": "1.12.0",
                 "snyk-python-plugin": "1.8.1",
                 "snyk-resolve": "1.0.1",
                 "snyk-resolve-deps": "3.1.0",
-                "snyk-sbt-plugin": "1.3.2",
+                "snyk-sbt-plugin": "2.0.0",
                 "snyk-tree": "^1.0.0",
                 "snyk-try-require": "1.3.1",
                 "source-map-support": "^0.5.9",
@@ -9855,9 +9468,9 @@
             }
         },
         "snyk-gradle-plugin": {
-            "version": "1.3.1",
-            "resolved": "https://registry.npmjs.org/snyk-gradle-plugin/-/snyk-gradle-plugin-1.3.1.tgz",
-            "integrity": "sha512-WJQuJFihqvnOqtV8Psl8W2/XxluSxB/tffHmGXy5b2C2VO56WmEvn1JHTcmvkRBP1KjPtwccMc1e7WeOVT3saQ==",
+            "version": "2.0.1",
+            "resolved": "https://registry.npmjs.org/snyk-gradle-plugin/-/snyk-gradle-plugin-2.0.1.tgz",
+            "integrity": "sha512-dL9MRlwmDP4OmOk4b61pMqvbu8gG+HVCBTryBEU+vkvjloX0lslKvA5NTUPAM2M8SShnOic54cSegGQChBhYHw==",
             "dev": true,
             "requires": {
                 "clone-deep": "^0.3.0"
@@ -9891,17 +9504,18 @@
             }
         },
         "snyk-mvn-plugin": {
-            "version": "1.2.2",
-            "resolved": "https://registry.npmjs.org/snyk-mvn-plugin/-/snyk-mvn-plugin-1.2.2.tgz",
-            "integrity": "sha512-KfT7JZWIxYbLkqhidUyOMNeK/iTwNeHYwqNtycMS3S4i9NfbfrMl73IesxNyJQeGgZ79ms5sg7psqAQj29uZIA==",
+            "version": "2.0.0",
+            "resolved": "https://registry.npmjs.org/snyk-mvn-plugin/-/snyk-mvn-plugin-2.0.0.tgz",
+            "integrity": "sha512-9jAhZhv+7YcqtoQYCYlgMoxK+dWBKlk+wkX27Ebg3vNddNop9q5jZitRXTjsXwfSUZHRt+Ptw1f8vei9kjzZVg==",
             "dev": true
         },
         "snyk-nodejs-lockfile-parser": {
-            "version": "1.4.1",
-            "resolved": "https://registry.npmjs.org/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.4.1.tgz",
-            "integrity": "sha512-xjkf1BHk7HQlp4ABIWPtEvAOAvWhwMtJ7ElQVUvKBHPVHjMEz3mucBRfrtpuyDBJ3DaBlN8Wiw+kcEinX6f09w==",
+            "version": "1.5.1",
+            "resolved": "https://registry.npmjs.org/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.5.1.tgz",
+            "integrity": "sha512-rfFcW+ZrOEH3NxufUCpMBpNLSb4BPOxLbAM6MoRqfYH5DhSdTHsecwRDf1gU6XzQok/9Koav+1qtP8+welJC2A==",
             "dev": true,
             "requires": {
+                "@yarnpkg/lockfile": "^1.0.2",
                 "lodash": "4.17.10",
                 "path": "0.12.7",
                 "source-map-support": "^0.5.7"
@@ -10082,9 +9696,9 @@
             }
         },
         "snyk-sbt-plugin": {
-            "version": "1.3.2",
-            "resolved": "https://registry.npmjs.org/snyk-sbt-plugin/-/snyk-sbt-plugin-1.3.2.tgz",
-            "integrity": "sha512-Pm6G8emW4mDg9hflY0gsdFV5JgR8pHa8D1vCZGJMVSRuGrc64CEg8I1D6977lGoKDwJGePwi4CTcluwj7cNsxQ==",
+            "version": "2.0.0",
+            "resolved": "https://registry.npmjs.org/snyk-sbt-plugin/-/snyk-sbt-plugin-2.0.0.tgz",
+            "integrity": "sha512-bOUqsQ1Lysnwfnvf4QQIBfC0M0ZVuhlshTKd7pNwgAJ41YEPJNrPEpzOePl/HfKtwilEEwHh5YHvjYGegEKx0A==",
             "dev": true
         },
         "snyk-tree": {
@@ -10649,27 +10263,16 @@
             }
         },
         "stylehacks": {
-            "version": "4.0.0",
-            "resolved": "https://registry.npmjs.org/stylehacks/-/stylehacks-4.0.0.tgz",
-            "integrity": "sha1-ZLMjlRxKJOX8ey7AbBN78y0VXoo=",
+            "version": "4.0.1",
+            "resolved": "https://registry.npmjs.org/stylehacks/-/stylehacks-4.0.1.tgz",
+            "integrity": "sha512-TK5zEPeD9NyC1uPIdjikzsgWxdQQN/ry1X3d1iOz1UkYDCmcr928gWD1KHgyC27F50UnE0xCTrBOO1l6KR8M4w==",
             "dev": true,
             "requires": {
                 "browserslist": "^4.0.0",
-                "postcss": "^6.0.0",
+                "postcss": "^7.0.0",
                 "postcss-selector-parser": "^3.0.0"
             },
             "dependencies": {
-                "postcss": {
-                    "version": "6.0.23",
-                    "resolved": "https://registry.npmjs.org/postcss/-/postcss-6.0.23.tgz",
-                    "integrity": "sha512-soOk1h6J3VMTZtVeVpv15/Hpdl2cBLX3CAw4TAbkpTJiNPk9YP/zWcD1ND+xEtvyuuvKzbxliTOIyvkSeSJ6ag==",
-                    "dev": true,
-                    "requires": {
-                        "chalk": "^2.4.1",
-                        "source-map": "^0.6.1",
-                        "supports-color": "^5.4.0"
-                    }
-                },
                 "postcss-selector-parser": {
                     "version": "3.1.1",
                     "resolved": "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-3.1.1.tgz",
@@ -10763,9 +10366,9 @@
             }
         },
         "sweetalert2": {
-            "version": "7.26.29",
-            "resolved": "https://registry.npmjs.org/sweetalert2/-/sweetalert2-7.26.29.tgz",
-            "integrity": "sha512-J6i3MCsn9GNBdvHduC9zzGpN98ySdq9ik1fkoC4OfqVjuCtw5Ehfm9YA4ptSmnSNH6jr4hDZkSIoW16uxxZkqw=="
+            "version": "7.28.4",
+            "resolved": "https://registry.npmjs.org/sweetalert2/-/sweetalert2-7.28.4.tgz",
+            "integrity": "sha512-HEAfIAPactjB8CvgsJClxT+6wv2OGh/KkgvgJ8xR28uAXtx9BUQAlws1mruaS7Jzn8gIt6esx4BEZLaZSGvBZw=="
         },
         "tar": {
             "version": "2.2.1",
@@ -10857,7 +10460,7 @@
         },
         "through": {
             "version": "2.3.8",
-            "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz",
+            "resolved": "http://registry.npmjs.org/through/-/through-2.3.8.tgz",
             "integrity": "sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=",
             "dev": true
         },
@@ -11378,9 +10981,9 @@
             }
         },
         "vanilla-lazyload": {
-            "version": "10.17.0",
-            "resolved": "https://registry.npmjs.org/vanilla-lazyload/-/vanilla-lazyload-10.17.0.tgz",
-            "integrity": "sha512-Fp+LjYLPM3n6s9EpozVWQ5hJ087kcEzbtNqtKns39RLF7HcE/uE+z4ePT2/jp6/KXBhf7N3uw9OG/fgkQgDQNA=="
+            "version": "10.18.0",
+            "resolved": "https://registry.npmjs.org/vanilla-lazyload/-/vanilla-lazyload-10.18.0.tgz",
+            "integrity": "sha512-PX8SuHCPzjL7B3ral1WhCtYNYwB2jqPF26TQ68xtW6TAPezYiCnugZWkFF5xSWG4zTcIMUIPXGSw564mxw6Pnw=="
         },
         "vendors": {
             "version": "1.0.2",
