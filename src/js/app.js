@@ -1,47 +1,47 @@
 $(document).ready(function() {
-    var myLazyLoad = new LazyLoad({
-        elements_selector: '.lazy'
-    });
+  var myLazyLoad = new LazyLoad({
+    elements_selector: '.lazy'
+  });
 
-    // Toggling colored class
-    $('.my-skills').hover(function() {
-        $(this)
-            .find('i.devicons')
-            .toggleClass('colored');
-        $(this)
-            .find('i.devicons')
-            .css('color', 'none');
-    });
+  // Toggling colored class
+  $('.my-skills').hover(function() {
+    $(this)
+      .find('i.devicons')
+      .toggleClass('colored');
+    $(this)
+      .find('i.devicons')
+      .css('color', 'none');
+  });
 
-    // Collapsing Sections
-    $('.port-item').on('click', function(e) {
-        e.preventDefault();
-        $('.collapse').collapse('hide');
-    });
+  // Collapsing Sections
+  $('.port-item').on('click', function(e) {
+    e.preventDefault();
+    $('.collapse').collapse('hide');
+  });
 
-    // FancyBox
-    $('[data-fancybox]').fancybox({
-        protect: true,
-        loop: true
-    });
+  // FancyBox
+  $('[data-fancybox]').fancybox({
+    protect: true,
+    loop: true
+  });
 
-    // Toggling Tabs Smooth Scroll
-    $('.toggling-tabs').on('click', function() {
-        var targetOffset = $(this).offset().top;
-        $('html, body').animate({ scrollTop: targetOffset }, 'slow');
-    });
+  // Toggling Tabs Smooth Scroll
+  $('.toggling-tabs').on('click', function() {
+    var targetOffset = $(this).offset().top;
+    $('html, body').animate({ scrollTop: targetOffset }, 'slow');
+  });
 
-    $('.download-btn').on('click', function() {
-        swal({
-            position: 'bottom-center',
-            type: 'success',
-            title: 'My Résumé',
-            text: 'Thank you for downloading my résumé',
-            showConfirmButton: false,
-            showCloseButton: true,
-            target: document.querySelector('.download-resume')
-        });
+  $('.download-btn').on('click', function() {
+    swal({
+      position: 'bottom-center',
+      type: 'success',
+      title: 'My Résumé',
+      text: 'Thank you for downloading my résumé',
+      showConfirmButton: false,
+      showCloseButton: true,
+      target: document.querySelector('.download-resume')
     });
+  });
 });
 
 // var name = $("#name").val();

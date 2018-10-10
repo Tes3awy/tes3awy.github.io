@@ -12,7 +12,7 @@ $color-youtube: #ff0000;
 $color-mail: #ccc;
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1,
@@ -20,227 +20,227 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #main-header {
-    img {
-        width: 100%;
-        height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .port-item {
+    width: 100%;
+
+    .icon {
+      font-size: 2rem;
+      transition: all 0.4s;
+      backface-visibility: hidden;
     }
 
-    .port-item {
-        width: 100%;
+    &:hover {
+      cursor: pointer;
 
-        .icon {
-            font-size: 2rem;
-            transition: all 0.4s;
-            backface-visibility: hidden;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            .icon {
-                transform: scale(1.1);
-            }
-        }
+      .icon {
+        transform: scale(1.1);
+      }
     }
+  }
 }
 
 .title {
-    .name-title {
-        font-family: 'Great Vibes', sans-serif;
-        text-align: center;
+  .name-title {
+    font-family: 'Great Vibes', sans-serif;
+    text-align: center;
+  }
+
+  .social-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 0;
+
+    &--item {
+      display: inline-block;
+      margin: 0 1.5rem;
     }
 
-    .social-list {
-        list-style: none;
-        padding-left: 0;
-        text-align: center;
-        margin-bottom: 0;
+    &--link {
+      color: $color-white;
+      font-size: 2rem;
 
-        &--item {
-            display: inline-block;
-            margin: 0 1.5rem;
+      i.fa {
+        transition: all 0.4s;
+      }
+
+      &:hover {
+        .fa {
+          backface-visibility: hidden;
+          text-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+          transform: scale(1.2);
         }
 
-        &--link {
-            color: $color-white;
-            font-size: 2rem;
-
-            i.fa {
-                transition: all 0.4s;
-            }
-
-            &:hover {
-                .fa {
-                    backface-visibility: hidden;
-                    text-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
-                    transform: scale(1.2);
-                }
-
-                .fa-twitter {
-                    backface-visibility: hidden;
-                    color: $color-twitter;
-                }
-
-                .fa-linkedin {
-                    backface-visibility: hidden;
-                    color: $color-linkedin;
-                }
-
-                .fa-github {
-                    backface-visibility: hidden;
-                    color: $color-github;
-                }
-
-                .fa-youtube-play {
-                    backface-visibility: hidden;
-                    color: $color-youtube;
-                }
-
-                .fa-envelope {
-                    backface-visibility: hidden;
-                    color: $color-mail;
-                }
-            }
+        .fa-twitter {
+          backface-visibility: hidden;
+          color: $color-twitter;
         }
+
+        .fa-linkedin {
+          backface-visibility: hidden;
+          color: $color-linkedin;
+        }
+
+        .fa-github {
+          backface-visibility: hidden;
+          color: $color-github;
+        }
+
+        .fa-youtube-play {
+          backface-visibility: hidden;
+          color: $color-youtube;
+        }
+
+        .fa-envelope {
+          backface-visibility: hidden;
+          color: $color-mail;
+        }
+      }
     }
+  }
 }
 
 .bg-black {
-    background-color: $color-black;
-    color: $color-white;
+  background-color: $color-black;
+  color: $color-white;
 
-    .info-text {
-        &:hover {
-            text-decoration: none;
-        }
+  .info-text {
+    &:hover {
+      text-decoration: none;
     }
+  }
 }
 
 p.bg-dark {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 .my-skills {
-    &:hover {
-        cursor: default;
-    }
+  &:hover {
+    cursor: default;
+  }
 }
 
 .devicons {
-    font-size: 2.8rem;
-    transition: all 0.4s;
-    vertical-align: middle;
+  font-size: 2.8rem;
+  transition: all 0.4s;
+  vertical-align: middle;
 }
 
 .captcha-col {
-    text-align: center;
-    text-align: -webkit-center;
+  text-align: center;
+  text-align: -webkit-center;
 }
 
 .contact-form {
-    .form-group {
-        .input-group {
-            .form-control {
-                border: 0;
-                font-size: 0.8rem;
+  .form-group {
+    .input-group {
+      .form-control {
+        border: 0;
+        font-size: 0.8rem;
 
-                &:hover {
-                    cursor: not-allowed;
-                }
-
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-
-            #message {
-                height: 100px;
-            }
-
-            .input-group-addon {
-                display: inline-block;
-                padding: 0 1.5rem;
-                text-align: center;
-                position: relative;
-                border: 0;
-
-                .fa {
-                    font-size: 1.2rem;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
-
-        label {
-            font-size: 0.6rem;
-        }
-    }
-
-    .send-btn {
         &:hover {
-            cursor: not-allowed;
+          cursor: not-allowed;
         }
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      #message {
+        height: 100px;
+      }
+
+      .input-group-addon {
+        display: inline-block;
+        padding: 0 1.5rem;
+        text-align: center;
+        position: relative;
+        border: 0;
+
+        .fa {
+          font-size: 1.2rem;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
     }
+
+    label {
+      font-size: 0.6rem;
+    }
+  }
+
+  .send-btn {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
 }
 
 .download-resume {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .matcss-img {
-    filter: grayscale(100%);
-    transition: all 0.4s;
+  filter: grayscale(100%);
+  transition: all 0.4s;
 }
 
 .my-skills:hover {
-    .matcss-img {
-        filter: grayscale(0);
-    }
+  .matcss-img {
+    filter: grayscale(0);
+  }
 }
 
 @media (min-width: 1199px) {
-    .port-item {
-        padding: 2rem !important;
-    }
+  .port-item {
+    padding: 2rem !important;
+  }
 }
 
 @media (max-width: 576px) {
-    .bg-black {
-        text-align: center;
-    }
+  .bg-black {
+    text-align: center;
+  }
 
-    .info-text {
-        font-size: 1rem;
-    }
+  .info-text {
+    font-size: 1rem;
+  }
 
-    .title {
-        text-align: center;
-        padding: 2.3rem !important;
-    }
+  .title {
+    text-align: center;
+    padding: 2.3rem !important;
+  }
 
-    .name-title {
-        margin-bottom: 1rem;
-    }
+  .name-title {
+    margin-bottom: 1rem;
+  }
 
-    .name {
-        .fa {
-            padding: 0.9rem 0;
-            font-size: 1.5rem;
-        }
+  .name {
+    .fa {
+      padding: 0.9rem 0;
+      font-size: 1.5rem;
     }
+  }
 }
 
 @media (max-width: 768px) {
-    .download-resume {
-        text-align: center !important;
-    }
+  .download-resume {
+    text-align: center !important;
+  }
 }
