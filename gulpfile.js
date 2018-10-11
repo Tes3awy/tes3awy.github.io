@@ -70,7 +70,7 @@ gulp.task('js', () => {
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/popper.js/dist/umd/popper.min.js',
       'bower_components/fancybox/dist/jquery.fancybox.min.js',
-      'node_modules/vanilla-lazyload/dist/lazyload.min.js',
+      'node_modules/lazysizes/lazysizes.min.js',
       'node_modules/sweetalert2/dist/sweetalert2.min.js'
     ])
     .pipe(gulp.dest('src/js'))
@@ -153,7 +153,7 @@ gulp.task('concat:js', () => {
       'src/js/bootstrap.min.js',
       'src/js/sweetalert2.min.js',
       'src/js/jquery.fancybox.min.js',
-      'src/js/lazyload.min.js',
+      'src/js/lazysizes.min.js',
       'src/js/hammer.min.js'
     ])
     .pipe(concat('all.min.js'))
