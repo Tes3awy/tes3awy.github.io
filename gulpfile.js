@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const csscomb = require('gulp-csscomb');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
@@ -57,6 +58,7 @@ gulp.task('scss', () => {
     .src('src/scss/style.scss')
     .pipe(plumber())
     .pipe(sass.sync())
+    .pipe(csscomb())
     .pipe(postcss(plugins))
     .pipe(gulp.dest('src/css/'))
     .pipe(browserSync.stream());
@@ -113,7 +115,7 @@ gulp.task('imagemin', () => {
       imagemin(
         [
           imagemin.optipng({
-            optimizationLevel: 5
+            optimizationLevel: 6
           })
         ],
         {
@@ -154,7 +156,8 @@ gulp.task('concat:js', () => {
       'src/js/sweetalert2.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.min.js',
-      'src/js/hammer.min.js'
+      'src/js/hammer.min.js',
+      'src/js/app.min.js'
     ])
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('src/js'));
@@ -168,7 +171,8 @@ gulp.task('concat:css', () => {
       'src/css/linea.css',
       'src/css/bootstrap.min.css',
       'src/css/sweetalert2.min.css',
-      'src/css/jquery.fancybox.min.css'
+      'src/css/jquery.fancybox.min.css',
+      'src/css/style.min.css'
     ])
     .pipe(postcss([cssnano()]))
     .pipe(concat('all.min.css'))
@@ -177,9 +181,9 @@ gulp.task('concat:css', () => {
 
 // Watch Sass & Serve
 gulp.task('watch', () => {
-  gulp.watch('index.src.html').on('change', reload);
-  gulp.watch('src/js/app.js', ['minjs']).on('change', reload);
-  gulp.watch('src/scss/style.scss', ['scss', 'mincss']).on('change', reload);
+  gulp.watch('*.html').on('change', reload);
+  gulp.watch('src/js/app.js', ['minjs', 'concat:js']).on('change', reload);
+  gulp.watch('src/scss/style.scss', ['scss', 'mincss', 'concat:css']).on('change', reload);
 });
 
 // Concat tasks
