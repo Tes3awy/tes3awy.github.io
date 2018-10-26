@@ -1,15 +1,18 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-const postcss = require('gulp-postcss');
+
 const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 const csscomb = require('gulp-csscomb');
-const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
-const plumber = require('gulp-plumber');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+
 const concat = require('gulp-concat');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+
+const htmlmin = require('gulp-html-minifier');
+const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -133,16 +136,24 @@ gulp.task('imagemin', () => {
 });
 
 // Minify HTML File
-gulp.task('minhtml', () => {
+gulp.task('minify-html', () => {
+  const options = {
+    caseSensitive: true,
+    collapseBooleanAttributes: true,
+    removeComments: true,
+    collapseWhitespace: true,
+    quoteCharacter: "",
+    removeEmptyAttributes: true,
+    removeRedundantAttributes: true,
+    removeScriptTypeAttributes: true,
+    sortAttributes: true,
+    sortClassName: true
+  };
   return gulp
-    .src('*.html')
-    .pipe(
-      htmlmin({
-        removeComments: true,
-        collapseWhitespace: true
-      })
-    )
-    .pipe(rename('index.html'))
+    .src('index.src.html')
+    .pipe(plumber())
+    .pipe(htmlmin(options))
+    .pipe(rename({ basename: 'index', extname: '.html' }))
     .pipe(gulp.dest('./'));
 });
 
@@ -183,7 +194,10 @@ gulp.task('concat:css', () => {
 gulp.task('watch', () => {
   gulp.watch('*.html').on('change', reload);
   gulp.watch('src/js/app.js', ['minjs', 'concat:js']).on('change', reload);
-  gulp.watch('src/scss/style.scss', ['scss', 'mincss', 'concat:css']).on('change', reload);
+  gulp
+    .watch('src/scss/style.scss', ['scss', 'mincss', 'concat:css'])
+    .on('change', reload);
+  gulp.watch('*.html', ['minify-html']).on('change', reload);
 });
 
 // Concat tasks

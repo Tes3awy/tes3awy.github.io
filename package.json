@@ -1,9 +1,7 @@
 {
-  "name": "portfolio",
-  "version": "4.1.2",
+  "name": "tes3awy-portfolio",
+  "version": "5.0.0",
   "description": "Osama Abbas a.k.a tes3awy Portfolio",
-  "private": false,
-  "port": 5500,
   "main": "src/js/app.js",
   "homepage": "https://tes3awy.github.io/",
   "scripts": {
@@ -28,22 +26,22 @@
     "jquery": "^3.3.1",
     "lazysizes": "^4.1.4",
     "popper.js": "^1.14.4",
-    "sweetalert2": "^7.28.7"
+    "sweetalert2": "^7.28.10"
   },
   "devDependencies": {
-    "autoprefixer": "^9.2.1",
+    "autoprefixer": "^9.3.1",
     "browser-sync": "^2.26.3",
-    "cssnano": "^4.1.5",
+    "cssnano": "^4.1.7",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-csscomb": "^3.0.8",
-    "gulp-htmlmin": "^5.0.1",
+    "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "snyk": "^1.104.1"
+    "snyk": "^1.105.0"
   }
 }
