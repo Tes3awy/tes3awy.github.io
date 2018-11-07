@@ -40,11 +40,8 @@ h5 {
 .title .name-title {
   font-family: 'Titillium Web', sans-serif !important;
   text-align: center;
-  color: transparent;
-  -webkit-text-stroke: 0.5px #fff;
+  color: #fff;
   font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .title .social-list {
