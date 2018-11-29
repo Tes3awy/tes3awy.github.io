@@ -25,13 +25,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "lazysizes": "^4.1.4",
-<<<<<<< HEAD
     "popper.js": "^1.14.6",
     "sweetalert2": "^7.29.2"
-=======
-    "popper.js": "^1.14.4",
-    "sweetalert2": "^7.28.12"
->>>>>>> c46838936e65f5934ed7baa30035501f93d2a3ec
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
@@ -42,19 +37,11 @@
     "gulp-csscomb": "^3.0.8",
     "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^5.0.3",
-<<<<<<< HEAD
     "gulp-plumber": "^1.2.1",
-=======
-    "gulp-plumber": "^1.2.0",
->>>>>>> c46838936e65f5934ed7baa30035501f93d2a3ec
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-<<<<<<< HEAD
     "snyk": "^1.111.1"
-=======
-    "snyk": "^1.108.0"
->>>>>>> c46838936e65f5934ed7baa30035501f93d2a3ec
   }
 }
