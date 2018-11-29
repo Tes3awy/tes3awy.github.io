@@ -25,8 +25,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "lazysizes": "^4.1.4",
-    "popper.js": "^1.14.4",
-    "sweetalert2": "^7.28.10"
+    "popper.js": "^1.14.6",
+    "sweetalert2": "^7.29.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
@@ -36,12 +36,12 @@
     "gulp-concat": "^2.6.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-html-minifier": "^0.1.8",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.2.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "snyk": "^1.105.0"
+    "snyk": "^1.111.1"
   }
 }
