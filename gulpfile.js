@@ -60,7 +60,7 @@ gulp.task('scss', () => {
   return gulp
     .src('src/scss/style.scss')
     .pipe(plumber())
-    .pipe(sass.sync())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(csscomb())
     .pipe(postcss(plugins))
     .pipe(gulp.dest('src/css/'))
@@ -74,9 +74,9 @@ gulp.task('js', () => {
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/popper.js/dist/umd/popper.min.js',
-      'bower_components/fancybox/dist/jquery.fancybox.min.js',
       'node_modules/lazysizes/lazysizes.min.js',
-      'node_modules/sweetalert2/dist/sweetalert2.min.js'
+      'node_modules/sweetalert2/dist/sweetalert2.min.js',
+      'bower_components/fancybox/dist/jquery.fancybox.min.js'
     ])
     .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream());
