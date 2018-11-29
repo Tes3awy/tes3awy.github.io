@@ -41,6 +41,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-strip-comments": "^2.5.2",
     "gulp-uglify": "^3.0.1",
     "snyk": "^1.111.1"
   }

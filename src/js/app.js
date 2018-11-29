@@ -40,6 +40,8 @@ $(document).ready(function() {
   });
 });
 
+console.log("%cBelieve me, there is nothing important here for you :P!", "color: #ff8100; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #000 1px 1px 1px;");
+
 // var name = $("#name").val();
 // var email = $("#email").val();
 // var message = $("#message").val();

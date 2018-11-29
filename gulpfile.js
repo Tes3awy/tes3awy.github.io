@@ -13,6 +13,7 @@ const rename = require('gulp-rename');
 const htmlmin = require('gulp-html-minifier');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
+const strip = require('gulp-strip-comments');
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -22,10 +23,10 @@ gulp.task('css', () => {
   return gulp
     .src([
       'node_modules/font-awesome/css/font-awesome.min.css',
-      'bower_components/fancybox/dist/jquery.fancybox.min.css',
       'node_modules/sweetalert2/dist/sweetalert2.min.css',
       'node_modules/bootstrap/dist/css/bootstrap.css',
-      'node_modules/bootstrap/dist/css/bootstrap.min.css'
+      'node_modules/bootstrap/dist/css/bootstrap.min.css',
+      'bower_components/fancybox/dist/jquery.fancybox.min.css'
     ])
     .pipe(gulp.dest('src/css'));
 });
@@ -170,6 +171,7 @@ gulp.task('concat:js', () => {
       'src/js/hammer.min.js',
       'src/js/app.min.js'
     ])
+    .pipe(strip())
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('src/js'));
 });
