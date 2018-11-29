@@ -31,8 +31,8 @@ $(document).ready(function() {
     swal({
       position: 'bottom-center',
       type: 'success',
-      title: 'My Résumé',
-      text: 'Thank you for downloading my résumé',
+      title: 'My Resume',
+      text: 'Thank you for downloading my resume',
       showConfirmButton: false,
       showCloseButton: true,
       target: document.querySelector('.download-resume')
