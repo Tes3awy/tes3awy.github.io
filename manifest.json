@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://tes3awy.github.io/",
+  "start_url": ".",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone"

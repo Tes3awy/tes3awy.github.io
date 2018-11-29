@@ -6,23 +6,6 @@ const staticAssets = [
   './src/img/*'
 ];
 
-window.addEventListener('load', (e) => {
-  new PWAConfApp();
-  registerSW();
-});
-
-async function registerSW() {
-  if ('serviceWorker' in navigator) {
-    try {
-      await navigator.serviceWorker.register('./sw.js');
-    } catch (error) {
-      alert('ServiceWorker registration failed. Sorry about that!');
-    }
-  } else {
-    document.querySelector('.alert').removeAttribute('hidden');
-  }
-}
-
 self.addEventListener('install', async (event) => {
   const cache = await caches.open(cacheName);
   await cache.addAll(staticAssets);
