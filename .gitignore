@@ -4,3 +4,4 @@ bower_components
 ._*
 npm-debug.log
 *.lock
+src/vendor

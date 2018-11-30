@@ -13,7 +13,9 @@ const rename = require('gulp-rename');
 const htmlmin = require('gulp-html-minifier');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
+
 const strip = require('gulp-strip-comments');
+const stripCssComments = require('gulp-strip-css-comments');
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -39,8 +41,8 @@ gulp.task('fonts', () => {
 });
 
 // Bootstrap task
-/* gulp.task('bootstrap', () => {
-    var plugins = [cssnano()];
+gulp.task('bootstrap', () => {
+    const plugins = [cssnano()];
     return gulp
         .src('node_modules/bootstrap/scss/bootstrap.scss')
         .pipe(sass.sync())
@@ -48,11 +50,11 @@ gulp.task('fonts', () => {
         .pipe(postcss(plugins))
         .pipe(rename({ suffix: '-min' }))
         .pipe(gulp.dest('src/css'));
-}); */
+});
 
 // My Custom SCSS
 gulp.task('scss', () => {
-  var plugins = [
+  const plugins = [
     autoprefixer({
       browsers: ['last 15 versions'],
       cascade: true
@@ -180,14 +182,15 @@ gulp.task('concat:js', () => {
 gulp.task('concat:css', () => {
   return gulp
     .src([
+      'src/css/bootstrap.css',
       'src/css/font-awesome.min.css',
       'src/css/linea.css',
-      'src/css/bootstrap.min.css',
-      'src/css/sweetalert2.min.css',
       'src/css/jquery.fancybox.min.css',
+      'src/css/sweetalert2.min.css',
       'src/css/style.min.css'
     ])
     .pipe(postcss([cssnano()]))
+    .pipe(stripCssComments({ preserve: false }))
     .pipe(concat('all.min.css'))
     .pipe(gulp.dest('src/css'));
 });
