@@ -54,7 +54,6 @@ h6 {
 
 .title {
   .name-title {
-    font-family: 'Titillium Web', sans-serif !important;
     text-align: center;
     color: $color-white;
     font-weight: bold;
@@ -124,10 +123,6 @@ h6 {
       text-decoration: none;
     }
   }
-}
-
-p.bg-dark {
-  border-radius: 3px;
 }
 
 .my-skills {
@@ -213,13 +208,13 @@ p.bg-dark {
   }
 }
 
-@media (min-width: 1199px) {
+@media screen and (min-width: 1199px) {
   .port-item {
     padding: 2rem !important;
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   .bg-black {
     text-align: center;
   }
@@ -250,7 +245,7 @@ p.bg-dark {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .download-resume {
     text-align: center !important;
   }
