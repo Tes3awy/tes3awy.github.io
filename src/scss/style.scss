@@ -1,6 +1,5 @@
 // Main Sass File
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
 
 // Color Variables
 $color-black: #000 !default;
@@ -10,9 +9,10 @@ $color-linkedin: #0077b5 !default;
 $color-github: #6e5494 !default;
 $color-youtube: #ff0000 !default;
 $color-mail: #ccc !default;
+
 // Fonts Variables
-$font: 'Montserrat', sans-serif !default;
-$font-headings: 'Titillium Web', sans-serif !default;
+$font-headings: 'Lato', sans-serif !default;
+$font: 'Roboto', sans-serif !default;
 
 body {
   font-family: $font;
@@ -22,7 +22,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: $font-headings;
 }
 

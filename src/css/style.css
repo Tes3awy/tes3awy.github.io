@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: 'Titillium Web', sans-serif;
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
 }
 
 #main-header img {

@@ -40,16 +40,16 @@ gulp.task('fonts', () => {
 });
 
 // Bootstrap task
-gulp.task('bootstrap', () => {
-    const plugins = [cssnano()];
-    return gulp
-        .src('node_modules/bootstrap/scss/bootstrap.scss')
-        .pipe(sass.sync())
-        .pipe(gulp.dest('src/css'))
-        .pipe(postcss(plugins))
-        .pipe(rename({ suffix: '-min' }))
-        .pipe(gulp.dest('src/css'));
-});
+// gulp.task('bootstrap', () => {
+//     const plugins = [cssnano()];
+//     return gulp
+//         .src('node_modules/bootstrap/scss/bootstrap.scss')
+//         .pipe(sass.sync())
+//         .pipe(gulp.dest('src/css'))
+//         .pipe(postcss(plugins))
+//         .pipe(rename({ suffix: '-min' }))
+//         .pipe(gulp.dest('src/css'));
+// });
 
 // My Custom SCSS
 gulp.task('scss', () => {
