@@ -144,7 +144,7 @@ gulp.task('minify-html', () => {
     collapseBooleanAttributes: true,
     removeComments: true,
     collapseWhitespace: true,
-    quoteCharacter: "",
+    quoteCharacter: '',
     removeEmptyAttributes: true,
     removeRedundantAttributes: true,
     removeScriptTypeAttributes: true,
@@ -173,6 +173,7 @@ gulp.task('concat:js', () => {
       'src/js/app.min.js'
     ])
     .pipe(strip())
+    .pipe(uglify())
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('src/js'));
 });

@@ -11,8 +11,13 @@ $color-youtube: #ff0000 !default;
 $color-mail: #ccc !default;
 
 // Fonts Variables
-$font-headings: 'Lato', sans-serif !default;
-$font: 'Roboto', sans-serif !default;
+$font-headings: 'Lato' !default;
+$font: 'Roboto' !default;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
   font-family: $font;
@@ -54,6 +59,7 @@ h6 {
 
 .title {
   .name-title {
+    font-family: $font-headings;
     text-align: center;
     color: $color-white;
     font-weight: bold;
@@ -139,6 +145,7 @@ h6 {
 
 .captcha-col {
   text-align: center;
+  text-align: -moz-center;
   text-align: -webkit-center;
 }
 
@@ -199,7 +206,7 @@ h6 {
 
 .matcss-img {
   filter: grayscale(100%);
-  transition: all 0.4s;
+  transition: all 0.3s ease-in-out;
 }
 
 .my-skills:hover {
@@ -208,13 +215,17 @@ h6 {
   }
 }
 
-@media screen and (min-width: 1199px) {
+#back_to_top {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1199px) {
   .port-item {
     padding: 2rem !important;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .bg-black {
     text-align: center;
   }
@@ -245,7 +256,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .download-resume {
     text-align: center !important;
   }

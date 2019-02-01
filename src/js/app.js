@@ -23,7 +23,7 @@ $(document).ready(function() {
 
   // Toggling Tabs Smooth Scroll
   $('.toggling-tabs').on('click', function() {
-    var targetOffset = $(this).offset().top;
+    var targetOffset = $(this).offset().top + $('.toggling-tabs').height();
     $('html, body').animate({ scrollTop: targetOffset }, 'slow');
   });
 
@@ -38,9 +38,23 @@ $(document).ready(function() {
       target: document.querySelector('.download-resume')
     });
   });
+
+  $('#back_to_top').on('click', function(e) {
+    e.preventDefault();
+    var target = $('#top');
+    $('html, body').animate(
+      {
+        scrollTop: target.offset().top
+      },
+      1000
+    );
+  });
 });
 
-console.log("%cBelieve me, there is nothing important here for you :P!", "color: #ff8100; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #000 1px 1px 1px;");
+console.log(
+  '%cBelieve me, there is nothing important here for you :P!',
+  'color: #ff8100; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #222 1px 1px 1px;'
+);
 
 // var name = $("#name").val();
 // var email = $("#email").val();
@@ -55,7 +69,7 @@ console.log("%cBelieve me, there is nothing important here for you :P!", "color:
 //             url: 'mailto:osaid2512@gmail.com',
 //             data: $('.contact-form').serialize(),
 //             success: () => {
-//                 alert('Your message has been sent successfully. Thank you for contacting me.');
+//                 swal('Your message has been sent successfully. Thank you for contacting me :).');
 //             }
 //         });
 //     });
