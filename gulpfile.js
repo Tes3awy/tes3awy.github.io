@@ -115,7 +115,7 @@ gulp.task('mincss', () => {
 // Minify Images
 gulp.task('imagemin', () => {
   return gulp
-    .src('src/img/*')
+    .src(['src/img/*', '!src/img/dist'])
     .pipe(
       imagemin(
         [
