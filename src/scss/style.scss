@@ -2,25 +2,31 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
 
 // Color Variables
+$color-primary: #a52122 !default;
 $color-black: #000 !default;
 $color-white: #fff !default;
-$color-twitter: #0084b4 !default;
 $color-linkedin: #0077b5 !default;
 $color-github: #6e5494 !default;
+$color-twitter: #0084b4 !default;
 $color-youtube: #ff0000 !default;
 $color-mail: #ccc !default;
 
 // Fonts Variables
 $font-headings: 'Lato' !default;
-$font: 'Roboto' !default;
+$font-body: 'Roboto' !default;
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
 body {
-  font-family: $font;
+  font-family: $font-body;
 }
 
 h1,
@@ -123,17 +129,26 @@ h6 {
 .bg-black {
   background-color: $color-black;
   color: $color-white;
-
   .info-text {
+    color: $color-primary;
     &:hover {
       text-decoration: none;
     }
   }
 }
 
+.skill-set-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .my-skills {
-  &:hover {
-    cursor: default;
+  display: inline-flex;
+  margin: 50px;
+  img {
+    filter: grayscale(100%);
   }
 }
 
@@ -217,6 +232,7 @@ h6 {
 
 #back_to_top {
   cursor: pointer;
+  color: $color-primary;
 }
 
 @media only screen and (min-width: 1199px) {
@@ -253,6 +269,10 @@ h6 {
       padding: 0.9rem 0;
       font-size: 1.8rem;
     }
+  }
+
+  .my-skills {
+    margin: 30px;
   }
 }
 

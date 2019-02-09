@@ -1,14 +1,4 @@
 $(document).ready(function() {
-  // Toggling colored class
-  $('.my-skills').hover(function() {
-    $(this)
-      .find('i.devicons')
-      .toggleClass('colored');
-    $(this)
-      .find('i.devicons')
-      .css('color', 'none');
-  });
-
   // Collapsing Sections
   $('.port-item').on('click', function(e) {
     e.preventDefault();
@@ -53,7 +43,7 @@ $(document).ready(function() {
 
 console.log(
   '%cBelieve me, there is nothing important here for you :P!',
-  'color: #ff8100; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #222 1px 1px 1px;'
+  'color: #a52122; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #222 1px 1px 1px;'
 );
 
 // var name = $("#name").val();

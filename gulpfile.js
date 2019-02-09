@@ -16,6 +16,7 @@ const uglify = require('gulp-uglify');
 
 const strip = require('gulp-strip-comments');
 const stripCssComments = require('gulp-strip-css-comments');
+const sourcemaps = require('gulp-sourcemaps');
 
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -41,21 +42,21 @@ gulp.task('fonts', () => {
 
 // Bootstrap task
 // gulp.task('bootstrap', () => {
-//     const plugins = [cssnano()];
-//     return gulp
-//         .src('node_modules/bootstrap/scss/bootstrap.scss')
-//         .pipe(sass.sync())
-//         .pipe(gulp.dest('src/css'))
-//         .pipe(postcss(plugins))
-//         .pipe(rename({ suffix: '-min' }))
-//         .pipe(gulp.dest('src/css'));
+//   const plugins = [cssnano()];
+//   return gulp
+//     .src('node_modules/bootstrap/scss/bootstrap.scss')
+//     .pipe(sass.sync())
+//     .pipe(gulp.dest('src/css'))
+//     .pipe(postcss(plugins))
+//     .pipe(rename({ suffix: '-min' }))
+//     .pipe(gulp.dest('src/css'));
 // });
 
 // My Custom SCSS
 gulp.task('scss', () => {
   const plugins = [
     autoprefixer({
-      browsers: ['last 15 versions'],
+      browsers: ['last 3 versions', 'ie > 9'],
       cascade: true
     })
   ];
@@ -65,7 +66,7 @@ gulp.task('scss', () => {
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(csscomb())
     .pipe(postcss(plugins))
-    .pipe(gulp.dest('src/css/'))
+    .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream());
 });
 
@@ -88,19 +89,20 @@ gulp.task('js', () => {
 gulp.task('minjs', () => {
   return gulp
     .src('src/js/app.js')
-    .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(
       rename({
         suffix: '.min'
       })
     )
-    .pipe(gulp.dest('src/js/'));
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('src/js'));
 });
 
 // Minify CSS
 gulp.task('mincss', () => {
-  var plugins = [cssnano()];
+  const plugins = [cssnano()];
   return gulp
     .src('src/css/style.css')
     .pipe(postcss(plugins))
@@ -109,7 +111,7 @@ gulp.task('mincss', () => {
         suffix: '.min'
       })
     )
-    .pipe(gulp.dest('src/css/'));
+    .pipe(gulp.dest('src/css'));
 });
 
 // Minify Images
@@ -167,6 +169,7 @@ gulp.task('concat:js', () => {
       'src/js/popper.min.js',
       'src/js/bootstrap.min.js',
       'src/js/sweetalert2.min.js',
+      'src/js/pace.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.min.js',
       'src/js/hammer.min.js',
@@ -185,6 +188,7 @@ gulp.task('concat:css', () => {
       'src/css/bootstrap-min.css',
       'src/css/font-awesome.min.css',
       'src/css/linea.css',
+      'src/css/pace.min.css',
       'src/css/jquery.fancybox.min.css',
       'src/css/sweetalert2.min.css',
       'src/css/style.min.css'

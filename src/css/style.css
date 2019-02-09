@@ -4,6 +4,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background-color: #a52122;
+  color: #fff;
+}
+
 body {
   font-family: 'Roboto';
 }
@@ -97,12 +102,37 @@ h6 {
   background-color: #000;
   color: #fff;
 }
+.bg-black .info-text {
+  color: #a52122;
+}
 .bg-black .info-text:hover {
   text-decoration: none;
 }
 
-.my-skills:hover {
-  cursor: default;
+.skill-set-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.my-skills {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 50px;
+}
+.my-skills img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .devicons {
@@ -181,6 +211,7 @@ h6 {
 
 #back_to_top {
   cursor: pointer;
+  color: #a52122;
 }
 
 @media only screen and (min-width: 1199px) {
@@ -209,6 +240,9 @@ h6 {
   .name .fa {
     padding: 0.9rem 0;
     font-size: 1.8rem;
+  }
+  .my-skills {
+    margin: 30px;
   }
 }
 
