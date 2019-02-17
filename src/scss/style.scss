@@ -15,18 +15,16 @@ $color-mail: #ccc !default;
 $font-headings: 'Lato' !default;
 $font-body: 'Roboto' !default;
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 ::selection {
   background-color: $color-primary;
   color: $color-white;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: $font-body;
+  position: relative;
 }
 
 h1,
@@ -49,16 +47,10 @@ h6 {
 
     .icon {
       font-size: 2rem;
-      transition: all 0.4s;
-      backface-visibility: hidden;
     }
 
     &:hover {
       cursor: pointer;
-
-      .icon {
-        transform: scale(1.1);
-      }
     }
   }
 }
@@ -233,6 +225,24 @@ h6 {
 #back_to_top {
   cursor: pointer;
   color: $color-primary;
+}
+
+#spinner-container {
+  height: 100vh;
+}
+
+#spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#spinner {
+  width: 5rem;
+  height: 5rem;
+  z-index: 9999;
 }
 
 @media only screen and (min-width: 1199px) {

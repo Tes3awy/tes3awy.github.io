@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 ::selection {
   background-color: #a52122;
   color: #fff;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto';
+  position: relative;
 }
 
 h1,
@@ -32,19 +30,9 @@ h6 {
 }
 #main-header .port-item .icon {
   font-size: 2rem;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 #main-header .port-item:hover {
   cursor: pointer;
-}
-#main-header .port-item:hover .icon {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .title .name-title {
@@ -212,6 +200,26 @@ h6 {
 #back_to_top {
   cursor: pointer;
   color: #a52122;
+}
+
+#spinner-container {
+  height: 100vh;
+}
+
+#spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#spinner {
+  width: 5rem;
+  height: 5rem;
+  z-index: 9999;
 }
 
 @media only screen and (min-width: 1199px) {

@@ -41,16 +41,16 @@ gulp.task('fonts', () => {
 });
 
 // Bootstrap task
-// gulp.task('bootstrap', () => {
-//   const plugins = [cssnano()];
-//   return gulp
-//     .src('node_modules/bootstrap/scss/bootstrap.scss')
-//     .pipe(sass.sync())
-//     .pipe(gulp.dest('src/css'))
-//     .pipe(postcss(plugins))
-//     .pipe(rename({ suffix: '-min' }))
-//     .pipe(gulp.dest('src/css'));
-// });
+gulp.task('bootstrap', () => {
+  const plugins = [cssnano()];
+  return gulp
+    .src('node_modules/bootstrap/scss/bootstrap.scss')
+    .pipe(sass.sync())
+    .pipe(gulp.dest('src/css'))
+    .pipe(postcss(plugins))
+    .pipe(rename({ suffix: '-min' }))
+    .pipe(gulp.dest('src/css'));
+});
 
 // My Custom SCSS
 gulp.task('scss', () => {
@@ -74,10 +74,9 @@ gulp.task('scss', () => {
 gulp.task('js', () => {
   return gulp
     .src([
-      'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/popper.js/dist/umd/popper.min.js',
-      'node_modules/lazysizes/lazysizes.min.js',
+      'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+      'node_modules/lazysizes/lazysizes.js',
       'node_modules/sweetalert2/dist/sweetalert2.min.js',
       'bower_components/fancybox/dist/jquery.fancybox.min.js'
     ])
@@ -89,14 +88,14 @@ gulp.task('js', () => {
 gulp.task('minjs', () => {
   return gulp
     .src('src/js/app.js')
-    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(uglify())
     .pipe(
       rename({
         suffix: '.min'
       })
     )
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('maps/'))
     .pipe(gulp.dest('src/js'));
 });
 
@@ -169,7 +168,6 @@ gulp.task('concat:js', () => {
       'src/js/popper.min.js',
       'src/js/bootstrap.min.js',
       'src/js/sweetalert2.min.js',
-      'src/js/pace.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.min.js',
       'src/js/hammer.min.js',
@@ -188,7 +186,6 @@ gulp.task('concat:css', () => {
       'src/css/bootstrap-min.css',
       'src/css/font-awesome.min.css',
       'src/css/linea.css',
-      'src/css/pace.min.css',
       'src/css/jquery.fancybox.min.css',
       'src/css/sweetalert2.min.css',
       'src/css/style.min.css'

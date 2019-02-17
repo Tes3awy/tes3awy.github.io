@@ -30,7 +30,7 @@
       sizes="16x16"
       href="src/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="src/favicons/site.webmanifest" />
+    <link rel="manifest" href="manifest.json" />
     <link
       rel="mask-icon"
       href="src/favicons/safari-pinned-tab.svg"
@@ -104,16 +104,23 @@
   </head>
 
   <body id="top">
-    <div class="container">
+    <div id="spinner-container">
+      <div id="spinner-wrapper">
+        <div id="spinner" class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="wrapper-container">
       <header class="shadow" id="main-header">
         <div class="row no-gutters">
           <div class="col-lg-4 col-md-5 col-sm-12">
-            <img src="src/img/me.jpg" alt="Osama Abbas" title="Osama Abbas" />
+            <img src="src/img/me.jpg" alt="Osama Abbas" title="Yeah, I look like this" />
           </div>
           <div class="col-lg-8 col-md-7 col-sm-12">
             <div class="d-flex flex-column">
-              <section class="bg-black p-5 text-white title">
-                <h1 class="display-3 name-title" title="That's my name!">
+              <section class="bg-dark p-5 text-white title">
+                <h1 class="display-3 name-title" title="Yes, That's my name!">
                   Osama Abbas
                 </h1>
                 <div class="name">
@@ -165,8 +172,8 @@
                   </ul>
                 </div>
               </section>
-              <div class="p-4 bg-black lead text-center info-bar">
-                <h4>Full-time Front End Web Developer</h4>
+              <div class="p-4 bg-dark lead text-center info-bar">
+                <h4 class="text-white">Full-time Front End Web Developer</h4>
                 <a
                   href="//34ml.com"
                   class="info-text"
@@ -183,19 +190,19 @@
                 >
                   <div class="row no-gutters w-100">
                     <div
-                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-black"
+                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-dark"
                     >
                       <div
                         class="port-item p-4 home-pane"
                         data-toggle="collapse"
                         data-target="#home"
                       >
-                        <i class="icon icon-basic-home d-block pb-2"></i>
+                        <i class="icon icon-basic-server-cloud d-block pb-2"></i>
                         <span class="text-primary">Home</span>
                       </div>
                     </div>
                     <div
-                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-black"
+                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-dark"
                     >
                       <div
                         class="port-item p-4 resume-pane"
@@ -203,13 +210,13 @@
                         data-target="#resume"
                       >
                         <i
-                          class="icon icon-basic-notebook-pen d-block pb-2"
+                          class="icon icon-basic-archive-full d-block pb-2"
                         ></i>
                         <span class="text-primary">Resume</span>
                       </div>
                     </div>
                     <div
-                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-black"
+                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-dark"
                     >
                       <div
                         class="port-item p-4 projects-pane"
@@ -217,20 +224,20 @@
                         data-target="#projects"
                       >
                         <i
-                          class="icon icon-basic-folder-multiple d-block pb-2"
+                          class="icon icon-basic-cards-hearts d-block pb-2"
                         ></i>
                         <span class="text-primary">Projects</span>
                       </div>
                     </div>
                     <div
-                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-black"
+                      class="col-lg-3 col-md-6 col-sm-12 toggling-tabs bg-dark"
                     >
                       <div
                         class="port-item p-4 contact-pane"
                         data-toggle="collapse"
                         data-target="#contact"
                       >
-                        <i class="icon icon-basic-paperplane d-block pb-2"></i>
+                        <i class="icon icon-basic-book-pencil d-block pb-2"></i>
                         <span class="text-primary">Contact</span>
                       </div>
                     </div>
@@ -245,7 +252,7 @@
       <main class="shadow">
         <!-- Section: Skills || Home -->
         <section class="collapse show sections" id="home">
-          <div class="card card-body home-pane text-white py-5 banner bg-black">
+          <div class="card card-body home-pane text-white py-5 banner bg-dark">
             <h2>Welcome to my Portfolio</h2>
           </div>
 
@@ -465,7 +472,7 @@
 
         <!-- Section: Resume -->
         <section class="collapse collapsing sections" id="resume">
-          <div class="card card-body resume-pane text-white py-5 bg-black">
+          <div class="card card-body resume-pane text-white py-5 bg-dark">
             <h2>My Resume</h2>
           </div>
           <div class="card card-body py-5">
@@ -484,12 +491,12 @@
                 </div>
                 <div class="card-body">
                   <p></p>
-                  <p class="card-text p-2 mb-3 bg-black text-white">
+                  <p class="card-text p-2 mb-3 bg-dark text-white">
                     Position: Front End Web Developer
                   </p>
                   <a
                     href="mailto:osama@34ml.com"
-                    class="p-2 mb-3 bg-black text-white d-block"
+                    class="p-2 mb-3 bg-dark text-white d-block"
                     title="Work Email Address"
                     >Email: osama@34ml.com</a
                   >
@@ -512,12 +519,12 @@
                 </div>
                 <div class="card-body">
                   <p></p>
-                  <p class="p-2 mb-3 bg-black text-white">
+                  <p class="p-2 mb-3 bg-dark text-white">
                     Position: Full Stack Developer
                   </p>
                   <a
                     href="mailto:oabbas@vm.com.eg"
-                    class="p-2 mb-3 bg-black text-white d-block"
+                    class="p-2 mb-3 bg-dark text-white d-block"
                     title="Work Email Address"
                     >Email: oabbas@vm.com.eg</a
                   >
@@ -541,12 +548,12 @@
                 </div>
                 <div class="card-body">
                   <p></p>
-                  <p class="card-text p-2 mb-3 bg-black text-white">
+                  <p class="card-text p-2 mb-3 bg-dark text-white">
                     Position: Part time Teaching Assistant
                   </p>
                   <a
                     href="mailto:osama_student.aast.edu"
-                    class="p-2 mb-3 bg-black text-white d-block"
+                    class="p-2 mb-3 bg-dark text-white d-block"
                     title="Work Email Address"
                     >Email: osama_student.aast.edu</a
                   >
@@ -561,7 +568,7 @@
 
         <!-- Section: Projects -->
         <section class="collapse collapsing sections" id="projects">
-          <div class="card card-body projects-pane text-white py-5 bg-black">
+          <div class="card card-body projects-pane text-white py-5 bg-dark">
             <h2>My Projects</h2>
           </div>
           <div class="card card-body py-5">
@@ -772,7 +779,7 @@
 
         <!-- Section: Contact -->
         <section class="collapse collapsing sections" id="contact">
-          <div class="card card-body contact-pane text-white py-5 bg-black">
+          <div class="card card-body contact-pane text-white py-5 bg-dark">
             <h2>Contact Me</h2>
           </div>
           <div
@@ -796,12 +803,12 @@
                     <div class="form-group">
                       <div class="input-group input-group-lg">
                         <span
-                          class="input-group-addon contact-pane text-white bg-black"
+                          class="input-group-addon contact-pane text-white bg-primary"
                         >
                           <i class="fa fa-user text-white"></i>
                         </span>
                         <input
-                          class="form-control bg-black text-white"
+                          class="form-control bg-dark text-white"
                           type="text"
                           placeholder="Your Name"
                           id="name"
@@ -812,12 +819,12 @@
                     <div class="form-group">
                       <div class="input-group input-group-lg">
                         <span
-                          class="input-group-addon contact-pane text-white bg-black"
+                          class="input-group-addon contact-pane text-white bg-primary"
                         >
                           <i class="fa fa-envelope text-white"></i>
                         </span>
                         <input
-                          class="form-control bg-black text-white"
+                          class="form-control bg-dark text-white"
                           type="email"
                           placeholder="Email Address"
                           id="email"
@@ -831,12 +838,12 @@
                     <div class="form-group">
                       <div class="input-group input-group-lg">
                         <span
-                          class="input-group-addon contact-pane text-white bg-black"
+                          class="input-group-addon contact-pane text-white bg-primary"
                         >
                           <i class="fa fa-pencil text-white"></i>
                         </span>
                         <textarea
-                          class="form-control bg-black text-white"
+                          class="form-control bg-dark text-white"
                           type="text"
                           placeholder="Your Message"
                           rows="10"
@@ -873,7 +880,7 @@
       </main>
 
       <!-- Section: Footer -->
-      <footer id="main-footer" class="bg-black pt-3 pb-3">
+      <footer id="main-footer" class="bg-dark pt-3 pb-3">
         <div class="container">
           <div class="row">
             <div
@@ -902,5 +909,6 @@
 
     <!-- REQUIRED JS LIBS -->
     <script src="src/js/all.min.js"></script>
+    <script src="src/js/main.js"></script>
   </body>
 </html>
