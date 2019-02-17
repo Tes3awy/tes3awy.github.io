@@ -165,11 +165,10 @@ gulp.task('concat:js', () => {
   return gulp
     .src([
       'src/js/jquery.min.js',
-      'src/js/popper.min.js',
-      'src/js/bootstrap.min.js',
+      'src/js/bootstrap.bundle.min.js',
       'src/js/sweetalert2.min.js',
       'src/js/jquery.fancybox.min.js',
-      'src/js/lazysizes.min.js',
+      'src/js/lazysizes.js',
       'src/js/hammer.min.js',
       'src/js/app.min.js'
     ])
