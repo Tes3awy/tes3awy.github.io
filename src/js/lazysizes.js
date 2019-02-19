@@ -12,18 +12,31 @@
   }
 
   var lazysizes, lazySizesConfig;
+
   var docElem = document.documentElement;
+
   var Date = window.Date;
+
   var supportPicture = window.HTMLPictureElement;
+
   var _addEventListener = 'addEventListener';
+
   var _getAttribute = 'getAttribute';
+
   var addEventListener = window[_addEventListener];
+
   var setTimeout = window.setTimeout;
+
   var requestAnimationFrame = window.requestAnimationFrame || setTimeout;
+
   var requestIdleCallback = window.requestIdleCallback;
+
   var regPicture = /^picture$/i;
+
   var loadEvents = ['load', 'error', 'lazyincluded', '_lazyloaded'];
+
   var regClassCache = {};
+
   var forEach = Array.prototype.forEach;
 
   var hasClass = function(ele, cls) {

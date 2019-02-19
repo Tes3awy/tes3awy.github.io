@@ -17,15 +17,14 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: targetOffset }, 'slow');
   });
 
-  $('.download-btn').on('click', function() {
-    swal({
-      position: 'bottom-center',
+  $('#downloadBtn').on('click', function() {
+    Swal.fire({
+      position: 'center',
       type: 'success',
       title: 'My Resume',
-      text: 'Thank you for downloading my resume',
+      text: 'Thank you for downloading my resume 😄',
       showConfirmButton: false,
-      showCloseButton: true,
-      target: document.querySelector('.download-resume')
+      showCloseButton: true
     });
   });
 
@@ -42,7 +41,7 @@ $(document).ready(function() {
 });
 
 console.log(
-  '%cBelieve me, there is nothing important here for you :P!',
+  '%cBelieve me, there is nothing important here for you 😜!',
   'color: #a52122; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #222 1px 1px 1px;'
 );
 

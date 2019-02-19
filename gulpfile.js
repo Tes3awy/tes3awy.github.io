@@ -26,8 +26,8 @@ gulp.task('css', () => {
   return gulp
     .src([
       'node_modules/font-awesome/css/font-awesome.min.css',
-      'node_modules/sweetalert2/dist/sweetalert2.min.css',
       'node_modules/bootstrap/dist/css/bootstrap.css',
+      'node_modules/sweetalert2/dist/sweetalert2.min.css',
       'bower_components/fancybox/dist/jquery.fancybox.min.css'
     ])
     .pipe(gulp.dest('src/css'));
@@ -166,10 +166,9 @@ gulp.task('concat:js', () => {
     .src([
       'src/js/jquery.min.js',
       'src/js/bootstrap.bundle.min.js',
-      'src/js/sweetalert2.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.js',
-      'src/js/hammer.min.js',
+      'src/js/sweetalert2.min.js',
       'src/js/app.min.js'
     ])
     .pipe(strip())

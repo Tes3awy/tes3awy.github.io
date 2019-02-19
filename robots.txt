@@ -1,2 +1,4 @@
+Sitemap: https://tes3awy.netlify.com/sitemap.xml
+
 User-agent: *
 Disallow:

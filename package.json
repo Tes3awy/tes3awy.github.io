@@ -10,6 +10,9 @@
     "test": "snyk test",
     "concat:all": "gulp concat"
   },
+  "pre-commit": [
+    "test"
+  ],
   "author": {
     "name": "Osama Abbas",
     "email": "osaid2512@gmail.com",
@@ -19,9 +22,6 @@
     "type": "git",
     "url": "https://github.com/Tes3awy/tes3awy.github.io.git"
   },
-  "engines": {
-    "vscode": "^1.31.1"
-  },
   "readme": "README.md",
   "license": "MIT",
   "dependencies": {
@@ -30,7 +30,7 @@
     "jquery": "^3.3.1",
     "lazysizes": "^4.1.6",
     "popper.js": "^1.14.7",
-    "sweetalert2": "^8.1.0"
+    "sweetalert2": "^8.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.7",
@@ -45,10 +45,10 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-strip-comments": "^2.5.2",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.1",
-    "snyk": "^1.132.0"
+    "snyk": "^1.134.2"
   }
 }
