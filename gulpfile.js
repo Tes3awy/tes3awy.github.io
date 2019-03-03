@@ -56,7 +56,7 @@ gulp.task('bootstrap', () => {
 gulp.task('scss', () => {
   const plugins = [
     autoprefixer({
-      browsers: ['last 3 versions', 'ie > 9'],
+      browsers: ['last 4 version', 'ie > 9'],
       cascade: true
     })
   ];

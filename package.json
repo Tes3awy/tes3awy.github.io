@@ -30,10 +30,10 @@
     "jquery": "^3.3.1",
     "lazysizes": "^4.1.6",
     "popper.js": "^1.14.7",
-    "sweetalert2": "^8.2.1"
+    "sweetalert2": "^8.2.6"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.7",
+    "autoprefixer": "^9.4.9",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.10",
     "gulp": "^3.9.1",
@@ -48,7 +48,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-strip-comments": "^2.5.2",
     "gulp-strip-css-comments": "^2.0.0",
-    "gulp-uglify": "^3.0.1",
-    "snyk": "^1.134.2"
+    "gulp-uglify": "^3.0.2",
+    "snyk": "^1.135.1"
   }
 }
