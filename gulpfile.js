@@ -28,7 +28,7 @@ gulp.task('css', () => {
       'node_modules/font-awesome/css/font-awesome.min.css',
       'node_modules/bootstrap/dist/css/bootstrap.css',
       'node_modules/sweetalert2/dist/sweetalert2.min.css',
-      'bower_components/fancybox/dist/jquery.fancybox.min.css'
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
     ])
     .pipe(gulp.dest('src/css'));
 });
@@ -78,7 +78,7 @@ gulp.task('js', () => {
       'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       'node_modules/lazysizes/lazysizes.js',
       'node_modules/sweetalert2/dist/sweetalert2.min.js',
-      'bower_components/fancybox/dist/jquery.fancybox.min.js'
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
     ])
     .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream());
