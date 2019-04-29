@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+::-moz-selection {
+  background-color: #a52122;
+  color: #fff;
+}
+
 ::selection {
   background-color: #a52122;
   color: #fff;
