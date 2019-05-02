@@ -50,6 +50,7 @@
     "gulp-strip-comments": "^2.5.2",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
+    "pre-commit": "^1.2.2",
     "snyk": "^1.161.1"
   }
 }
