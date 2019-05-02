@@ -145,12 +145,20 @@ gulp.task('minify-html', () => {
     collapseBooleanAttributes: true,
     removeComments: true,
     collapseWhitespace: true,
+    conservativeCollapse: true,
+    decodeEntities: true,
+    minifyJS: true,
+    minifyCSS: true,
+    minifyURLs: true,
     quoteCharacter: '',
     removeEmptyAttributes: true,
     removeRedundantAttributes: true,
     removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
     sortAttributes: true,
-    sortClassName: true
+    sortClassName: true,
+    trimCustomFragments: true,
+    useShortDoctype: true,
   };
   return gulp
     .src('index.src.html')
