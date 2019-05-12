@@ -1,6 +1,6 @@
 {
   "name": "tes3awy-portfolio",
-  "version": "5.5.2",
+  "version": "5.5.3",
   "description": "Osama Abbas a.k.a tes3awy Portfolio",
   "main": "src/js/app.js",
   "homepage": "https://tes3awy.netlify.com/",
@@ -15,7 +15,7 @@
   ],
   "author": {
     "name": "Osama Abbas",
-    "email": "osaid2512@gmail.com",
+    "email": "oabbas2512@gmail.com",
     "url": "https://tes3awy.netlify.com/"
   },
   "repository": {
@@ -31,7 +31,7 @@
     "jquery": "^3.4.1",
     "lazysizes": "^4.1.8",
     "popper.js": "^1.15.0",
-    "sweetalert2": "^8.9.0"
+    "sweetalert2": "^8.10.7"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
@@ -51,6 +51,6 @@
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "pre-commit": "^1.2.2",
-    "snyk": "^1.161.1"
+    "snyk": "^1.163.3"
   }
 }
