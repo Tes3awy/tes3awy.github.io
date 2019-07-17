@@ -1,6 +1,6 @@
 {
   "name": "tes3awy-portfolio",
-  "version": "5.5.3",
+  "version": "5.5.4",
   "description": "Osama Abbas a.k.a tes3awy Portfolio",
   "main": "src/js/app.js",
   "homepage": "https://tes3awy.netlify.com/",
@@ -8,7 +8,7 @@
     "start": "gulp",
     "dev": "gulp watch",
     "test": "snyk test",
-    "concat": "gulp concat"
+    "production": "gulp concat"
   },
   "pre-commit": [
     "test"
@@ -29,13 +29,13 @@
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
-    "lazysizes": "^4.1.8",
+    "lazysizes": "^5.1.0",
     "popper.js": "^1.15.0",
-    "sweetalert2": "^8.10.7"
+    "sweetalert2": "^8.13.6"
   },
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
-    "browser-sync": "^2.26.5",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -51,6 +51,6 @@
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "pre-commit": "^1.2.2",
-    "snyk": "^1.163.3"
+    "snyk": "^1.193.2"
   }
 }

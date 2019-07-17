@@ -56,7 +56,6 @@ gulp.task('bootstrap', () => {
 gulp.task('scss', () => {
   const plugins = [
     autoprefixer({
-      browsers: ['last 4 versions', 'ie > 9'],
       cascade: true
     })
   ];
@@ -158,7 +157,7 @@ gulp.task('minify-html', () => {
     sortAttributes: true,
     sortClassName: true,
     trimCustomFragments: true,
-    useShortDoctype: true,
+    useShortDoctype: true
   };
   return gulp
     .src('index.src.html')
