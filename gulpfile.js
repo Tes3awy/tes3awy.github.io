@@ -11,7 +11,6 @@ const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
 
 const htmlmin = require('gulp-html-minifier');
-const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
 const strip = require('gulp-strip-comments');
@@ -21,23 +20,19 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
+const psi = require('psi');
+const site = 'https://tes3awy.netlify.com/';
+const key = 'AIzaSyDAJzl1tWyXNeIe2ESCExV7nvWklISQThY';
+
 // Move CSS to src/css
 gulp.task('css', () => {
   return gulp
     .src([
-      'node_modules/font-awesome/css/font-awesome.min.css',
       'node_modules/bootstrap/dist/css/bootstrap.css',
       'node_modules/sweetalert2/dist/sweetalert2.min.css',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
     ])
     .pipe(gulp.dest('src/css'));
-});
-
-// Move Fonts to src/fonts
-gulp.task('fonts', () => {
-  return gulp
-    .src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('src/fonts'));
 });
 
 // Bootstrap task
@@ -77,13 +72,14 @@ gulp.task('js', () => {
       'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       'node_modules/lazysizes/lazysizes.js',
       'node_modules/sweetalert2/dist/sweetalert2.min.js',
-      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+      'node_modules/@fortawesome/fontawesome-free/js/all.min.js'
     ])
     .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream());
 });
 
-// Minify js
+// Minify app.js
 gulp.task('minjs', () => {
   return gulp
     .src('src/js/app.js')
@@ -110,31 +106,6 @@ gulp.task('mincss', () => {
       })
     )
     .pipe(gulp.dest('src/css'));
-});
-
-// Minify Images
-gulp.task('imagemin', () => {
-  return gulp
-    .src(['src/img/*', '!src/img/dist'])
-    .pipe(
-      imagemin(
-        [
-          imagemin.optipng({
-            optimizationLevel: 6
-          })
-        ],
-        {
-          verbose: true,
-          progressive: true
-        }
-      )
-    )
-    .pipe(
-      rename({
-        suffix: '-min'
-      })
-    )
-    .pipe(gulp.dest('src/img/dist'));
 });
 
 // Minify HTML File
@@ -171,16 +142,18 @@ gulp.task('minify-html', () => {
 gulp.task('concat:js', () => {
   return gulp
     .src([
+      'src/js/main.js', // Preloader
       'src/js/jquery.min.js',
+      'src/js/app.min.js',
+      'src/js/all.min.js', // FontAwesome 5
       'src/js/bootstrap.bundle.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.js',
-      'src/js/sweetalert2.min.js',
-      'src/js/app.min.js'
+      'src/js/sweetalert2.min.js'
     ])
     .pipe(strip())
     .pipe(uglify())
-    .pipe(concat('all.min.js'))
+    .pipe(concat('main.min.js'))
     .pipe(gulp.dest('src/js'));
 });
 
@@ -189,7 +162,6 @@ gulp.task('concat:css', () => {
   return gulp
     .src([
       'src/css/bootstrap-min.css',
-      'src/css/font-awesome.min.css',
       'src/css/linea.css',
       'src/css/jquery.fancybox.min.css',
       'src/css/sweetalert2.min.css',
@@ -201,9 +173,23 @@ gulp.task('concat:css', () => {
     .pipe(gulp.dest('src/css'));
 });
 
+// Get the PageSpeed Insights report
+gulp.task('psi', async () => {
+  const data = await psi(site, {
+    key,
+    strategy: 'desktop'
+  });
+  console.log('Page Stats:', data.pageStats);
+  console.log('Speed score:', data.ruleGroups.SPEED.score);
+});
+
 // Watch Sass & Serve
-gulp.task('watch', () => {
-  gulp.watch('*.html').on('change', reload);
+gulp.task('serve', () => {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  });
   gulp.watch('src/js/app.js', ['minjs', 'concat:js']).on('change', reload);
   gulp
     .watch('src/scss/style.scss', ['scss', 'mincss', 'concat:css'])

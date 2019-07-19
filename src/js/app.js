@@ -35,31 +35,12 @@ $(document).ready(function() {
       {
         scrollTop: target.offset().top
       },
-      1000
+      800
     );
   });
 });
 
 console.log(
   '%cBelieve me, there is nothing important here for you 😜!',
-  'color: #a52122; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #222 1px 1px 1px;'
+  'color: #a52122; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #232323 1px 1px 1px;'
 );
-
-// var name = $("#name").val();
-// var email = $("#email").val();
-// var message = $("#message").val();
-
-// Submit form using AJAX
-// $(function () {
-//     $('.contact-form').on('submit', (e) => {
-//         e.preventDefault();
-//         $.ajax({
-//             type: 'POST',
-//             url: 'mailto:osaid2512@gmail.com',
-//             data: $('.contact-form').serialize(),
-//             success: () => {
-//                 swal('Your message has been sent successfully. Thank you for contacting me :).');
-//             }
-//         });
-//     });
-// });

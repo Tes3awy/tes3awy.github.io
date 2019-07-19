@@ -15,7 +15,7 @@ $font-body: 'Roboto' !default;
 
 ::selection {
   background-color: $color-primary;
-  color: $color-white;
+  color: $color-black;
 }
 
 body {
@@ -90,33 +90,35 @@ h6 {
         text-decoration: none;
       }
 
-      i.fa {
-        transition: color 0.35s;
+      .fab,
+      .fas {
+        transition: color 0.3s ease;
       }
 
       &:hover {
-        .fa {
+        .fab,
+        .fas {
           text-shadow: 0 0.2rem 0.4rem rgba($color-black, 0.1);
         }
 
         .fa-twitter {
-          color: $color-twitter;
+          fill: $color-twitter;
         }
 
         .fa-linkedin {
-          color: $color-linkedin;
+          fill: $color-linkedin;
         }
 
         .fa-github {
-          color: $color-github;
+          fill: $color-github;
         }
 
-        .fa-youtube-play {
-          color: $color-youtube;
+        .fa-youtube {
+          fill: $color-youtube;
         }
 
         .fa-envelope {
-          color: $color-mail;
+          fill: $color-mail;
         }
       }
     }
@@ -149,17 +151,11 @@ h6 {
   }
 }
 
-.devicons {
-  font-size: 2.8rem;
-  transition: all 0.4s;
-  vertical-align: middle;
-}
-
-.captcha-col {
-  text-align: center;
-  text-align: -moz-center;
-  text-align: -webkit-center;
-}
+// .captcha-col {
+//   text-align: center;
+//   text-align: -moz-center;
+//   text-align: -webkit-center;
+// }
 
 .contact-form {
   .form-group {
@@ -189,13 +185,22 @@ h6 {
         position: relative;
         border: 0;
 
-        .fa {
+        .fas {
           font-size: 1.2rem;
           position: absolute;
           left: 0;
           right: 0;
           top: 50%;
           transform: translateY(-50%);
+        }
+      }
+
+      .contact-pane {
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
     }
