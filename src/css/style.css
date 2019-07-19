@@ -210,26 +210,6 @@ h6 {
   color: #a52122;
 }
 
-#spinner-container {
-  height: 100vh;
-}
-
-#spinner-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-#spinner {
-  width: 5rem;
-  height: 5rem;
-  z-index: 9999;
-}
-
 @media only screen and (min-width: 1199px) {
   .port-item {
     padding: 2rem !important;
