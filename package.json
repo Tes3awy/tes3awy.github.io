@@ -11,6 +11,11 @@
     "pageSpeedTest": "gulp psi",
     "prod": "gulp concat"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "test"
+    }
+  },
   "author": {
     "name": "Osama Abbas",
     "email": "oabbas2512@gmail.com",
