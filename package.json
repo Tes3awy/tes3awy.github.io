@@ -9,12 +9,8 @@
     "serve": "gulp serve",
     "test": "snyk test",
     "pageSpeedTest": "gulp psi",
-    "production": "gulp concat"
+    "prod": "gulp concat"
   },
-  "pre-commit": [
-    "test",
-    "pageSpeedTest"
-  ],
   "author": {
     "name": "Osama Abbas",
     "email": "oabbas2512@gmail.com",
@@ -51,8 +47,8 @@
     "gulp-strip-comments": "^2.5.2",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "pre-commit": "^1.2.2",
+    "husky": "^3.0.1",
     "psi": "^3.1.0",
-    "snyk": "^1.195.0"
+    "snyk": "^1.197.0"
   }
 }
