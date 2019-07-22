@@ -13,7 +13,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "test"
+      "pre-commit": "snyk test",
+      "pre-push": "gulp psi"
     }
   },
   "author": {
