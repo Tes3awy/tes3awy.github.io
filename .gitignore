@@ -2,7 +2,7 @@ node_modules
 bower_components
 .DS_Store
 ._*
-npm-debug.log
 *.lock
 src/vendor
 maps/
+yarn-error.log
