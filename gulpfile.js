@@ -23,6 +23,7 @@ const reload = browserSync.reload;
 const psi = require('psi');
 const site = 'https://tes3awy.netlify.com/';
 const key = 'AIzaSyDAJzl1tWyXNeIe2ESCExV7nvWklISQThY';
+const port = 3000;
 
 // Move CSS to src/css
 gulp.task('css', () => {
@@ -170,30 +171,47 @@ gulp.task('concat:css', () => {
     .pipe(postcss([cssnano()]))
     .pipe(stripCssComments({ preserve: false }))
     .pipe(concat('all.min.css'))
-    .pipe(gulp.dest('src/css'));
+    .pipe(gulp.dest('src/css'))
+    .pipe(browserSync.stream());
 });
 
 // Get the PageSpeed Insights report
-gulp.task('psi', async () => {
+gulp.task('psi:desktop', async () => {
   const data = await psi(site, {
     key,
     strategy: 'desktop'
   });
-  console.log('Page Stats:', data.pageStats);
-  console.log('Speed score:', data.ruleGroups.SPEED.score);
+  console.log('Desktop Page Stats:', data.pageStats);
+  console.log('Desktop Speed score:', data.ruleGroups.SPEED.score);
+});
+
+gulp.task('psi:mobile', async () => {
+  const data = await psi(site, {
+    key,
+    strategy: 'mobile'
+  });
+  console.log('Mobile Page Stats:', data.pageStats);
+  console.log('Mobile Speed score:', data.ruleGroups.SPEED.score);
 });
 
 // Watch Sass & Serve
 gulp.task('serve', () => {
   browserSync.init({
+    watch: true,
     server: {
-      baseDir: './'
-    }
+      baseDir: './',
+      index: 'index.html'
+    },
+    port,
+    https: false,
+    logLevel: 'debug',
+    minify: true
   });
-  gulp.watch('src/js/app.js', ['minjs', 'concat:js']).on('change', reload);
+  browserSync.watch('all.min.css').on('change', reload);
   gulp
-    .watch('src/scss/style.scss', ['scss', 'mincss', 'concat:css'])
+    .watch('src/scss/style.scss', ['concat:css', 'scss', 'mincss'])
     .on('change', reload);
+  gulp.watch('src/js/app.js', ['minjs', 'concat:js']).on('change', reload);
   gulp.watch('*.html', ['minify-html']).on('change', reload);
 });
 

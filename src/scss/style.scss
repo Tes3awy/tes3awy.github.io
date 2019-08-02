@@ -10,8 +10,8 @@ $color-youtube: #ff0000 !default;
 $color-mail: #ccc !default;
 
 // Fonts Variables
-$font-headings: 'Lato' !default;
-$font-body: 'Roboto' !default;
+$font-headings: 'Roboto Condensed' !default;
+$font-body: 'Roboto Condensed' !default;
 
 ::selection {
   background-color: $color-primary;
@@ -77,48 +77,34 @@ h6 {
     &--item {
       display: inline-block;
       margin: 0;
-    }
-    &--item:not(:last-child) {
-      margin-right: 2rem;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
     }
 
     &--link {
       color: $color-white;
       font-size: 2rem;
-
+      transition: color 0.3s ease;
       &:hover {
-        text-decoration: none;
-      }
-
-      .fab,
-      .fas {
-        transition: color 0.3s ease;
-      }
-
-      &:hover {
-        .fab,
-        .fas {
-          text-shadow: 0 0.2rem 0.4rem rgba($color-black, 0.1);
+        svg.fa-twitter {
+          color: $color-twitter;
         }
 
-        .fa-twitter {
-          fill: $color-twitter;
+        svg.fa-linkedin {
+          color: $color-linkedin;
         }
 
-        .fa-linkedin {
-          fill: $color-linkedin;
+        svg.fa-github {
+          color: $color-github;
         }
 
-        .fa-github {
-          fill: $color-github;
+        svg.fa-youtube {
+          color: $color-youtube;
         }
 
-        .fa-youtube {
-          fill: $color-youtube;
-        }
-
-        .fa-envelope {
-          fill: $color-mail;
+        svg.fa-envelope {
+          color: $color-mail;
         }
       }
     }

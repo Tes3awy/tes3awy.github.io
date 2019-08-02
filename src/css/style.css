@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Roboto Condensed';
   position: relative;
      -ms-font-feature-settings: kern 1;
       -o-font-feature-settings: kern 1;
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Lato';
+  font-family: 'Roboto Condensed';
 }
 
 #main-header img {
@@ -47,7 +47,7 @@ h6 {
 }
 
 .title .name-title {
-  font-family: 'Lato';
+  font-family: 'Roboto Condensed';
   text-align: center;
   color: #fff;
   font-weight: bold;
@@ -69,34 +69,24 @@ h6 {
 .title .social-list--link {
   color: #fff;
   font-size: 2rem;
-}
-.title .social-list--link:hover {
-  text-decoration: none;
-}
-.title .social-list--link .fab,
-.title .social-list--link .fas {
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-.title .social-list--link:hover .fab,
-.title .social-list--link:hover .fas {
-  text-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+.title .social-list--link:hover svg.fa-twitter {
+  color: #0084b4;
 }
-.title .social-list--link:hover .fa-twitter {
-  fill: #0084b4;
+.title .social-list--link:hover svg.fa-linkedin {
+  color: #0077b5;
 }
-.title .social-list--link:hover .fa-linkedin {
-  fill: #0077b5;
+.title .social-list--link:hover svg.fa-github {
+  color: #6e5494;
 }
-.title .social-list--link:hover .fa-github {
-  fill: #6e5494;
+.title .social-list--link:hover svg.fa-youtube {
+  color: #f00;
 }
-.title .social-list--link:hover .fa-youtube {
-  fill: #f00;
-}
-.title .social-list--link:hover .fa-envelope {
-  fill: #ccc;
+.title .social-list--link:hover svg.fa-envelope {
+  color: #ccc;
 }
 
 .bg-black {
