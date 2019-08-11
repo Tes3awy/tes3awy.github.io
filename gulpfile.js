@@ -143,7 +143,6 @@ gulp.task('minify-html', () => {
 gulp.task('concat:js', () => {
   return gulp
     .src([
-      'src/js/main.js', // Preloader
       'src/js/jquery.min.js',
       'src/js/app.min.js',
       'src/js/all.min.js', // FontAwesome 5
@@ -216,7 +215,8 @@ gulp.task('serve', () => {
 });
 
 // Concat tasks
-gulp.task('concat', ['concat:js', 'concat:css']);
+gulp.task('concat:js', gulp.series('concat:js'));
+gulp.task('concat:css', gulp.series('concat:css'));
 
 // Default Tasks
-gulp.task('default', ['js', 'css', 'fonts']);
+gulp.task('default', gulp.series(['js', 'css']));
