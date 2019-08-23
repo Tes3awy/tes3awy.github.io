@@ -208,10 +208,15 @@ gulp.task('serve', () => {
   });
   browserSync.watch('all.min.css').on('change', reload);
   gulp
-    .watch('src/scss/style.scss', ['concat:css', 'scss', 'mincss'])
+    .watch(
+      'src/scss/style.scss',
+      gulp.parallel(['scss', 'concat:css', 'mincss'])
+    )
     .on('change', reload);
-  gulp.watch('src/js/app.js', ['minjs', 'concat:js']).on('change', reload);
-  gulp.watch('*.html', ['minify-html']).on('change', reload);
+  gulp
+    .watch('src/js/app.js', gulp.parallel(['minjs', 'concat:js']))
+    .on('change', reload);
+  gulp.watch('*.html', gulp.parallel('minify-html')).on('change', reload);
 });
 
 // Concat tasks
