@@ -199,24 +199,28 @@ gulp.task('serve', () => {
     watch: true,
     server: {
       baseDir: './',
-      index: 'index.html'
+      index: 'index.html',
+      serveStaticOptions: {
+        extensions: ['html']
+      }
     },
     port,
     https: false,
     logLevel: 'debug',
-    minify: true
+    minify: true,
+    logPrefix: 'bs-',
+    logConnections: true,
+    notify: true
   });
   browserSync.watch('all.min.css').on('change', reload);
   gulp
-    .watch(
-      'src/scss/style.scss',
-      gulp.parallel(['scss', 'concat:css', 'mincss'])
-    )
+    .watch('src/scss/style.scss', gulp.series(['scss', 'concat:css', 'mincss']))
     .on('change', reload);
   gulp
-    .watch('src/js/app.js', gulp.parallel(['minjs', 'concat:js']))
+    .watch('src/js/app.js', gulp.series(['minjs', 'concat:js']))
     .on('change', reload);
-  gulp.watch('*.html', gulp.parallel('minify-html')).on('change', reload);
+  // gulp.watch('*.html', gulp.series('minify-html')).on('change', reload);
+  browserSync.watch('*.html').on('change', reload);
 });
 
 // Concat tasks
