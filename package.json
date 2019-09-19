@@ -29,10 +29,10 @@
     "jquery": "^3.4.1",
     "lazysizes": "^5.1.1",
     "popper.js": "^1.15.0",
-    "sweetalert2": "^8.17.1"
+    "sweetalert2": "^8.17.6"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
+    "@fortawesome/fontawesome-free": "^5.11.1",
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
@@ -51,6 +51,11 @@
     "gulp-uglify": "^3.0.2",
     "husky": "^3.0.5",
     "psi": "^3.1.0",
-    "snyk": "^1.224.0"
+    "snyk": "^1.228.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run pageSpeedTest"
+    }
   }
 }
