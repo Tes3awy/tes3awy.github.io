@@ -41,7 +41,7 @@ gulp.task('bootstrap', () => {
   const plugins = [cssnano()];
   return gulp
     .src('node_modules/bootstrap/scss/bootstrap.scss')
-    .pipe(sass.sync())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('src/css'))
     .pipe(postcss(plugins))
     .pipe(rename({ suffix: '-min' }))
