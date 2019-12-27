@@ -29,7 +29,6 @@ const port = 3000;
 gulp.task('css', () => {
   return gulp
     .src([
-      'node_modules/bootstrap/dist/css/bootstrap.css',
       'node_modules/sweetalert2/dist/sweetalert2.min.css',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
     ])

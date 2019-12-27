@@ -42,5 +42,5 @@ $(document).ready(function() {
 
 console.log(
   '%cBelieve me, there is nothing important here for you 😜!',
-  'color: #a52122; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #232323 1px 1px 1px;'
+  'color: #dc3545; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #232323 1px 1px 1px;'
 );

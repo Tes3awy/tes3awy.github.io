@@ -1,6 +1,6 @@
 // Main Sass File
 // Color Variables
-$color-primary: #a52122 !default;
+$color-primary: #dc3545 !default;
 $color-black: #000 !default;
 $color-white: #fff !default;
 $color-linkedin: #0077b5 !default;
@@ -15,7 +15,7 @@ $font-body: 'Roboto Condensed' !default;
 
 ::selection {
   background-color: $color-primary;
-  color: $color-black;
+  color: $color-white;
 }
 
 body {
