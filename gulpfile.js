@@ -143,12 +143,13 @@ gulp.task('concat:js', () => {
   return gulp
     .src([
       'src/js/jquery.min.js',
+      'src/js/particles.min.js',
       'src/js/app.min.js',
       'src/js/all.min.js', // FontAwesome 5
       'src/js/bootstrap.bundle.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.js',
-      'src/js/sweetalert2.min.js'
+      'src/js/sweetalert2.min.js',
     ])
     .pipe(strip())
     .pipe(uglify())
