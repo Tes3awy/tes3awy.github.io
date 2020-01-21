@@ -22,7 +22,7 @@ $(document).ready(function() {
       position: 'center',
       type: 'success',
       title: 'My Resume',
-      text: 'Thank you for downloading my resume 😄',
+      text: 'Thank you for downloading my resume',
       showConfirmButton: false,
       showCloseButton: true
     });
@@ -43,6 +43,6 @@ $(document).ready(function() {
 particlesJS.load('particles-js', 'particles.json');
 
 console.log(
-  '%cBelieve me, there is nothing important here for you 😜!',
+  '%cBelieve me, there is nothing important here for you 😜!!!',
   'color: #dc3545; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #232323 1px 1px 1px;'
 );

@@ -1,7 +1,6 @@
-const gulp = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 
 const autoprefixer = require('autoprefixer');
-const csscomb = require('gulp-csscomb');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
@@ -20,96 +19,45 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
-const psi = require('psi');
-const site = 'https://tes3awy.netlify.com/';
-const key = 'AIzaSyDAJzl1tWyXNeIe2ESCExV7nvWklISQThY';
-const port = 3000;
+// Copy CSS to src/css Task
+function copyCSS() {
+  return src([
+    'node_modules/sweetalert2/dist/sweetalert2.min.css',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
+  ]).pipe(dest('src/css'));
+}
 
-// Move CSS to src/css
-gulp.task('css', () => {
-  return gulp
-    .src([
-      'node_modules/sweetalert2/dist/sweetalert2.min.css',
-      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
-    ])
-    .pipe(gulp.dest('src/css'));
-});
+// Copy JS Files to src/js Task
+function copyJS() {
+  return src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    'node_modules/lazysizes/lazysizes.js',
+    'node_modules/sweetalert2/dist/sweetalert2.min.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+    'node_modules/@fortawesome/fontawesome-free/js/all.min.js'
+  ]).pipe(dest('src/js'));
+}
 
-// Bootstrap task
-gulp.task('bootstrap', () => {
-  const plugins = [cssnano()];
-  return gulp
-    .src('node_modules/bootstrap/scss/bootstrap.scss')
+// Copy Bootstrap Scss files Task
+function copyBootstrap() {
+  return src('node_modules/bootstrap/scss/**/*.scss').pipe(
+    dest('src/scss/vendors/bootstrap')
+  );
+}
+
+// Preprocess Custom Scss Task
+function scss() {
+  let plugins = [autoprefixer(), cssnano()];
+  return src('src/scss/style.scss')
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('src/css'))
     .pipe(postcss(plugins))
-    .pipe(rename({ suffix: '-min' }))
-    .pipe(gulp.dest('src/css'));
-});
-
-// My Custom SCSS
-gulp.task('scss', () => {
-  const plugins = [
-    autoprefixer({
-      cascade: true
-    })
-  ];
-  return gulp
-    .src('src/scss/style.scss')
-    .pipe(plumber())
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(csscomb())
-    .pipe(postcss(plugins))
-    .pipe(gulp.dest('src/css'))
-    .pipe(browserSync.stream());
-});
-
-// Move JS Files to src/js
-gulp.task('js', () => {
-  return gulp
-    .src([
-      'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-      'node_modules/lazysizes/lazysizes.js',
-      'node_modules/sweetalert2/dist/sweetalert2.min.js',
-      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-      'node_modules/@fortawesome/fontawesome-free/js/all.min.js'
-    ])
-    .pipe(gulp.dest('src/js'))
-    .pipe(browserSync.stream());
-});
-
-// Minify app.js
-gulp.task('minjs', () => {
-  return gulp
-    .src('src/js/app.js')
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        suffix: '.min'
-      })
-    )
-    .pipe(sourcemaps.write('maps/'))
-    .pipe(gulp.dest('src/js'));
-});
-
-// Minify CSS
-gulp.task('mincss', () => {
-  const plugins = [cssnano()];
-  return gulp
-    .src('src/css/style.css')
-    .pipe(postcss(plugins))
-    .pipe(
-      rename({
-        suffix: '.min'
-      })
-    )
-    .pipe(gulp.dest('src/css'));
-});
+    .pipe(rename('style.min.css'))
+    .pipe(dest('src/css'));
+}
 
 // Minify HTML File
-gulp.task('minify-html', () => {
+function minifyHTML() {
   const options = {
     caseSensitive: true,
     collapseBooleanAttributes: true,
@@ -130,102 +78,68 @@ gulp.task('minify-html', () => {
     trimCustomFragments: true,
     useShortDoctype: true
   };
-  return gulp
-    .src('index.src.html')
+  return src('index.src.html')
     .pipe(plumber())
     .pipe(htmlmin(options))
-    .pipe(rename({ basename: 'index', extname: '.html' }))
-    .pipe(gulp.dest('./'));
-});
+    .pipe(rename('index.html'))
+    .pipe(dest('./'));
+}
 
-// Concat All JS Files
-gulp.task('concat:js', () => {
-  return gulp
-    .src([
+// Concat All CSS Files Task
+function concatCSS() {
+  return src([
+    'src/css/jquery.fancybox.min.css',
+    'src/css/sweetalert2.min.css',
+    'src/css/style.min.css'
+  ])
+    .pipe(postcss([cssnano()]))
+    .pipe(stripCssComments({ preserve: false }))
+    .pipe(concat('all.min.css'))
+    .pipe(dest('src/css'));
+}
+
+// Concat All JS Files Task
+function concatJS() {
+  return src(
+    [
       'src/js/jquery.min.js',
       'src/js/particles.min.js',
-      'src/js/app.min.js',
       'src/js/all.min.js', // FontAwesome 5
       'src/js/bootstrap.bundle.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.js',
       'src/js/sweetalert2.min.js',
-    ])
+      'src/js/app.js'
+    ],
+    { sourcemaps: true }
+  )
     .pipe(strip())
     .pipe(uglify())
     .pipe(concat('main.min.js'))
-    .pipe(gulp.dest('src/js'));
-});
-
-// Concat All CSS Files
-gulp.task('concat:css', () => {
-  return gulp
-    .src([
-      'src/css/bootstrap-min.css',
-      'src/css/linea.css',
-      'src/css/jquery.fancybox.min.css',
-      'src/css/sweetalert2.min.css',
-      'src/css/style.min.css'
-    ])
-    .pipe(postcss([cssnano()]))
-    .pipe(stripCssComments({ preserve: false }))
-    .pipe(concat('all.min.css'))
-    .pipe(gulp.dest('src/css'))
-    .pipe(browserSync.stream());
-});
-
-// Get the PageSpeed Insights report
-gulp.task('psi:desktop', async () => {
-  const data = await psi(site, {
-    key,
-    strategy: 'desktop'
-  });
-  console.log('Desktop Page Stats:', data.pageStats);
-  console.log('Desktop Speed score:', data.ruleGroups.SPEED.score);
-});
-
-gulp.task('psi:mobile', async () => {
-  const data = await psi(site, {
-    key,
-    strategy: 'mobile'
-  });
-  console.log('Mobile Page Stats:', data.pageStats);
-  console.log('Mobile Speed score:', data.ruleGroups.SPEED.score);
-});
+    .pipe(dest('src/js', { sourcemaps: true }));
+}
 
 // Watch Sass & Serve
-gulp.task('serve', () => {
+function serve() {
   browserSync.init({
     watch: true,
     server: {
-      baseDir: './',
-      index: 'index.html',
-      serveStaticOptions: {
-        extensions: ['html']
-      }
-    },
-    port,
-    https: false,
-    logLevel: 'debug',
-    minify: true,
-    logPrefix: 'bs-',
-    logConnections: true,
-    notify: true
+      baseDir: './'
+    }
   });
-  browserSync.watch('all.min.css').on('change', reload);
-  gulp
-    .watch('src/scss/style.scss', gulp.series(['scss', 'concat:css', 'mincss']))
-    .on('change', reload);
-  gulp
-    .watch('src/js/app.js', gulp.series(['minjs', 'concat:js']))
-    .on('change', reload);
-  // gulp.watch('*.html', gulp.series('minify-html')).on('change', reload);
-  browserSync.watch('*.html').on('change', reload);
-});
-
-// Concat tasks
-gulp.task('concat:js', gulp.series('concat:js'));
-gulp.task('concat:css', gulp.series('concat:css'));
+  watch('src/scss/**/*.scss', series('scss', 'concatCSS'));
+  watch('src/js/app.js', series('concatJS'));
+  watch('index.src.html', series('minifyHTML'));
+}
 
 // Default Tasks
-gulp.task('default', gulp.series(['js', 'css']));
+exports.default = parallel(copyCSS, copyJS);
+
+exports.copyCSS = copyCSS;
+exports.copyJS = copyJS;
+exports.copyBootstrap = copyBootstrap;
+exports.scss = scss;
+exports.concatCSS = concatCSS;
+exports.concatJS = concatJS;
+exports.minifyHTML = minifyHTML;
+exports.serve = serve;
