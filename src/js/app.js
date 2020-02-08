@@ -38,9 +38,22 @@ $(document).ready(function() {
       800
     );
   });
+
+  // Keep current accordion  on page refresh
+  // var selectedCollapse = sessionStorage.getItem('selectedCollapse');
+  // if (selectedCollapse != null) {
+  //   // $('.accordion .collapsed').removeClass('show');
+  //   $(selectedCollapse).addClass('show');
+  // }
+  // //To set, which one will be opened
+  // $('.accordion .port-item').on('click', function() {
+  //   var target = $(this).data('target');
+  //   //Save data to sessionStorage
+  //   sessionStorage.setItem('selectedCollapse', target);
+  // });
 });
 
-particlesJS.load('particles-js', 'particles.json');
+// particlesJS.load('particles-js', 'particles.json');
 
 console.log(
   '%cBelieve me, there is nothing important here for you 😜!!!',

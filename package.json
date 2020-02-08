@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "tes3awy-portfolio",
-  "version": "5.7.2",
+  "version": "5.7.3",
   "description": "Osama Abbas a.k.a tes3awy Portfolio",
   "main": "src/js/app.js",
   "homepage": "https://tes3awy.netlify.com/",
@@ -27,8 +27,8 @@
     "jquery": "^3.4.1",
     "lazysizes": "^5.2.0",
     "popper.js": "^1.16.1",
-    "sweetalert2": "^9.7.0",
-    "@fortawesome/fontawesome-free": "^5.12.0"
+    "sweetalert2": "^9.7.2",
+    "@fortawesome/fontawesome-free": "^5.12.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
@@ -45,6 +45,6 @@
     "gulp-strip-comments": "^2.5.2",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "snyk": "^1.279.1"
+    "snyk": "^1.290.2"
   }
 }
