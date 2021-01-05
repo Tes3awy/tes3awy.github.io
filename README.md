@@ -5,7 +5,6 @@
 ## Table of Contents
 - [Preview](#preview)
 - [Changelog](#changelog)
-- [Badges](#badges)
 
 ---
 
@@ -21,7 +20,7 @@
 
 1. Updated all packages.
 2. Removed unused packages.
-3. Added preview.
+3. Updated preview.
 4. Updated netlify URL.
 5. Updated `README.md`.
 6. Added minor adjustments.

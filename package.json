@@ -19,6 +19,12 @@
     "type": "git",
     "url": "https://github.com/Tes3awy/tes3awy.github.io.git"
   },
+  "os": [
+    "darwin",
+    "win32",
+    "win64",
+    "linux"
+  ],
   "readme": "README.md",
   "license": "ISC",
   "dependencies": {
