@@ -14,10 +14,8 @@ const uglify = require('gulp-uglify');
 
 const strip = require('gulp-strip-comments');
 const stripCssComments = require('gulp-strip-css-comments');
-const sourcemaps = require('gulp-sourcemaps');
 
 const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
 
 // Copy CSS to src/css Task
 function copyCSS() {
@@ -103,20 +101,18 @@ function concatJS() {
   return src(
     [
       'src/js/jquery.min.js',
-      'src/js/particles.min.js',
       'src/js/all.min.js', // FontAwesome 5
       'src/js/bootstrap.bundle.min.js',
       'src/js/jquery.fancybox.min.js',
       'src/js/lazysizes.js',
       'src/js/sweetalert2.min.js',
       'src/js/app.js'
-    ],
-    { sourcemaps: true }
+    ]
   )
     .pipe(strip())
     .pipe(uglify())
     .pipe(concat('main.min.js'))
-    .pipe(dest('src/js', { sourcemaps: true }));
+    .pipe(dest('src/js'));
 }
 
 // Watch Sass & Serve

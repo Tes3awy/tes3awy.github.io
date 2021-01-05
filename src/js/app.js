@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Collapsing Sections
-  $('.port-item').on('click', function(e) {
+  $('.port-item').on('click', function (e) {
     e.preventDefault();
     $('.collapse').collapse('hide');
   });
@@ -8,34 +8,37 @@ $(document).ready(function() {
   // FancyBox
   $('[data-fancybox]').fancybox({
     protect: true,
-    loop: true
+    loop: false
   });
 
   // Toggling Tabs Smooth Scroll
-  $('.toggling-tabs').on('click', function() {
+  $('.toggling-tabs').on('click', function () {
     var targetOffset = $(this).offset().top + $('.toggling-tabs').height();
     $('html, body').animate({ scrollTop: targetOffset }, 'slow');
   });
 
-  $('#downloadBtn').on('click', function() {
+  $('#downloadBtn').on('click', function () {
     Swal.fire({
       position: 'center',
       type: 'success',
-      title: 'My Resume',
-      text: 'Thank you for downloading my resume',
-      showConfirmButton: false,
-      showCloseButton: true
+      backdrop: 'swal2-backdrop-show',
+      title: 'Thank you',
+      text: 'for downloading my resume',
+      icon: 'info',
+      showConfirmButton: true,
+      confirmButtonText: 'Dismiss',
+      showCloseButton: false
     });
   });
 
-  $('#back_to_top').on('click', function(e) {
+  $('#back_to_top').on('click', function (e) {
     e.preventDefault();
     var target = $('#top');
     $('html, body').animate(
       {
         scrollTop: target.offset().top
       },
-      800
+      600
     );
   });
 
@@ -52,8 +55,6 @@ $(document).ready(function() {
   //   sessionStorage.setItem('selectedCollapse', target);
   // });
 });
-
-// particlesJS.load('particles-js', 'particles.json');
 
 console.log(
   '%cBelieve me, there is nothing important here for you 😜!!!',

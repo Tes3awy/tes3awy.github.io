@@ -1,19 +1,19 @@
 {
   "private": true,
   "name": "tes3awy-portfolio",
-  "version": "5.7.3",
+  "version": "6.0.0",
   "description": "Osama Abbas a.k.a tes3awy Portfolio",
   "main": "src/js/app.js",
-  "homepage": "https://tes3awy.netlify.com/",
+  "homepage": "https://tes3awy.netlify.app/",
   "scripts": {
     "dev": "gulp",
-    "serve": "gulp serve",
+    "start": "gulp serve",
     "test": "snyk test -d"
   },
   "author": {
     "name": "Osama Abbas",
     "email": "oabbas2512@gmail.com",
-    "url": "https://tes3awy.netlify.com/"
+    "url": "https://tes3awy.netlify.app/"
   },
   "repository": {
     "type": "git",
@@ -23,28 +23,28 @@
   "license": "ISC",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "bootstrap": "^4.4.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.3.0",
     "popper.js": "^1.16.1",
-    "sweetalert2": "^9.10.12"
+    "sweetalert2": "^10.12.7"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "browser-sync": "^2.26.7",
+    "autoprefixer": "^10.1.0",
+    "browser-sync": "^2.26.13",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
     "gulp-strip-comments": "^2.5.2",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
-    "snyk": "^1.319.2"
+    "postcss": "^8.2.2",
+    "snyk": "^1.437.3"
   }
 }
