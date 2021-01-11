@@ -24,3 +24,9 @@
 4. Updated netlify URL.
 5. Updated `README.md`.
 6. Added minor adjustments.
+
+**11 January 2021**
+
+1. Updated packages.
+2. Changed brands' color codes.
+3. Updated gulp tasks.

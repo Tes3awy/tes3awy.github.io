@@ -5,18 +5,19 @@ $(document).ready(function () {
     $('.collapse').collapse('hide');
   });
 
+  // Toggling Tabs Smooth Scroll
+  $('.toggling-tabs').on('click', function () {
+    let targetOffset = $(this).offset().top + $('.toggling-tabs').height();
+    $('html, body').animate({ scrollTop: targetOffset }, 'slow');
+  });
+
   // FancyBox
   $('[data-fancybox]').fancybox({
     protect: true,
     loop: false
   });
 
-  // Toggling Tabs Smooth Scroll
-  $('.toggling-tabs').on('click', function () {
-    var targetOffset = $(this).offset().top + $('.toggling-tabs').height();
-    $('html, body').animate({ scrollTop: targetOffset }, 'slow');
-  });
-
+  // Sweetalert2
   $('#downloadBtn').on('click', function () {
     Swal.fire({
       position: 'center',
@@ -24,36 +25,24 @@ $(document).ready(function () {
       backdrop: 'swal2-backdrop-show',
       title: 'Thank you',
       text: 'for downloading my resume',
-      icon: 'info',
+      icon: 'success',
       showConfirmButton: true,
       confirmButtonText: 'Dismiss',
       showCloseButton: false
     });
   });
 
+  // Back to top
   $('#back_to_top').on('click', function (e) {
     e.preventDefault();
-    var target = $('#top');
+    let pageTop = $('#top');
     $('html, body').animate(
       {
-        scrollTop: target.offset().top
+        scrollTop: pageTop.offset().top
       },
-      600
+      550
     );
   });
-
-  // Keep current accordion  on page refresh
-  // var selectedCollapse = sessionStorage.getItem('selectedCollapse');
-  // if (selectedCollapse != null) {
-  //   // $('.accordion .collapsed').removeClass('show');
-  //   $(selectedCollapse).addClass('show');
-  // }
-  // //To set, which one will be opened
-  // $('.accordion .port-item').on('click', function() {
-  //   var target = $(this).data('target');
-  //   //Save data to sessionStorage
-  //   sessionStorage.setItem('selectedCollapse', target);
-  // });
 });
 
 console.log(

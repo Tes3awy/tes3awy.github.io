@@ -4,9 +4,9 @@
 $color-primary: #dc3545 !default;
 $color-black: #000 !default;
 $color-white: #fff !default;
-$color-linkedin: #0077b5 !default;
-$color-github: #6e5494 !default;
-$color-twitter: #0084b4 !default;
+$color-linkedin: #2867b2 !default;
+$color-github: #6f42c1 !default;
+$color-twitter: #1da1f2 !default;
 $color-youtube: #ff0000 !default;
 $color-mail: #ccc !default;
 
@@ -134,8 +134,12 @@ h6 {
 .my-skills {
   display: inline-flex;
   margin: 50px;
+  transition: transform 0.3s ease-in-out;
   img {
     filter: grayscale(100%);
+  }
+  &:hover {
+    transform: translateY(-2px);
   }
 }
 

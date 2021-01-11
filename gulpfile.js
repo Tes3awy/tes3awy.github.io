@@ -121,7 +121,11 @@ function serve() {
     watch: true,
     server: {
       baseDir: './'
-    }
+    },
+    watchOptions: {
+      ignoreInitial: true,
+      ignored: ['README.md', 'gulpfile.js', 'package.json', 'index.html']
+    },
   });
   watch('src/scss/**/*.scss', series('scss', 'concatCSS'));
   watch('src/js/app.js', series('concatJS'));
