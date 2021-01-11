@@ -30,3 +30,4 @@
 1. Updated packages.
 2. Changed brands' color codes.
 3. Updated gulp tasks.
+4. Added GTM.
