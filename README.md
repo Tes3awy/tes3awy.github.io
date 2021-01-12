@@ -37,3 +37,4 @@
 1. Preserved last collapse tab on page refresh.
 2. Minor UI changes.
 3. Added `gulp-csso`.
+4. Updated preview.
