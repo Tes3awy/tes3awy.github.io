@@ -6,8 +6,8 @@ $(document).ready(function () {
   });
 
   // Toggling Tabs Smooth Scroll
-  $('.toggling-tabs').on('click', function () {
-    let targetOffset = $(this).offset().top + $('.toggling-tabs').height();
+  $('.toggling-tab').on('click', function () {
+    let targetOffset = $(this).offset().top + $('.toggling-tab').height();
     $('html, body').animate({ scrollTop: targetOffset }, 'slow');
   });
 
@@ -16,6 +16,19 @@ $(document).ready(function () {
     protect: true,
     loop: false
   });
+
+  // Preserve the last accordion tab on refresh
+  $('.sections').on('show.bs.collapse', function (e) {
+    sessionStorage.setItem('activeTab', "#" + e.target.id);
+  });
+
+  let activeTab = sessionStorage.getItem('activeTab');
+
+  if (activeTab) {
+    $(activeTab).collapse('show');
+  } else {
+    $('#home').collapse('show');
+  }
 
   // Sweetalert2
   $('#downloadBtn').on('click', function () {

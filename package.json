@@ -42,6 +42,7 @@
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",

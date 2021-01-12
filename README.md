@@ -1,6 +1,6 @@
 # Osama Abbas a.k.a tes3awy Portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d75f469a-848d-4449-966a-178c9256c9cd/deploy-status)](https://app.netlify.com/sites/tes3awy/deploys) [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/Tes3awy/my-stack)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d75f469a-848d-4449-966a-178c9256c9cd/deploy-status)](https://app.netlify.com/sites/tes3awy/deploys) [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/Tes3awy/my-stack) [![Known Vulnerabilities](https://snyk.io/test/github/Tes3awy/tes3awy.github.io/badge.svg)](https://snyk.io/test/github/Tes3awy/tes3awy.github.io)
 
 ## Table of Contents
 - [Preview](#preview)
@@ -31,3 +31,9 @@
 2. Changed brands' color codes.
 3. Updated gulp tasks.
 4. Added GTM.
+
+**12 January 2021**
+
+1. Preserved last collapse tab on page refresh.
+2. Minor UI changes.
+3. Added `gulp-csso`.

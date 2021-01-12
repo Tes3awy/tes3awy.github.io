@@ -136,10 +136,10 @@ h6 {
   margin: 50px;
   transition: transform 0.3s ease-in-out;
   img {
-    filter: grayscale(100%);
+    filter: grayscale(100%) drop-shadow(1px 2px 1px rgba($color-black, 0.2));
   }
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
 }
 

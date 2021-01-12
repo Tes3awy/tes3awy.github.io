@@ -4,6 +4,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
+const csso = require('gulp-csso');
 
 const concat = require('gulp-concat');
 const plumber = require('gulp-plumber');
@@ -58,14 +59,16 @@ function scss() {
 function minifyHTML() {
   const options = {
     caseSensitive: true,
-    collapseBooleanAttributes: true,
-    removeComments: true,
     collapseWhitespace: true,
+    collapseBooleanAttributes: true,
+    collapseInlineTagWhitespace: true,
     conservativeCollapse: true,
+    removeComments: true,
     decodeEntities: true,
-    minifyJS: true,
     minifyCSS: true,
+    minifyJS: true,
     minifyURLs: true,
+    preserveLineBreaks: false,
     quoteCharacter: '',
     removeEmptyAttributes: true,
     removeRedundantAttributes: true,
@@ -91,6 +94,7 @@ function concatCSS() {
     'src/css/style.min.css'
   ])
     .pipe(postcss([cssnano()]))
+    .pipe(csso())
     .pipe(stripCssComments({ preserve: false }))
     .pipe(concat('all.min.css'))
     .pipe(dest('src/css'));
@@ -119,6 +123,9 @@ function concatJS() {
 function serve() {
   browserSync.init({
     watch: true,
+    logPrefix: "Tes3awy",
+    logConnections: true,
+    debugLevel: "info",
     server: {
       baseDir: './'
     },
