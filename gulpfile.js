@@ -79,7 +79,7 @@ function minifyHTML() {
     trimCustomFragments: true,
     useShortDoctype: true
   };
-  return src('index.src.html')
+  return src('index.app.html')
     .pipe(plumber())
     .pipe(htmlmin(options))
     .pipe(rename('index.html'))
@@ -136,7 +136,7 @@ function serve() {
   });
   watch('src/scss/**/*.scss', series('scss', 'concatCSS'));
   watch('src/js/app.js', series('concatJS'));
-  watch('index.src.html', series('minifyHTML'));
+  watch('index.app.html', series('minifyHTML'));
 }
 
 // Default Tasks

@@ -27,9 +27,9 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="AlJ67r4xZb8qMlWEh3GghAj2x_Hx9SDGkH-cK9ITDRU" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="src/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="src/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="src/favicons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicons/apple-touch-icon.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicons/favicon-32x32.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicons/favicon-16x16.jpg" />
     <link rel="manifest" href="manifest.json" />
     <link rel="mask-icon" href="src/favicons/safari-pinned-tab.svg" color="#a52122" />
     <link rel="shortcut icon" href="src/favicons/favicon.ico" />
@@ -120,14 +120,14 @@
         style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container" id="wrapper-container">
-      <header class="shadow" id="main-header" role="banner">
+      <header class="shadow banner" id="main-header" role="banner">
         <div class="row no-gutters">
           <div class="col-lg-4 col-md-5 col-sm-12">
-            <img src="src/img/me.png" alt="Osama Abbas" title="Yeah, I look like this!" />
+            <img src="src/img/me.jpg" alt="Osama Abbas" title="Yeah, I look like this!" />
           </div>
           <div class="col-lg-8 col-md-7 col-sm-12 bg-dark">
             <div class="d-flex flex-column">
-              <section class="bg-dark py-4 px-5 text-white title">
+              <section class="py-4 px-5 text-white title">
                 <h1 class="display-3 name-title" title="Yes, That's my name!">
                   Osama Abbas
                 </h1>
@@ -160,7 +160,7 @@
                   </ul>
                 </div>
               </section>
-              <div class="p-4 bg-dark lead text-center info-bar">
+              <div class="p-4 lead text-center info-bar">
                 <h4 class="text-white mb-0">Network Field Engineer <span>@</span> <a href="//seegypt.com"
                     target="_blank" rel="noopener" title="SEE Egypt">SEE Egypt</a>
                 </h4>
@@ -170,28 +170,28 @@
               <section class="accordion">
                 <div class="d-flex flex-row text-white align-item-stretch text-center">
                   <div class="row no-gutters w-100">
-                    <div class="col-lg-3 col-md-6 col-6 toggling-tab bg-dark">
-                      <div class="port-item p-4 home-pane text-center" data-toggle="collapse" data-target="#home">
+                    <div class="col-lg-3 col-md-6 col-6 toggling-tab">
+                      <div class="port-item p-4 text-center" data-toggle="collapse" data-target="#home">
                         <i class="fas fa-house-user icon d-block mx-auto pb-2"></i>
-                        <span class="text-primary">Home</span>
+                        <span class="port-item__desc">Home</span>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6 toggling-tab bg-dark">
-                      <div class="port-item p-4 resume-pane" data-toggle="collapse" data-target="#resume">
+                    <div class="col-lg-3 col-md-6 col-6 toggling-tab">
+                      <div class="port-item p-4" data-toggle="collapse" data-target="#resume">
                         <i class="fab fa-readme icon mx-auto d-block pb-2"></i>
-                        <span class="text-primary">Resume</span>
+                        <span class="port-item__desc">Resume</span>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6 toggling-tab bg-dark">
-                      <div class="port-item p-4 projects-pane" data-toggle="collapse" data-target="#projects">
+                    <div class="col-lg-3 col-md-6 col-6 toggling-tab">
+                      <div class="port-item p-4" data-toggle="collapse" data-target="#projects">
                         <i class="fas fa-tasks icon mx-auto d-block pb-2"></i>
-                        <span class="text-primary">Projects</span>
+                        <span class="port-item__desc">Projects</span>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-6 toggling-tab bg-dark">
-                      <div class="port-item p-4 contact-pane" data-toggle="collapse" data-target="#contact">
+                    <div class="col-lg-3 col-md-6 col-6 toggling-tab">
+                      <div class="port-item p-4" data-toggle="collapse" data-target="#contact">
                         <i class="fas fa-address-card icon mx-auto d-block pb-2"></i>
-                        <span class="text-primary">Contact</span>
+                        <span class="port-item__desc">Contact</span>
                       </div>
                     </div>
                   </div>
@@ -205,7 +205,7 @@
       <main class="shadow" role="main">
         <!-- Section: Skills || Home -->
         <section class="collapse collapsing sections" id="home">
-          <div class="card card-body home-pane text-white py-5 banner bg-dark">
+          <div class="card card-body home-pane pane text-white py-5 bg-dark">
             <h2>Welcome to my Portfolio</h2>
           </div>
 
@@ -284,7 +284,7 @@
 
         <!-- Section: Resume -->
         <section class="collapse collapsing sections" id="resume">
-          <div class="card card-body resume-pane text-white py-5 bg-dark">
+          <div class="card card-body resume-pane pane text-white py-5 bg-dark">
             <h2>My Resume</h2>
           </div>
           <div class="card card-body py-5">
@@ -346,7 +346,7 @@
               <div class="card shadow-sm">
                 <div class="card-header">
                   <h4 class="card-title mb-0">
-                    <a class="text-dark" href="//aast.edu" title="AAST Website">Arab Academy Cairo, Egypt</a>
+                    <a class="text-dark" href="//aast.edu" title="AAST Website">Arab Academy (AAST). Cairo, Egypt</a>
                   </h4>
                 </div>
                 <div class="card-body">
@@ -364,17 +364,17 @@
 
         <!-- Section: Projects -->
         <section class="collapse collapsing sections" id="projects">
-          <div class="card card-body projects-pane text-white py-5 bg-dark">
+          <div class="card card-body projects-pane pane text-white py-5 bg-dark">
             <h2>My Projects</h2>
           </div>
           <div class="card card-body py-5">
-            <h3 class="text-center mb-0">Some of what I have built so far</h3>
-            <h5 class="text-center text-primary mb-3">Click any to preview</h5>
+            <h3 class="text-center mb-0">Some of what I have built</h3>
+            <h5 class="text-center text-primary mb-3">Click any project to preview</h5>
             <div class="card-columns">
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/mince-burger.png" data-fancybox="images" data-type="image"
+                <a href="src/img/mince-burger.jpg" data-fancybox="images" data-type="image"
                   data-caption="minceburgers.com" title="Mince Burgers">
-                  <img data-src="src/img/mince-burger.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/mince-burger.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="Mince Burgers Website" title="Mince Burgers" />
                 </a>
               </div>
@@ -386,9 +386,9 @@
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/premium-card.png" data-fancybox="images" data-type="image"
+                <a href="src/img/premium-card.jpg" data-fancybox="images" data-type="image"
                   data-caption="premiumcard.net" title="Premium Card">
-                  <img data-src="src/img/premium-card.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/premium-card.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="Premium Card Website" title="Premium Card" />
                 </a>
               </div>
@@ -400,10 +400,17 @@
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/veeta.png" data-fancybox="images" data-type="image" data-caption="veeta-egypt.com"
+                <a href="src/img/veeta.jpg" data-fancybox="images" data-type="image" data-caption="veeta-egypt.com"
                   title="Veeta Polymers Egypt">
-                  <img data-src="src/img/veeta.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/veeta.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="Veeta Polymers Egypt Website" title="Veeta Polymers Egypt" />
+                </a>
+              </div>
+              <div class="card mb-4 project-col shadow-sm">
+                <a href="src/img/alexseeds.jpg" data-fancybox="images" data-type="image" data-caption="alexseeds.com"
+                  title="AlexSeeds">
+                  <img data-src="src/img/alexseeds.jpg" class="card-img w-100 shadow-sm lazyload"
+                    alt="AlexSeeds Website" title="AlexSeeds" />
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
@@ -414,23 +421,23 @@
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/ihab-madi.png" data-fancybox="images" data-type="image" data-caption="ihabmadi.com"
+                <a href="src/img/ihab-madi.jpg" data-fancybox="images" data-type="image" data-caption="ihabmadi.com"
                   title="Ihab Madi">
-                  <img data-src="src/img/ihab-madi.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/ihab-madi.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="Ihab Madi Website" title="Ihab Madi Website" />
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/rowad2030.png" data-fancybox="images" data-type="image" data-caption="rowad2030.com"
+                <a href="src/img/rowad2030.jpg" data-fancybox="images" data-type="image" data-caption="rowad2030.com"
                   title="Rowad2030">
-                  <img data-src="src/img/rowad2030.png" class="card-img w-100 shadow-sm lazyload" alt="Rowad 2030"
+                  <img data-src="src/img/rowad2030.jpg" class="card-img w-100 shadow-sm lazyload" alt="Rowad 2030"
                     title="Rowad 2030" />
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/soufie.png" data-fancybox="images" data-type="image" data-caption="soufie.com"
+                <a href="src/img/soufie.jpg" data-fancybox="images" data-type="image" data-caption="soufie.com"
                   title="Soufie">
-                  <img data-src="src/img/soufie.png" class="card-img w-100 shadow-sm lazyload" alt="Soufie Website"
+                  <img data-src="src/img/soufie.jpg" class="card-img w-100 shadow-sm lazyload" alt="Soufie Website"
                     title="Soufie Website" />
                 </a>
               </div>
@@ -456,30 +463,30 @@
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/indie-coming-soon.png" data-fancybox="images" data-type="image"
+                <a href="src/img/indie-coming-soon.jpg" data-fancybox="images" data-type="image"
                   data-caption="i-ndie.com" title="Indie Media Comm">
-                  <img data-src="src/img/indie-coming-soon.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/indie-coming-soon.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="Indie Media Comm Landing Page" title="Indie Media Comm Landing Page" />
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/outreach.png" data-fancybox="images" data-type="image" data-caption="outreachegypt.com"
+                <a href="src/img/outreach.jpg" data-fancybox="images" data-type="image" data-caption="outreachegypt.com"
                   title="Outreach Egypt">
-                  <img data-src="src/img/outreach.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/outreach.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="Outreach Egypt Website" title="Outreach Egypt" />
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/ragyamer.png" data-fancybox="images" data-type="image"
+                <a href="src/img/ragyamer.jpg" data-fancybox="images" data-type="image"
                   data-caption="In progress - ragyamer.com/ramer" title="Ragy Amer">
-                  <img data-src="src/img/ragyamer.png" class="card-img w-100 shadow-sm lazyload" alt="Ragy Amer Website"
+                  <img data-src="src/img/ragyamer.jpg" class="card-img w-100 shadow-sm lazyload" alt="Ragy Amer Website"
                     title="Ragy Amer" />
                 </a>
               </div>
               <div class="card mb-4 project-col shadow-sm">
-                <a href="src/img/not-found.png" data-type="image" data-caption="Meme design for 404 Page not found"
+                <a href="src/img/not-found.jpg" data-type="image" data-caption="Meme design for 404 Page not found"
                   data-fancybox="images" title="404 Page">
-                  <img data-src="src/img/not-found.png" class="card-img w-100 shadow-sm lazyload"
+                  <img data-src="src/img/not-found.jpg" class="card-img w-100 shadow-sm lazyload"
                     alt="404 Page not Found Design" title="Custom 404 Page not Found Page" />
                 </a>
               </div>
@@ -489,7 +496,7 @@
 
         <!-- Section: Contact -->
         <section class="collapse collapsing sections" id="contact">
-          <div class="card card-body contact-pane text-white py-5 bg-dark">
+          <div class="card card-body contact-pane pane text-white py-5 bg-dark">
             <h2>Contact Me</h2>
           </div>
           <div class="alert alert-info text-center mx-auto contact-alert mb-0" role="alert">
@@ -510,7 +517,7 @@
                     <legend>Get in Touch</legend>
                     <div class="form-group">
                       <div class="input-group input-group-lg">
-                        <span class="input-group-addon contact-pane text-white bg-primary">
+                        <span class="input-group-addon input-field-icon text-white bg-primary">
                           <i class="fa fa-user text-white"></i>
                         </span>
                         <input class="form-control bg-dark text-white" type="text" placeholder="Your Full Name"
@@ -520,7 +527,7 @@
 
                     <div class="form-group">
                       <div class="input-group input-group-lg">
-                        <span class="input-group-addon contact-pane text-white bg-primary">
+                        <span class="input-group-addon input-field-icon text-white bg-primary">
                           <i class="fa fa-envelope text-white"></i>
                         </span>
                         <input class="form-control bg-dark text-white" type="email" placeholder="Email Address"
@@ -532,7 +539,7 @@
 
                     <div class="form-group">
                       <div class="input-group input-group-lg">
-                        <span class="input-group-addon contact-pane text-white bg-primary">
+                        <span class="input-group-addon input-field-icon text-white bg-primary">
                           <i class="fa fa-edit text-white"></i>
                         </span>
                         <textarea class="form-control bg-dark text-white" type="text" placeholder="Your Message"
@@ -552,7 +559,7 @@
       </main>
 
       <!-- Section: Footer -->
-      <footer id="main-footer" class="bg-dark pt-3 pb-3">
+      <footer id="main-footer" class="footer bg-dark pt-3 pb-3">
         <div class="container">
           <div class="row">
             <div class="col-md-5 col-sm-12 pr-md-4 pr-3 ml-md-auto text-right download-resume">

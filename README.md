@@ -38,3 +38,11 @@
 2. Minor UI changes.
 3. Added `gulp-csso`.
 4. Updated preview.
+
+**13 January 2021**
+
+1. Added `.active` to the current accordion tab.
+2. Smushed projects images.
+3. Converted all project images to `.jpg`.
+4. Added AlexSeeds project.
+5. Removed and renamed some classes.

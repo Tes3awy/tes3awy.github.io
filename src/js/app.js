@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   // Toggling Tabs Smooth Scroll
   $('.toggling-tab').on('click', function () {
-    let targetOffset = $(this).offset().top + $('.toggling-tab').height();
+    let targetOffset = $(this).offset().top + ($('.banner').height() - 400);
     $('html, body').animate({ scrollTop: targetOffset }, 'slow');
   });
 
@@ -29,6 +29,18 @@ $(document).ready(function () {
   } else {
     $('#home').collapse('show');
   }
+
+  // Add .active to current accordion tab
+
+  $('.sections').on('shown.bs.collapse', function (e) {
+    let currentTab = e.target.id;
+    $('div[data-target="' + '#' + currentTab + '"]').parent().addClass('active');
+  });
+
+  $('.sections').on('hidden.bs.collapse', function (e) {
+    let prevTab = e.target.id;
+    $('div[data-target="' + '#' + prevTab + '"]').parent().removeClass('active');
+  });
 
   // Sweetalert2
   $('#downloadBtn').on('click', function () {
