@@ -7,7 +7,7 @@ $(document).ready(function () {
 
   // Toggling Tabs Smooth Scroll
   $('.toggling-tab').on('click', function () {
-    let targetOffset = $(this).offset().top + ($('.banner').height() - 400);
+    let targetOffset = $(this).offset().top + $('.toggling-tab').height();
     $('html, body').animate({ scrollTop: targetOffset }, 'slow');
   });
 
