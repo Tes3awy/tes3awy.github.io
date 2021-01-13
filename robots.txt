@@ -1,4 +1,7 @@
-Sitemap: https://tes3awy.netlify.com/sitemap.xml
+Sitemap: https://tes3awy.netlify.app/sitemap.xml
+
+User-agent: Twitterbot
+Disallow:
 
 User-agent: *
 Disallow:

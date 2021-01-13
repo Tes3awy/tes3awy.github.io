@@ -47,3 +47,4 @@
 4. Added AlexSeeds project.
 5. Removed and renamed some classes.
 6. Updated resume.
+7. Added Twitter Card meta tags.
