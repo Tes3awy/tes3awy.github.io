@@ -6,6 +6,7 @@ $color-black: #000 !default;
 $color-white: #fff !default;
 $color-linkedin: #2867b2 !default;
 $color-github: #6f42c1 !default;
+$color-stackoverflow: #f48024 !default;
 $color-twitter: #1da1f2 !default;
 $color-youtube: #ff0000 !default;
 $color-mail: #ccc !default;
@@ -83,8 +84,12 @@ h6 {
     &--item {
       display: inline-block;
       margin: 0;
+      transition: transform 0.3s ease;
       &:not(:last-child) {
         margin-right: 2rem;
+      }
+      &:hover {
+        transform: translateY(-3px);
       }
     }
 
@@ -103,6 +108,10 @@ h6 {
 
         svg.fa-github {
           color: $color-github;
+        }
+
+        svg.fa-stack-overflow {
+          color: $color-stackoverflow;
         }
 
         svg.fa-youtube {
@@ -211,15 +220,8 @@ h6 {
   margin: 1rem 0;
 }
 
-.matcss-img {
-  filter: grayscale(100%);
-  transition: all 0.3s ease-in-out;
-}
-
-.my-skills:hover {
-  .matcss-img {
-    filter: grayscale(0);
-  }
+.copyright {
+  font-size: 0.7rem;
 }
 
 #back_to_top {

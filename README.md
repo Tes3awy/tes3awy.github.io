@@ -46,3 +46,4 @@
 3. Converted all project images to `.jpg`.
 4. Added AlexSeeds project.
 5. Removed and renamed some classes.
+6. Updated resume.

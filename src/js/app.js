@@ -46,7 +46,6 @@ $(document).ready(function () {
   $('#downloadBtn').on('click', function () {
     Swal.fire({
       position: 'center',
-      type: 'success',
       backdrop: 'swal2-backdrop-show',
       title: 'Thank you',
       text: 'for downloading my resume',
@@ -69,6 +68,16 @@ $(document).ready(function () {
     );
   });
 });
+
+function getFormattedTime() {
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate();
+  return year + "-" + month + "-" + day;
+}
+
+document.querySelector('.currentYear').textContent = new Date().getFullYear();
 
 console.log(
   '%cBelieve me, there is nothing important here for you 😜!!!',

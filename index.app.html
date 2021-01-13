@@ -146,6 +146,12 @@
                       </a>
                     </li>
                     <li class="social-list--item">
+                      <a class="social-list--link" href="//stackoverflow.com/users/5865393/tes3awy" target="_blank"
+                        title="Stackoverflow" rel="noopener">
+                        <i class="fab fa-stack-overflow"></i>
+                      </a>
+                    </li>
+                    <li class="social-list--item">
                       <a class="social-list--link" href="//youtube.com/c/GEEKLEAK25" target="_blank" title="YouTube"
                         rel="noopener">
                         <i class="fab fa-youtube"></i>
@@ -206,7 +212,7 @@
         <!-- Section: Skills || Home -->
         <section class="collapse collapsing sections" id="home">
           <div class="card card-body home-pane pane text-white py-5 bg-dark">
-            <h2>Welcome to my Portfolio</h2>
+            <h2 class="mb-0">Welcome to my Portfolio</h2>
           </div>
 
           <div class="card card-body py-5">
@@ -285,7 +291,7 @@
         <!-- Section: Resume -->
         <section class="collapse collapsing sections" id="resume">
           <div class="card card-body resume-pane pane text-white py-5 bg-dark">
-            <h2>My Resume</h2>
+            <h2 class="mb-0">My Resume</h2>
           </div>
           <div class="card card-body py-5">
             <h3 class="mb-4">Where I've Worked?</h3>
@@ -365,7 +371,7 @@
         <!-- Section: Projects -->
         <section class="collapse collapsing sections" id="projects">
           <div class="card card-body projects-pane pane text-white py-5 bg-dark">
-            <h2>My Projects</h2>
+            <h2 class="mb-0">My Projects</h2>
           </div>
           <div class="card card-body py-5">
             <h3 class="text-center mb-0">Some of what I have built</h3>
@@ -497,13 +503,13 @@
         <!-- Section: Contact -->
         <section class="collapse collapsing sections" id="contact">
           <div class="card card-body contact-pane pane text-white py-5 bg-dark">
-            <h2>Contact Me</h2>
+            <h2 class="mb-0">Contact Me</h2>
           </div>
           <div class="alert alert-info text-center mx-auto contact-alert mb-0" role="alert">
             <h3>
               Currently <span class="text-uppercase font-weight-bold"><u>unavailable</u></span>
             </h3>
-            <h4>
+            <h4 class="mb-0">
               Please contact me through
               <span class="text-uppercase font-weight-bold"><a
                   href="mailto:oabbas2512@gmail.com?subject=From Tes3awy Portfolio">Mail</a></span>
@@ -562,17 +568,19 @@
       <footer id="main-footer" class="footer bg-dark pt-3 pb-3">
         <div class="container">
           <div class="row">
-            <div class="col-md-5 col-sm-12 pr-md-4 pr-3 ml-md-auto text-right download-resume">
+            <div class="col-md-4 col-sm-12 pr-md-4 pr-3 ml-md-auto text-center text-md-right download-resume">
               <a href="src/docs/resume.pdf" class="btn btn-outline-primary text-white download-btn" id="downloadBtn"
-                target="_blank" rel="noopener" download="Osama_Abbas_Resume" title="My Resume">
-                <i class="fas fa-cloud-download-alt"></i> &nbsp;&nbsp;
-                <span>Download My Resume</span>
+                target="_blank" rel="noopener" download="Osama_Abbas_Resume.pdf"
+                onclick="this.download='Osama_Abbas_Resume-' + getFormattedTime() + '.pdf'" title="My Resume">
+                <i class="fas fa-file-download mr-2"></i> <span>Download My Resume</span>
               </a>
             </div>
           </div>
-          <div class="developed">
-            <small class="d-block text-center mb-0 text-white">Designed and Developed by
+          <div class="developed text-white text-center">
+            <small class="d-block mb-0">Designed and Developed by
               <span id="back_to_top">Osama Abbas</span>
+            </small>
+            <small class="d-block copyright">Copyright &copy; 2017 - <span class="currentYear"></span>. All rights reserved.
             </small>
           </div>
         </div>
