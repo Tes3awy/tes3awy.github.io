@@ -102,17 +102,15 @@ function concatCSS() {
 
 // Concat All JS Files Task
 function concatJS() {
-  return src(
-    [
-      'src/js/jquery.min.js',
-      'src/js/all.min.js', // FontAwesome 5
-      'src/js/bootstrap.bundle.min.js',
-      'src/js/jquery.fancybox.min.js',
-      'src/js/lazysizes.js',
-      'src/js/sweetalert2.min.js',
-      'src/js/app.js'
-    ]
-  )
+  return src([
+    'src/js/jquery.min.js',
+    'src/js/all.min.js', // FontAwesome 5
+    'src/js/bootstrap.bundle.min.js',
+    'src/js/jquery.fancybox.min.js',
+    'src/js/lazysizes.js',
+    'src/js/sweetalert2.min.js',
+    'src/js/app.js'
+  ])
     .pipe(strip())
     .pipe(uglify())
     .pipe(concat('main.min.js'))
@@ -123,16 +121,16 @@ function concatJS() {
 function serve() {
   browserSync.init({
     watch: true,
-    logPrefix: "Tes3awy",
+    logPrefix: 'Tes3awy',
     logConnections: true,
-    debugLevel: "info",
+    debugLevel: 'info',
     server: {
       baseDir: './'
     },
     watchOptions: {
       ignoreInitial: true,
-      ignored: ['README.md', 'gulpfile.js', 'package.json', 'index.html']
-    },
+      ignored: ['README.md', 'gulpfile.js', 'package.json']
+    }
   });
   watch('src/scss/**/*.scss', series('scss', 'concatCSS'));
   watch('src/js/app.js', series('concatJS'));
