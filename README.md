@@ -2,8 +2,9 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d75f469a-848d-4449-966a-178c9256c9cd/deploy-status)](https://app.netlify.com/sites/tes3awy/deploys) [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/Tes3awy/my-stack) [![Known Vulnerabilities](https://snyk.io/test/github/Tes3awy/tes3awy.github.io/badge.svg)](https://snyk.io/test/github/Tes3awy/tes3awy.github.io)
 
-## Table of Contents
+## Index
 - [Preview](#preview)
+- [Live Preview](#live-preview)
 - [Changelog](#changelog)
 
 ---
@@ -11,6 +12,12 @@
 ## Preview
 
 ![Preview](src/img/preview.jpg)
+
+---
+
+## Live Preview
+
+Check out the portfolio on [Netlify](http://tes3awy.netlify.app/).
 
 ---
 
@@ -48,3 +55,10 @@
 5. Removed and renamed some classes.
 6. Updated resume.
 7. Added Twitter Card meta tags.
+
+**19 January 2021**
+
+1. Updated packages.
+2. Added `.prettierignore`.
+3. Renamed minified files.
+4. Minor enhancements.

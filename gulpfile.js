@@ -1,4 +1,4 @@
-const { src, dest, parallel, series, watch } = require('gulp');
+const { src, dest, series, watch } = require('gulp');
 
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -96,7 +96,7 @@ function concatCSS() {
     .pipe(postcss([cssnano()]))
     .pipe(csso())
     .pipe(stripCssComments({ preserve: false }))
-    .pipe(concat('all.min.css'))
+    .pipe(concat('compiled.min.css'))
     .pipe(dest('src/css'));
 }
 
@@ -113,7 +113,7 @@ function concatJS() {
   ])
     .pipe(strip())
     .pipe(uglify())
-    .pipe(concat('main.min.js'))
+    .pipe(concat('bundle.min.js'))
     .pipe(dest('src/js'));
 }
 
@@ -129,7 +129,17 @@ function serve() {
     },
     watchOptions: {
       ignoreInitial: true,
-      ignored: ['README.md', 'gulpfile.js', 'package.json']
+      ignored: [
+        'README.md',
+        'gulpfile.js',
+        'package.json',
+        '.prettierignore',
+        '.gitignore',
+        '.gitattributes',
+        '.csscomb.json',
+        'robots.txt',
+        'sitemap.xml'
+      ]
     }
   });
   watch('src/scss/**/*.scss', series('scss', 'concatCSS'));
@@ -138,7 +148,7 @@ function serve() {
 }
 
 // Default Tasks
-exports.default = parallel(copyCSS, copyJS);
+exports.default = serve;
 
 exports.copyCSS = copyCSS;
 exports.copyJS = copyJS;
@@ -147,4 +157,3 @@ exports.scss = scss;
 exports.concatCSS = concatCSS;
 exports.concatJS = concatJS;
 exports.minifyHTML = minifyHTML;
-exports.serve = serve;

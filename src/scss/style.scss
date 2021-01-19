@@ -283,11 +283,11 @@ h6 {
 // Active Classes
 .active {
   background-color: $color-primary;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   .port-item {
     &__desc {
       color: $color-white;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 }
