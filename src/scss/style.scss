@@ -45,6 +45,18 @@ h6 {
   font-family: $font-headings;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
+.color-linkedin {
+  color: $color-linkedin;
+  transition: color 0.3s ease;
+  &:hover {
+    color: rgba($color: $color-linkedin, $alpha: 0.85);
+  }
+}
+
 .banner {
   img {
     width: 100%;
@@ -144,7 +156,7 @@ h6 {
   justify-content: space-evenly;
 }
 
-.my-skills {
+.skill-entry {
   display: inline-flex;
   margin: 50px;
   transition: transform 0.3s ease-in-out;
@@ -269,7 +281,7 @@ h6 {
     }
   }
 
-  .my-skills {
+  .skill-entry {
     margin: 30px;
   }
 }

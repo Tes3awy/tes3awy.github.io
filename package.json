@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "tes3awy-portfolio",
-  "version": "6.0.4",
+  "version": "6.0.5",
   "description": "Osama Abbas a.k.a tes3awy Portfolio",
   "main": "src/js/app.js",
   "homepage": "https://tes3awy.netlify.app/",
@@ -56,6 +56,6 @@
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.2.4",
     "prettier": "2.2.1",
-    "snyk": "^1.437.4"
+    "snyk": "^1.439.0"
   }
 }
