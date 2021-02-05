@@ -1,7 +1,7 @@
 // Main Sass File
 @import './vendors/bootstrap/bootstrap.scss';
 // Color Variables
-$color-primary: #dc3545 !default;
+$color-primary: #C10E14 !default;
 $color-black: #000 !default;
 $color-white: #fff !default;
 $color-linkedin: #2867b2 !default;
@@ -243,6 +243,10 @@ h6 {
 #back_to_top {
   cursor: pointer;
   color: $color-primary;
+  transition: all .3s ease;
+  &:hover {
+    letter-spacing: 2px;
+  }
 }
 
 @media only screen and (min-width: 1199px) {

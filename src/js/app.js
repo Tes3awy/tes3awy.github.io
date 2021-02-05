@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on('load', function () {
   // Collapsing Sections
   $('.port-item').on('click', function (e) {
     e.preventDefault();
@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   // Preserve the last accordion tab on refresh
   $('.sections').on('show.bs.collapse', function (e) {
-    sessionStorage.setItem('activeTab', "#" + e.target.id);
+    sessionStorage.setItem('activeTab', '#' + e.target.id);
   });
 
   let activeTab = sessionStorage.getItem('activeTab');
@@ -31,15 +31,18 @@ $(document).ready(function () {
   }
 
   // Add .active to current accordion tab
-
   $('.sections').on('shown.bs.collapse', function (e) {
     let currentTab = e.target.id;
-    $('div[data-target="' + '#' + currentTab + '"]').parent().addClass('active');
+    $('div[data-target="' + '#' + currentTab + '"]')
+      .parent()
+      .addClass('active');
   });
 
   $('.sections').on('hidden.bs.collapse', function (e) {
     let prevTab = e.target.id;
-    $('div[data-target="' + '#' + prevTab + '"]').parent().removeClass('active');
+    $('div[data-target="' + '#' + prevTab + '"]')
+      .parent()
+      .removeClass('active');
   });
 
   // Sweetalert2
@@ -74,10 +77,15 @@ function getFormattedTime() {
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
   let day = today.getDate();
-  return year + "-" + month + "-" + day;
+  return year + '-' + month + '-' + day;
 }
 
 document.querySelector('.currentYear').textContent = new Date().getFullYear();
 
-setTimeout(console.log.bind(console, '%cBelieve me, there is nothing important here for you 😜!!!',
-  'color: #dc3545; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #232323 1px 1px 1px;'));
+setTimeout(
+  console.log.bind(
+    console,
+    '%cBelieve me, there is nothing important here for you 😜!',
+    'color: #C10E14; font-family: sans-serif; font-size: 3em; font-weight: bolder; text-shadow: #232323 1px 1px 1px;'
+  )
+);

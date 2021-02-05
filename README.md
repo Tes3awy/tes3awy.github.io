@@ -62,3 +62,9 @@ Check out the portfolio on [Netlify](http://tes3awy.netlify.app/).
 2. Added `.prettierignore`.
 3. Renamed minified files.
 4. Minor enhancements.
+
+**05 February 2021**
+
+1. Updated packages.
+2. Changed red to AlAhly red color.
+3. Enhanced JS loading.
