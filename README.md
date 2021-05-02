@@ -1,8 +1,9 @@
-# Osama Abbas a.k.a tes3awy Portfolio
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d75f469a-848d-4449-966a-178c9256c9cd/deploy-status)](https://app.netlify.com/sites/tes3awy/deploys) [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/Tes3awy/my-stack) [![Known Vulnerabilities](https://snyk.io/test/github/Tes3awy/tes3awy.github.io/badge.svg)](https://snyk.io/test/github/Tes3awy/tes3awy.github.io)
 
-## Index
+# Osama Abbas a.k.a tes3awy Portfolio
+
+## Table of Contents
+
 - [Preview](#preview)
 - [Live Preview](#live-preview)
 - [Changelog](#changelog)
@@ -17,7 +18,7 @@
 
 ## Live Preview
 
-Check out the portfolio on [Netlify](http://tes3awy.netlify.app/).
+Check out my portfolio on [Netlify](http://tes3awy.netlify.app/).
 
 ---
 
@@ -68,3 +69,8 @@ Check out the portfolio on [Netlify](http://tes3awy.netlify.app/).
 1. Updated packages.
 2. Changed red to AlAhly red color.
 3. Enhanced JS loading.
+
+**02 May 2021**
+
+1. Updated packages.
+2. Updated README.
